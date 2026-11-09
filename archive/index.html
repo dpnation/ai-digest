@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily AI Digest archive — November 9, 2026</title>
+  <link rel="icon" type="image/png" href="../favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* dpnation brand: Ink #0D0D0D, Canvas #F7F6F3, Mist #EBEBEB, Smoke #7A7A7A, Spark #FF8C69 */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+           background: #F7F6F3; color: #0D0D0D; line-height: 1.6; }
+    a { color: inherit; }
+
+    header { background: #0D0D0D; color: #FFFFFF; padding: 2.25rem 2rem 1.75rem; border-bottom: 3px solid #FF8C69; }
+    .header-inner { max-width: 1100px; margin: 0 auto; }
+    .header-eyebrow { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.72rem; font-weight: 500;
+                       letter-spacing: 0.14em; text-transform: lowercase; color: #FF8C69; margin-bottom: 0.5rem; }
+    header h1 { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 2rem; font-weight: 800;
+                 letter-spacing: -0.01em; margin-bottom: 0.3rem; }
+    .header-date { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.8rem; color: #EBEBEB; }
+
+    main { max-width: 1100px; margin: 2.25rem auto; padding: 0 1.5rem; }
+    .slow { font-size: 0.9rem; color: #7A7A7A; margin-bottom: 1.5rem; }
+
+    .topic-section { margin-bottom: 2.75rem; }
+    .topic-heading { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 1.05rem; font-weight: 700;
+                      border-bottom: 1px solid #EBEBEB; padding-bottom: 0.5rem; margin-bottom: 1.1rem; }
+
+    /* Top stories */
+    .top-list { display: flex; flex-direction: column; gap: 1rem; }
+    .top-card { background: #FFFFFF; border: 1px solid #EBEBEB; border-left: 4px solid #FF8C69; border-radius: 8px;
+                 padding: 1.25rem 1.4rem; display: flex; gap: 1.2rem; }
+    .top-num { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 1.4rem; font-weight: 500;
+                color: #FF8C69; line-height: 1.2; }
+    .top-body { display: flex; flex-direction: column; gap: 0.45rem; flex: 1; }
+    .top-title { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 1.15rem; font-weight: 700; line-height: 1.35; }
+    .top-title a, .card-title a, .try h3 a { text-decoration: none; }
+    .top-title a:hover, .card-title a:hover, .try h3 a:hover { color: #FF8C69; }
+    .what { font-size: 0.92rem; }
+    .why { font-size: 0.88rem; color: #3A3A3A; background: #F7F6F3; border-radius: 6px; padding: 0.55rem 0.75rem; }
+    .why-label, .try-label { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.66rem; letter-spacing: 0.08em;
+                  text-transform: lowercase; color: #FF8C69; display: block; margin-bottom: 0.1rem; }
+
+    /* Try this */
+    .try { background: #0D0D0D; color: #FFFFFF; border-radius: 8px; padding: 1.2rem 1.4rem; margin-bottom: 2.75rem; }
+    .try h3 { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 1.02rem; margin-bottom: 0.3rem; }
+    .try p { font-size: 0.9rem; color: #EBEBEB; }
+
+    /* Cards */
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
+    .card { background: #FFFFFF; border-radius: 8px; padding: 1.15rem 1.3rem 1rem; border: 1px solid #EBEBEB;
+             display: flex; flex-direction: column; gap: 0.45rem;
+             transition: box-shadow 0.15s ease, transform 0.15s ease, border-color 0.15s ease; }
+    .card:hover { box-shadow: 0 6px 18px rgba(13,13,13,0.08); border-color: #FF8C69; transform: translateY(-1px); }
+    .card-source { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.68rem; font-weight: 500;
+                    letter-spacing: 0.08em; text-transform: lowercase; color: #7A7A7A; }
+    .also { color: #A0A0A0; }
+    .card-title { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 0.97rem; font-weight: 700; line-height: 1.4; }
+    .card-summary { font-size: 0.85rem; color: #4A4A4A; line-height: 1.55; }
+    .card-why { font-size: 0.82rem; color: #7A7A7A; line-height: 1.5; flex: 1; border-left: 2px solid #FF8C69; padding-left: 0.6rem; }
+    .read-more { font-size: 0.8rem; font-weight: 600; color: #0D0D0D; text-decoration: none;
+                  border-bottom: 2px solid #FF8C69; align-self: flex-start; margin-top: auto; }
+    .read-more:hover { color: #FF8C69; }
+
+    footer { text-align: center; padding: 2rem 1rem; font-family: "JetBrains Mono", ui-monospace, monospace;
+              font-size: 0.75rem; color: #7A7A7A; border-top: 1px solid #EBEBEB; margin-top: 1rem; }
+    footer a { color: #0D0D0D; text-decoration: none; border-bottom: 1px solid #FF8C69; }
+    .archive { margin-top: 0.6rem; }
+
+    @media (max-width: 600px) {
+      .cards-grid { grid-template-columns: 1fr; }
+      header h1 { font-size: 1.5rem; }
+      .top-card { flex-direction: column; gap: 0.4rem; }
+    }
+    .day ul { padding-left: 1.1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="header-eyebrow">dpnation · ai for pmm workflows</div>
+      <h1><a href="../index.html" style="text-decoration:none">Daily AI Digest</a></h1>
+      <div class="header-date">all past briefings · 2 days</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="topic-section">
+      <h2 class="topic-heading">🗂️ Past briefings (2)</h2>
+      <div class="cards-grid">
+      <article class="card day">
+        <div class="card-source">Monday</div>
+        <h3 class="card-title"><a href="2026-11-09.html">November 9, 2026</a></h3>
+        <ul class="card-summary"><li>Anthropic explains how Claude agents maintain their own memory</li><li>Perplexity launches Teammates, agents that own ongoing jobs</li><li>AI answers get a brand&#x27;s ideal customer right only 60% of the time</li></ul>
+      </article>
+      <article class="card day">
+        <div class="card-source">Sunday</div>
+        <h3 class="card-title"><a href="2026-11-08.html">November 8, 2026</a></h3>
+        <ul class="card-summary"><li>Cloudflare lays out a trust framework for AI agents</li><li>Cognition: writing code is only 23% of engineering agent hours</li><li>Companies further along with AI lean on Claude</li></ul>
+      </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    curated daily by <a href="https://dpnation.com" target="_blank" rel="noopener">dpnation</a> · November 9, 2026
+    
+  </footer>
+</body>
+</html>

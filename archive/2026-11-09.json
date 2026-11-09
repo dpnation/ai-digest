@@ -1,0 +1,113 @@
+{
+  "date": "2026-11-09",
+  "note": "",
+  "stats": {"newsletters_scanned": 30, "read_in_full": 8},
+  "top": [
+    {
+      "title": "Anthropic explains how Claude agents maintain their own memory",
+      "url": "https://www.anthropic.com/research/components-of-agent-memory",
+      "source": "The Rundown AI",
+      "also_in": [],
+      "summary": "Anthropic published research on agent memory: Claude saves notes as files, then uses downtime to check those notes against logs of past work and fix errors. It found that explaining why memory matters works better than rules about what to save, and newer models need far fewer memory files to do more.",
+      "why": "Directly shapes how to design memory and context files for PMM skills and agents: fewer, verified notes plus a stated purpose, instead of long rulebooks."
+    },
+    {
+      "title": "Perplexity launches Teammates, agents that own ongoing jobs",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1028302/perplexity-teammates-ai-agents-work",
+      "source": "The Neuron",
+      "also_in": ["The Deep View"],
+      "summary": "Perplexity Max subscribers on the web now get Teammates: agents that take ownership of a recurring job like research or bug triage and ask for a decision in Slack when they need one.",
+      "why": "Another vendor packaging 'agent owns a process, human approves at checkpoints', which is close to Camunda's orchestration story and worth a CI note on how they frame it."
+    },
+    {
+      "title": "AI answers get a brand's ideal customer right only 60% of the time",
+      "url": "https://searchengineland.com/ai-knows-what-your-brand-does-but-not-who-its-for-500556",
+      "source": "TLDR Marketing",
+      "also_in": [],
+      "summary": "A study of AI search answers found engines usually describe what a brand does but often miss who it is for, rarely cite proof points, and invent facts (most often prices) in about a third of answers. Positioning held up best when it was stated simply and repeated everywhere.",
+      "why": "A ready-made check for Camunda's positioning: run the persona and differentiator questions through the major assistants and track what they get wrong."
+    }
+  ],
+  "try_this": {
+    "title": "Add a 'skeptic' pass to one PMM workflow",
+    "url": "https://www.theneurondaily.com/p/anthropic-s-ai-cracks-a-puzzle",
+    "how": "A new benchmark found coding agents met 70% of hidden acceptance criteria but fully finished only 26% of tasks. Before your next AI-drafted brief, have the model write a pass/fail checklist, then open a fresh chat whose only job is to prove each item fails, and send back just the FAIL and UNCERTAIN items."
+  },
+  "sections": {
+    "workflows": [
+      {
+        "title": "A scheduled Claude task that alerts only on real problems",
+        "url": "https://therundownai.beehiiv.com/p/jensen-huang-admits-affair-amid-spy-claims",
+        "source": "The Rundown AI",
+        "also_in": [],
+        "summary": "A non-engineer at The Rundown set up a daily Claude scheduled task that reads an error dashboard, filters noise using plain-English rules about which errors matter, and posts to Slack only when something is actually wrong.",
+        "why": "Same pattern fits a competitive signal monitor: written rules for what counts as a real move, silence on noisy days."
+      },
+      {
+        "title": "A field guide to marketing engineering",
+        "url": "https://hackernoon.com/a-practitioners-field-guide-to-marketing-engineering",
+        "source": "TLDR Marketing",
+        "also_in": [],
+        "summary": "Describes marketing engineering as turning repetitive marketing tasks into systems that monitor the market, spot openings and produce content, built with AI coding tools rather than a CS degree.",
+        "why": "Useful framing and vocabulary for explaining the Workflow Architect role and its roadmap to marketing leadership."
+      }
+    ],
+    "governance": [
+      {
+        "title": "Visa benchmark: shopping agents often buy when they shouldn't",
+        "url": "https://www.thedeepview.com/articles/ai-agents-need-to-learn-when-not-to-buy",
+        "source": "The Deep View",
+        "also_in": [],
+        "summary": "Visa tested 22 models on realistic shopping tasks. The average pass rate was 57%, and more than half of failed runs still ended in a purchase. Models were also inconsistent when repeating scenarios they had passed.",
+        "why": "Concrete evidence for keeping a human approval step before any agent takes an irreversible action, in marketing workflows and in Camunda's human-in-the-loop messaging."
+      }
+    ],
+    "competitive": [
+      {
+        "title": "GitHub rebuilds around agent squads and learning automations",
+        "url": "https://www.thedeepview.com/articles/code-is-cheap-now-trust-is-the-new-bottleneck",
+        "source": "The Deep View",
+        "also_in": [],
+        "summary": "GitHub's CPO describes Copilot projects, agent squads and automations that learn from results, and argues trust and security are now the bottleneck, not code. He also responds to Anthropic building its own version control system, Scion.",
+        "why": "Developer platforms are moving into multi-agent coordination, which overlaps with Camunda's technical buyers and the agentic orchestration story."
+      },
+      {
+        "title": "Three ways to put AI into your positioning",
+        "url": "https://www.fletchpmm.com/newsletter/should-you-incorporate-ai-in-your-positioning",
+        "source": "TLDR Marketing",
+        "also_in": [],
+        "summary": "Fletch PMM lays out the options: move into a new AI category, use AI to stand out in an existing category, or keep current positioning with AI as a supporting feature, chosen by what customers value.",
+        "why": "A clean lens for sorting how BPM and automation competitors are positioning agentic AI in battlecards."
+      }
+    ],
+    "measurement": [],
+    "enablement": [
+      {
+        "title": "Reps treat AI and battlecards as shortcuts, and can't find assets",
+        "url": "https://hubspotmedia-20627419.hs-sites.com/shortcuts-and-scavenger-hunts-are-breaking-your-enablement",
+        "source": "The Science of Scaling",
+        "also_in": [],
+        "summary": "Surveys of 300+ sales leaders found the top barrier to AI value in prospecting is reps using it as a shortcut, and the best way to coach messaging is showing why an asset works. Knowing what exists and where to find it ranked second among habits of reps who use marketing well.",
+        "why": "Supports building a 'why this works' note into every AI-generated battlecard and running a timed findability test with sales."
+      }
+    ],
+    "landscape": [
+      {
+        "title": "Apple pushes for an agentic Siri",
+        "url": "https://www.bloomberg.com/news/newsletters/2026-11-08/apple-explores-turning-siri-ai-into-chatgpt-dots-like-agent-ios-28-shake-up",
+        "source": "TLDR",
+        "also_in": [],
+        "summary": "Apple's CEO is pressing software chief Craig Federighi for a more ambitious AI strategy, with the aim of turning Siri into an autonomous agent.",
+        "why": ""
+      },
+      {
+        "title": "OpenAI closes $11B at a $1.25T valuation",
+        "url": "https://www.bloomberg.com/news/articles/2026-11-06/openai-completes-11-billion-portion-of-funding-at-1-25-trillion-value",
+        "source": "The Deep View",
+        "also_in": ["The Rundown AI"],
+        "summary": "OpenAI reportedly finished an $11B round at a $1.25T valuation, up from $852B in March, as investors question Anthropic's hoped-for IPO valuation.",
+        "why": ""
+      }
+    ]
+  }
+}
