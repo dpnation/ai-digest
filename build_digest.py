@@ -4,7 +4,9 @@ Daily AI Digest builder.
 
 Reads digest.json (written each morning by Dana's Claude scheduled task, which
 curates AI newsletters from Gmail) and renders index.html in the dpnation style.
-Also archives each day's JSON to archive/YYYY-MM-DD.json and links recent days.
+Also archives each day's JSON to archive/YYYY-MM-DD.json, renders a readable
+page for every archived day (archive/YYYY-MM-DD.html) and an index of all past
+briefings (archive/index.html).
 
 Usage:  python3 build_digest.py            # builds from digest.json
 """
@@ -84,18 +86,23 @@ def render_try(t: dict | None) -> str:
       </section>"""
 
 
-def recent_archive(current: str, limit: int = 7) -> str:
+def archive_days() -> list[str]:
     if not ARCHIVE.exists():
-        return ""
-    days = sorted((p.stem for p in ARCHIVE.glob("*.json")), reverse=True)
-    days = [d for d in days if d != current][:limit]
+        return []
+    return sorted((p.stem for p in ARCHIVE.glob("????-??-??.json")), reverse=True)
+
+
+def recent_archive(current: str, prefix: str, limit: int = 7) -> str:
+    days = [d for d in archive_days() if d != current][:limit]
     if not days:
         return ""
-    links = " · ".join(f'<a href="archive/{d}.json">{d}</a>' for d in days)
-    return f'<div class="archive">past days (raw data): {links}</div>'
+    links = " · ".join(f'<a href="{prefix}archive/{d}.html">{d}</a>' for d in days)
+    return (f'<div class="archive">past days: {links} · '
+            f'<a href="{prefix}archive/index.html">all briefings →</a></div>')
 
 
-def build(d: dict) -> str:
+def build(d: dict, prefix: str = "") -> str:
+    """prefix is \"\" for the root page and \"../\" for pages inside archive/."""
     date = datetime.date.fromisoformat(d["date"])
     date_str = date.strftime("%B %-d, %Y")
     day_str = date.strftime("%A")
@@ -138,7 +145,7 @@ def build(d: dict) -> str:
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Daily AI Digest — {date_str}</title>
-  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="icon" type="image/png" href="{prefix}favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
@@ -215,7 +222,7 @@ def build(d: dict) -> str:
   <header>
     <div class="header-inner">
       <div class="header-eyebrow">dpnation · ai for pmm workflows</div>
-      <h1>Daily AI Digest</h1>
+      <h1><a href="{prefix}index.html" style="text-decoration:none">Daily AI Digest</a></h1>
       <div class="header-date">{meta}</div>
     </div>
   </header>
@@ -226,11 +233,41 @@ def build(d: dict) -> str:
 
   <footer>
     curated daily by <a href="https://dpnation.com" target="_blank" rel="noopener">dpnation</a> · {date_str}
-    {recent_archive(d["date"])}
+    {recent_archive(d["date"], prefix)}
   </footer>
 </body>
 </html>
 """
+
+
+def build_index(entries: list[dict]) -> str:
+    rows = ""
+    for d in entries:
+        date = datetime.date.fromisoformat(d["date"])
+        heads = "".join(f"<li>{esc(t['title'])}</li>" for t in (d.get("top") or []))
+        rows += f"""
+      <article class="card day">
+        <div class="card-source">{date.strftime("%A")}</div>
+        <h3 class="card-title"><a href="{d['date']}.html">{date.strftime("%B %-d, %Y")}</a></h3>
+        <ul class="card-summary">{heads}</ul>
+      </article>"""
+    page = build({"date": entries[0]["date"], "top": [], "sections": {}}, prefix="../")
+    head, _, rest = page.partition("<main>")
+    _, _, tail = rest.partition("</main>")
+    head = head.replace("<title>Daily AI Digest", "<title>Daily AI Digest archive", 1)
+    import re
+    head = re.sub(r'<div class="header-date">.*?</div>',
+                  f'<div class="header-date">all past briefings · {len(entries)} days</div>', head, count=1)
+    tail = re.sub(r'<div class="archive">.*?</div>', "", tail, count=1, flags=re.S)
+    body = f"""<main>
+    <section class="topic-section">
+      <h2 class="topic-heading">🗂️ Past briefings ({len(entries)})</h2>
+      <div class="cards-grid">{rows}
+      </div>
+    </section>
+  </main>"""
+    head = head.replace("</style>", "  .day ul {{ padding-left: 1.1rem; }}\n  </style>".replace("{{", "{").replace("}}", "}"))
+    return head + body + tail
 
 
 def main():
@@ -238,7 +275,13 @@ def main():
     ARCHIVE.mkdir(exist_ok=True)
     shutil.copyfile(DATA, ARCHIVE / f"{d['date']}.json")
     OUT.write_text(build(d), encoding="utf-8")
-    print(f"Built {OUT.name} for {d['date']}")
+    entries = []
+    for day in archive_days():
+        past = json.loads((ARCHIVE / f"{day}.json").read_text(encoding="utf-8"))
+        (ARCHIVE / f"{day}.html").write_text(build(past, prefix="../"), encoding="utf-8")
+        entries.append(past)
+    (ARCHIVE / "index.html").write_text(build_index(entries), encoding="utf-8")
+    print(f"Built {OUT.name} for {d['date']} plus {len(entries)} archive pages")
 
 
 if __name__ == "__main__":

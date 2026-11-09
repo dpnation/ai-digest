@@ -1,90 +1,111 @@
 {
-  "date": "2026-11-08",
+  "date": "2026-11-09",
   "note": "",
-  "stats": {"newsletters_scanned": 27, "read_in_full": 4},
+  "stats": {"newsletters_scanned": 30, "read_in_full": 8},
   "top": [
     {
-      "title": "Cloudflare lays out a trust framework for AI agents",
-      "url": "https://blog.cloudflare.com/trusted-agent-delegation",
-      "source": "TLDR AI",
+      "title": "Anthropic explains how Claude agents maintain their own memory",
+      "url": "https://www.anthropic.com/research/components-of-agent-memory",
+      "source": "The Rundown AI",
       "also_in": [],
-      "summary": "As agents act on behalf of users, sites struggle to verify who an agent represents, whether to trust it and who is accountable. Cloudflare proposes a delegation model to fix that.",
-      "why": "Agent accountability is the heart of the orchestration story, and the same questions apply to the guardrails for PMM's own agents: whose authority is it acting on, and where does a human sign off."
+      "summary": "Anthropic published research on agent memory: Claude saves notes as files, then uses downtime to check those notes against logs of past work and fix errors. It found that explaining why memory matters works better than rules about what to save, and newer models need far fewer memory files to do more.",
+      "why": "Directly shapes how to design memory and context files for PMM skills and agents: fewer, verified notes plus a stated purpose, instead of long rulebooks."
     },
     {
-      "title": "Cognition: writing code is only 23% of engineering agent hours",
-      "url": "https://devin.ai/paid/cloud-agent-benchmark",
-      "source": "TLDR (sponsored)",
-      "also_in": [],
-      "summary": "Five months of Global 1000 data on Devin cloud agents shows most productive hours go to planning, testing, security and deployment, and cost per session fell as usage grew.",
-      "why": "Evidence that agent value sits in the end-to-end process, not the single task. Useful proof point for orchestration messaging and a model for how to report agent ROI."
+      "title": "Perplexity launches Teammates, agents that own ongoing jobs",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1028302/perplexity-teammates-ai-agents-work",
+      "source": "The Neuron",
+      "also_in": ["The Deep View"],
+      "summary": "Perplexity Max subscribers on the web now get Teammates: agents that take ownership of a recurring job like research or bug triage and ask for a decision in Slack when they need one.",
+      "why": "Another vendor packaging 'agent owns a process, human approves at checkpoints', which is close to Camunda's orchestration story and worth a CI note on how they frame it."
     },
     {
-      "title": "Companies further along with AI lean on Claude",
-      "url": "https://newsletter.theaireport.ai/p/the-companies-ahead-use-claude",
-      "source": "The AI Report",
+      "title": "AI answers get a brand's ideal customer right only 60% of the time",
+      "url": "https://searchengineland.com/ai-knows-what-your-brand-does-but-not-who-its-for-500556",
+      "source": "TLDR Marketing",
       "also_in": [],
-      "summary": "In a survey of 4,117 business leaders, Claude use rises from 58% at the exploring stage to 86% among companies running AI in daily operations. ChatGPT stays flat around 70%, and most teams use both.",
-      "why": "A ready-made maturity baseline for the PMM ops dashboard and a talking point for enablement: teams that scale assign different jobs to different tools."
+      "summary": "A study of AI search answers found engines usually describe what a brand does but often miss who it is for, rarely cite proof points, and invent facts (most often prices) in about a third of answers. Positioning held up best when it was stated simply and repeated everywhere.",
+      "why": "A ready-made check for Camunda's positioning: run the persona and differentiator questions through the major assistants and track what they get wrong."
     }
   ],
   "try_this": {
-    "title": "Map the context before you build the agent",
-    "url": "https://getunblocked.com/blog/mcp-connectors-are-not-a-context-engine/",
-    "how": "A vendor piece argues MCP connectors alone leave agents guessing. Before the first CI agent, list where approved positioning, launch plans and field content live and which version is canonical."
+    "title": "Add a 'skeptic' pass to one PMM workflow",
+    "url": "https://www.theneurondaily.com/p/anthropic-s-ai-cracks-a-puzzle",
+    "how": "A new benchmark found coding agents met 70% of hidden acceptance criteria but fully finished only 26% of tasks. Before your next AI-drafted brief, have the model write a pass/fail checklist, then open a fresh chat whose only job is to prove each item fails, and send back just the FAIL and UNCERTAIN items."
   },
   "sections": {
     "workflows": [
       {
-        "title": "Cursor now builds and deploys shareable live apps",
-        "url": "https://links.tldrnewsletter.com/eaViIw",
-        "source": "TLDR AI",
-        "summary": "Describe a tool and Cursor builds it, sets up a database, runs security checks and deploys it behind a link.",
-        "why": "Lowers the bar for internal PMM tools like intake forms or CI trackers. Worth a governance check before teams start shipping their own."
+        "title": "A scheduled Claude task that alerts only on real problems",
+        "url": "https://therundownai.beehiiv.com/p/jensen-huang-admits-affair-amid-spy-claims",
+        "source": "The Rundown AI",
+        "also_in": [],
+        "summary": "A non-engineer at The Rundown set up a daily Claude scheduled task that reads an error dashboard, filters noise using plain-English rules about which errors matter, and posts to Slack only when something is actually wrong.",
+        "why": "Same pattern fits a competitive signal monitor: written rules for what counts as a real move, silence on noisy days."
       },
       {
-        "title": "Headroom trims what agents read from tool output",
-        "url": "",
-        "source": "TheAIgent",
-        "summary": "An open-source layer compresses tool results before they hit the model, cutting token spend on long agent runs.",
-        "why": "Relevant once PMM agents pull large docs or call logs and usage costs start to show up."
+        "title": "A field guide to marketing engineering",
+        "url": "https://hackernoon.com/a-practitioners-field-guide-to-marketing-engineering",
+        "source": "TLDR Marketing",
+        "also_in": [],
+        "summary": "Describes marketing engineering as turning repetitive marketing tasks into systems that monitor the market, spot openings and produce content, built with AI coding tools rather than a CS degree.",
+        "why": "Useful framing and vocabulary for explaining the Workflow Architect role and its roadmap to marketing leadership."
       }
     ],
     "governance": [
       {
-        "title": "Midterms shift Congress toward tighter AI rules",
-        "url": "https://www.theaireport.ai/newsletter/midterms-trigger-ai-crackdown",
-        "source": "The AI Report",
-        "also_in": ["TLDR"],
-        "summary": "Democrats won Congress, and incoming lawmakers promise hearings and possibly a development pause. Voters rejected 40 of 41 data center measures.",
-        "why": "Expect Legal and Security to ask harder questions. Build the AI usage policy so it can absorb new rules without a rewrite."
+        "title": "Visa benchmark: shopping agents often buy when they shouldn't",
+        "url": "https://www.thedeepview.com/articles/ai-agents-need-to-learn-when-not-to-buy",
+        "source": "The Deep View",
+        "also_in": [],
+        "summary": "Visa tested 22 models on realistic shopping tasks. The average pass rate was 57%, and more than half of failed runs still ended in a purchase. Models were also inconsistent when repeating scenarios they had passed.",
+        "why": "Concrete evidence for keeping a human approval step before any agent takes an irreversible action, in marketing workflows and in Camunda's human-in-the-loop messaging."
       }
     ],
-    "competitive": [],
-    "measurement": [
+    "competitive": [
       {
-        "title": "Usage and outcome pricing complicate revenue rules",
-        "url": "https://newsletter.aiforwork.co/p/you-changed-how-you-price-did-anyone-tell-finance",
-        "source": "AI For Work (sponsored)",
-        "also_in": ["The Deep View"],
-        "summary": "Credits, overages and pay-per-resolution pricing each force finance to make a call on what counts as revenue and when.",
-        "why": "Context for how AI-native competitors package and price, and how their sales teams will pitch it."
-      }
-    ],
-    "enablement": [],
-    "landscape": [
-      {
-        "title": "METR: Anthropic's AI R&D is accelerating",
-        "url": "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/",
-        "source": "TLDR AI",
-        "summary": "An independent review finds model gains on well-defined tasks are arriving about twice as fast as in 2024-2025, largely because AI now does more of the R&D.",
-        "why": "Tool capabilities will keep shifting under your workflows. Version and re-test skills on a schedule."
+        "title": "GitHub rebuilds around agent squads and learning automations",
+        "url": "https://www.thedeepview.com/articles/code-is-cheap-now-trust-is-the-new-bottleneck",
+        "source": "The Deep View",
+        "also_in": [],
+        "summary": "GitHub's CPO describes Copilot projects, agent squads and automations that learn from results, and argues trust and security are now the bottleneck, not code. He also responds to Anthropic building its own version control system, Scion.",
+        "why": "Developer platforms are moving into multi-agent coordination, which overlaps with Camunda's technical buyers and the agentic orchestration story."
       },
       {
-        "title": "Anthropic IPO valuation likely to come in lower",
-        "url": "https://www.wsj.com/finance/major-investors-are-skeptical-anthropic-ipo-can-achieve-1-5-trillion-valuation-ca965d8b",
+        "title": "Three ways to put AI into your positioning",
+        "url": "https://www.fletchpmm.com/newsletter/should-you-incorporate-ai-in-your-positioning",
+        "source": "TLDR Marketing",
+        "also_in": [],
+        "summary": "Fletch PMM lays out the options: move into a new AI category, use AI to stand out in an existing category, or keep current positioning with AI as a supporting feature, chosen by what customers value.",
+        "why": "A clean lens for sorting how BPM and automation competitors are positioning agentic AI in battlecards."
+      }
+    ],
+    "measurement": [],
+    "enablement": [
+      {
+        "title": "Reps treat AI and battlecards as shortcuts, and can't find assets",
+        "url": "https://hubspotmedia-20627419.hs-sites.com/shortcuts-and-scavenger-hunts-are-breaking-your-enablement",
+        "source": "The Science of Scaling",
+        "also_in": [],
+        "summary": "Surveys of 300+ sales leaders found the top barrier to AI value in prospecting is reps using it as a shortcut, and the best way to coach messaging is showing why an asset works. Knowing what exists and where to find it ranked second among habits of reps who use marketing well.",
+        "why": "Supports building a 'why this works' note into every AI-generated battlecard and running a timed findability test with sales."
+      }
+    ],
+    "landscape": [
+      {
+        "title": "Apple pushes for an agentic Siri",
+        "url": "https://www.bloomberg.com/news/newsletters/2026-11-08/apple-explores-turning-siri-ai-into-chatgpt-dots-like-agent-ios-28-shake-up",
         "source": "TLDR",
-        "summary": "Investors expect about $80B raised at closer to $1T, below the $1.5T target, ahead of a listing planned for the week before Thanksgiving.",
+        "also_in": [],
+        "summary": "Apple's CEO is pressing software chief Craig Federighi for a more ambitious AI strategy, with the aim of turning Siri into an autonomous agent.",
+        "why": ""
+      },
+      {
+        "title": "OpenAI closes $11B at a $1.25T valuation",
+        "url": "https://www.bloomberg.com/news/articles/2026-11-06/openai-completes-11-billion-portion-of-funding-at-1-25-trillion-value",
+        "source": "The Deep View",
+        "also_in": ["The Rundown AI"],
+        "summary": "OpenAI reportedly finished an $11B round at a $1.25T valuation, up from $852B in March, as investors question Anthropic's hoped-for IPO valuation.",
         "why": ""
       }
     ]
