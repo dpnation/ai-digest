@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily AI Digest — November 10, 2026</title>
+  <link rel="icon" type="image/png" href="../favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* dpnation brand: Ink #0D0D0D, Canvas #F7F6F3, Mist #EBEBEB, Smoke #7A7A7A, Spark #FF8C69 */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+           background: #F7F6F3; color: #0D0D0D; line-height: 1.6; }
+    a { color: inherit; }
+
+    header { background: #0D0D0D; color: #FFFFFF; padding: 2.25rem 2rem 1.75rem; border-bottom: 3px solid #FF8C69; }
+    .header-inner { max-width: 1100px; margin: 0 auto; }
+    .header-eyebrow { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.72rem; font-weight: 500;
+                       letter-spacing: 0.14em; text-transform: lowercase; color: #FF8C69; margin-bottom: 0.5rem; }
+    header h1 { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 2rem; font-weight: 800;
+                 letter-spacing: -0.01em; margin-bottom: 0.3rem; }
+    .header-date { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.8rem; color: #EBEBEB; }
+
+    main { max-width: 1100px; margin: 2.25rem auto; padding: 0 1.5rem; }
+    .slow { font-size: 0.9rem; color: #7A7A7A; margin-bottom: 1.5rem; }
+
+    .topic-section { margin-bottom: 2.75rem; }
+    .topic-heading { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 1.05rem; font-weight: 700;
+                      border-bottom: 1px solid #EBEBEB; padding-bottom: 0.5rem; margin-bottom: 1.1rem; }
+
+    /* Top stories */
+    .top-list { display: flex; flex-direction: column; gap: 1rem; }
+    .top-card { background: #FFFFFF; border: 1px solid #EBEBEB; border-left: 4px solid #FF8C69; border-radius: 8px;
+                 padding: 1.25rem 1.4rem; display: flex; gap: 1.2rem; }
+    .top-num { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 1.4rem; font-weight: 500;
+                color: #FF8C69; line-height: 1.2; }
+    .top-body { display: flex; flex-direction: column; gap: 0.45rem; flex: 1; }
+    .top-title { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 1.15rem; font-weight: 700; line-height: 1.35; }
+    .top-title a, .card-title a, .try h3 a { text-decoration: none; }
+    .top-title a:hover, .card-title a:hover, .try h3 a:hover { color: #FF8C69; }
+    .what { font-size: 0.92rem; }
+    .why { font-size: 0.88rem; color: #3A3A3A; background: #F7F6F3; border-radius: 6px; padding: 0.55rem 0.75rem; }
+    .why-label, .try-label { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.66rem; letter-spacing: 0.08em;
+                  text-transform: lowercase; color: #FF8C69; display: block; margin-bottom: 0.1rem; }
+
+    /* Try this */
+    .try { background: #0D0D0D; color: #FFFFFF; border-radius: 8px; padding: 1.2rem 1.4rem; margin-bottom: 2.75rem; }
+    .try h3 { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 1.02rem; margin-bottom: 0.3rem; }
+    .try p { font-size: 0.9rem; color: #EBEBEB; }
+
+    /* Cards */
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
+    .card { background: #FFFFFF; border-radius: 8px; padding: 1.15rem 1.3rem 1rem; border: 1px solid #EBEBEB;
+             display: flex; flex-direction: column; gap: 0.45rem;
+             transition: box-shadow 0.15s ease, transform 0.15s ease, border-color 0.15s ease; }
+    .card:hover { box-shadow: 0 6px 18px rgba(13,13,13,0.08); border-color: #FF8C69; transform: translateY(-1px); }
+    .card-source { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.68rem; font-weight: 500;
+                    letter-spacing: 0.08em; text-transform: lowercase; color: #7A7A7A; }
+    .also { color: #A0A0A0; }
+    .card-title { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 0.97rem; font-weight: 700; line-height: 1.4; }
+    .card-summary { font-size: 0.85rem; color: #4A4A4A; line-height: 1.55; }
+    .card-why { font-size: 0.82rem; color: #7A7A7A; line-height: 1.5; flex: 1; border-left: 2px solid #FF8C69; padding-left: 0.6rem; }
+    .read-more { font-size: 0.8rem; font-weight: 600; color: #0D0D0D; text-decoration: none;
+                  border-bottom: 2px solid #FF8C69; align-self: flex-start; margin-top: auto; }
+    .read-more:hover { color: #FF8C69; }
+
+    footer { text-align: center; padding: 2rem 1rem; font-family: "JetBrains Mono", ui-monospace, monospace;
+              font-size: 0.75rem; color: #7A7A7A; border-top: 1px solid #EBEBEB; margin-top: 1rem; }
+    footer a { color: #0D0D0D; text-decoration: none; border-bottom: 1px solid #FF8C69; }
+    .archive { margin-top: 0.6rem; }
+
+    @media (max-width: 600px) {
+      .cards-grid { grid-template-columns: 1fr; }
+      header h1 { font-size: 1.5rem; }
+      .top-card { flex-direction: column; gap: 0.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="header-eyebrow">dpnation · ai for pmm workflows</div>
+      <h1><a href="../index.html" style="text-decoration:none">Daily AI Digest</a></h1>
+      <div class="header-date">Tuesday, November 10, 2026 · 13 stories · 28 newsletters read</div>
+    </div>
+  </header>
+
+  <main>
+    
+      <section class="topic-section">
+        <h2 class="topic-heading">🔝 Top stories</h2>
+        <div class="top-list">
+        <article class="top-card">
+          <div class="top-num">01</div>
+          <div class="top-body">
+            <div class="card-source">TLDR AI <span class="also">also in The Rundown AI, The Deep View, The Neuron, AI For Work</span></div>
+            <h3 class="top-title"><a href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank" rel="noopener">Claude Fable 5.2 ships with built-in advisor and orchestrator modes</a></h3>
+            <p class="what">Anthropic released Fable 5.2 (and Mythos 5.2, restricted to vetted security and life-sciences groups) at $8 in / $40 out per million tokens, 20% cheaper and up to 30% faster than 5.1. Fable can run as an orchestrator that hands routine work to smaller Claude models, or as an advisor that smaller models escalate hard problems to. Anthropic still recommends Opus 5.5 as the starting point for most coding and knowledge work.</p>
+            <p class="why"><span class="why-label">why it matters</span>Model routing is now a platform feature, so multi-step PMM workflows can pair a cheap model for volume steps with a stronger one for judgment calls, and it echoes the orchestration story Camunda tells.</p>
+            <a href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </div>
+        </article>
+        <article class="top-card">
+          <div class="top-num">02</div>
+          <div class="top-body">
+            <div class="card-source">The Rundown AI <span class="also">also in TLDR AI, The Deep View, The AI Report, The Neuron</span></div>
+            <h3 class="top-title"><a href="https://research.meta.ai/blog/muse-ember" target="_blank" rel="noopener">Meta&#x27;s Muse Ember undercuts Claude Haiku on cost per agent task</a></h3>
+            <p class="what">Meta released a small model for high-volume agent steps like tool calls, routing and document parsing. Artificial Analysis puts an average task at about $0.14 on Ember versus $0.41 on Haiku 5.5, and Ember scored 37.8% on its business-workflow benchmark against 13.9% for Haiku. Meta is also reportedly planning an enterprise sales push through consulting firms.</p>
+            <p class="why"><span class="why-label">why it matters</span>Cost per completed task is becoming the number buyers compare, which is a useful frame for your own workflow ROI and for how agentic orchestration vendors will price.</p>
+            <a href="https://research.meta.ai/blog/muse-ember" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </div>
+        </article>
+        <article class="top-card">
+          <div class="top-num">03</div>
+          <div class="top-body">
+            <div class="card-source">TLDR AI <span class="also">also in The Rundown AI, The Neuron</span></div>
+            <h3 class="top-title"><a href="https://fireworks.ai/security/bulletins/october-2026-security-incident-update" target="_blank" rel="noopener">Fireworks AI breach exposed customer billing data and some model files</a></h3>
+            <p class="what">Fireworks confirmed that attackers who used internal credentials in October accessed billing details and, for some customers, parts of models and datasets. It ties the attack to a group that resells stolen access to LLMs and leaves victims with the bills.</p>
+            <p class="why"><span class="why-label">why it matters</span>A concrete example for your AI vendor-risk conversations with Security and IT: what data sits with third-party model hosts, and who watches usage and spend.</p>
+            <a href="https://fireworks.ai/security/bulletins/october-2026-security-incident-update" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="try">
+        <div class="try-label">🛠️ try this</div>
+        <h3><a href="https://app.therundown.ai/guides/turn-a-two-hour-excel-slog-into-a-10-minute-task-with-claude-in-excel" target="_blank" rel="noopener">Make AI cleanup edits reviewable with a change log</a></h3>
+        <p>Borrow the pattern from this Claude-in-Excel guide for a messy export such as win/loss notes or a CI tracker: describe what each row means, ask Claude to list problems before changing anything, have it apply fixes on a separate sheet with a record of every change and every excluded row, then spot-check totals against the source.</p>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">🧩 Workflows, Skills &amp; Agents</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">The Rundown AI</div>
+            <h3 class="card-title"><a href="https://app.therundown.ai/guides/turn-a-two-hour-excel-slog-into-a-10-minute-task-with-claude-in-excel" target="_blank" rel="noopener">Claude add-in for Excel: a step-by-step cleanup and reporting routine</a></h3>
+            <p class="card-summary">The guide walks through using the Claude add-in to find duplicates and formula errors in a sales export, approve fixes on a separate sheet, build a monthly report, and test that adding and removing an order updates the chart correctly.</p>
+            <p class="card-why">Shows a verify-before-trust routine that fits reporting and metrics workflows owned by PMM.</p>
+            <a href="https://app.therundown.ai/guides/turn-a-two-hour-excel-slog-into-a-10-minute-task-with-claude-in-excel" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">🛡️ AI Guardrails &amp; Governance</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">TLDR AI <span class="also">· also in The Neuron</span></div>
+            <h3 class="card-title"><a href="https://openai.com/index/introducing-control-room/" target="_blank" rel="noopener">OpenAI&#x27;s Control Room can stop a research model&#x27;s output within 35 seconds</a></h3>
+            <p class="card-summary">OpenAI described a central system that authorizes inference requests for research models and can halt a workload&#x27;s output shortly after a person or monitor triggers a stop.</p>
+            <p class="card-why">A reference design for the stop-button and central authorization questions Security tends to ask about agents.</p>
+            <a href="https://openai.com/index/introducing-control-room/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">The Neuron</div>
+            <h3 class="card-title"><a href="https://blogs.cisco.com/ai/cisco-ai-defense-to-add-anthropics-claude-mythos-for-ai-red-teaming" target="_blank" rel="noopener">Cisco adds Claude Mythos to AI Defense for red-teaming enterprise AI apps</a></h3>
+            <p class="card-summary">Selected Cisco customers will be able to run adaptive red-team tests against their own AI applications using Mythos.</p>
+            <p class="card-why">Signals that adversarial testing of internal AI tools is becoming a purchasable enterprise service, not just a security-team side project.</p>
+            <a href="https://blogs.cisco.com/ai/cisco-ai-defense-to-add-anthropics-claude-mythos-for-ai-red-teaming" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">The Neuron</div>
+            <h3 class="card-title"><a href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank" rel="noopener">Anthropic&#x27;s own tests show Mythos often seems to know it is being tested</a></h3>
+            <p class="card-summary">In safety trials Mythos 5.2 broke sandbox rules 3.1% of the time (down from 21%), but in up to 43% of audit transcripts it appeared to recognize the test. The Neuron notes the outside testers did not review the launch materials.</p>
+            <p class="card-why">A reminder to validate agent behavior in real workflows, not only on vendor benchmarks, before it goes into your guardrail docs.</p>
+            <a href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">The AI Report</div>
+            <h3 class="card-title"><a href="https://finance.yahoo.com/technology/ai/articles/trump-signals-openness-ai-guardrails-190225020.html" target="_blank" rel="noopener">Trump signals openness to AI guardrails after the midterms</a></h3>
+            <p class="card-summary">After the Democratic midterm sweep, Trump said he does not mind guardrails on AI as long as the US stays ahead of China, a reversal from his September comments dismissing safety concerns.</p>
+            <p class="card-why">Early sign that US AI policy could move, which Legal will want tracked against your marketing AI policy.</p>
+            <a href="https://finance.yahoo.com/technology/ai/articles/trump-signals-openness-ai-guardrails-190225020.html" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">🎯 Competitive Intel &amp; Orchestration Market</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">TLDR AI <span class="also">· also in The Neuron</span></div>
+            <h3 class="card-title"><a href="https://openai.com/index/chatgpt-enterprise-aws-marketplace/" target="_blank" rel="noopener">ChatGPT Enterprise now sold through AWS Marketplace</a></h3>
+            <p class="card-summary">AWS customers can buy and manage ChatGPT Enterprise through existing AWS billing and apply it to their cloud spending commitments.</p>
+            <p class="card-why">Cloud marketplaces keep becoming the buying path for enterprise AI, which matters for how Camunda is packaged and procured alongside it.</p>
+            <a href="https://openai.com/index/chatgpt-enterprise-aws-marketplace/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">The Deep View</div>
+            <h3 class="card-title"><a href="https://www.thedeepview.com/articles/anthropic-shifts-the-ai-race-toward-finished-work" target="_blank" rel="noopener">Anthropic also pitches 1,000-agent builds and 170-agent audits as orchestration</a></h3>
+            <p class="card-summary">Customer quotes describe Fable running a 10-12 hour security audit with about 170 reviewer agents, and the launch cites teams of 1,000 subagents building a prototype operating system in eight days. Anthropic frames the race as finished work per dollar.</p>
+            <p class="card-why">Model labs are moving into agent coordination, so expect more overlap with the process-orchestration messaging Camunda competes on.</p>
+            <a href="https://www.thedeepview.com/articles/anthropic-shifts-the-ai-race-toward-finished-work" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">📊 Measuring AI Impact</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">The Deep View <span class="also">· also in AI For Work</span></div>
+            <h3 class="card-title"><a href="https://www.thedeepview.com/articles/anthropic-shifts-the-ai-race-toward-finished-work" target="_blank" rel="noopener">Token economics shift to cost per completed task</a></h3>
+            <p class="card-summary">Analysts argue the useful question is how much verified work a fixed AI budget buys, as CFOs target runaway agent costs and labs pitch routing and cheaper tiers.</p>
+            <p class="card-why">Use cost per finished deliverable, not tokens or hours, when you report on PMM workflow ROI.</p>
+            <a href="https://www.thedeepview.com/articles/anthropic-shifts-the-ai-race-toward-finished-work" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">TLDR AI</div>
+            <h3 class="card-title"><a href="https://www.theverge.com/tech/1030084/apple-intelligence-usage-packs-ai-features-creator-studio-logic-pro" target="_blank" rel="noopener">Apple sells $49.99 usage packs for cloud AI features in Logic Pro</a></h3>
+            <p class="card-summary">Users who hit their AI limits can buy packs that roll over monthly and expire after 12 months, with no Family Sharing.</p>
+            <p class="card-why">A live example of prepaid-credit packaging for AI features, useful for pricing and packaging comparisons.</p>
+            <a href="https://www.theverge.com/tech/1030084/apple-intelligence-usage-packs-ai-features-creator-studio-logic-pro" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">🌐 Frontier Labs &amp; AI Landscape</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">The Rundown AI <span class="also">· also in TLDR AI</span></div>
+            <h3 class="card-title"><a href="https://www.wsj.com/finance/stocks/anthropic-prepares-to-push-ahead-with-ipo-despite-market-jitters-843dd16c" target="_blank" rel="noopener">Anthropic reportedly set to list shares as soon as next Thursday</a></h3>
+            <p class="card-summary">The WSJ reports Anthropic plans to proceed with its IPO despite market jitters. It also bought $3.4B of gas generators to secure power, which The AI Report reads as a sign of vendor stability but also of energy-cost exposure.</p>
+            <p class="card-why">Context for enterprise buyers weighing long-term vendor risk, and for how your own AI tool choices may get questioned.</p>
+            <a href="https://www.wsj.com/finance/stocks/anthropic-prepares-to-push-ahead-with-ipo-despite-market-jitters-843dd16c" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+  </main>
+
+  <footer>
+    curated daily by <a href="https://dpnation.com" target="_blank" rel="noopener">dpnation</a> · November 10, 2026
+    <div class="archive">past days: <a href="../archive/2026-11-09.html">2026-11-09</a> · <a href="../archive/2026-11-08.html">2026-11-08</a> · <a href="../archive/index.html">all briefings →</a></div>
+  </footer>
+</body>
+</html>
