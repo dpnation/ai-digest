@@ -1,128 +1,112 @@
 {
-  "date": "2026-11-10",
+  "date": "2026-11-11",
   "note": "",
-  "stats": {"newsletters_scanned": 28, "read_in_full": 6},
+  "stats": {"newsletters_scanned": 14, "read_in_full": 6},
   "top": [
     {
-      "title": "Claude Fable 5.2 ships with built-in advisor and orchestrator modes",
-      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
-      "source": "TLDR AI",
-      "also_in": ["The Rundown AI", "The Deep View", "The Neuron", "AI For Work"],
-      "summary": "Anthropic released Fable 5.2 (and Mythos 5.2, restricted to vetted security and life-sciences groups) at $8 in / $40 out per million tokens, 20% cheaper and up to 30% faster than 5.1. Fable can run as an orchestrator that hands routine work to smaller Claude models, or as an advisor that smaller models escalate hard problems to. Anthropic still recommends Opus 5.5 as the starting point for most coding and knowledge work.",
-      "why": "Model routing is now a platform feature, so multi-step PMM workflows can pair a cheap model for volume steps with a stronger one for judgment calls, and it echoes the orchestration story Camunda tells."
-    },
-    {
-      "title": "Meta's Muse Ember undercuts Claude Haiku on cost per agent task",
-      "url": "https://research.meta.ai/blog/muse-ember",
+      "title": "Claude adds Sheets, Whiteboards and Meetings, and connectors now open apps inside Claude",
+      "url": "https://claude.com/resources/articles/more-ways-to-work-with-claude-sheets-whiteboards-and-interactive-connectors",
       "source": "The Rundown AI",
-      "also_in": ["TLDR AI", "The Deep View", "The AI Report", "The Neuron"],
-      "summary": "Meta released a small model for high-volume agent steps like tool calls, routing and document parsing. Artificial Analysis puts an average task at about $0.14 on Ember versus $0.41 on Haiku 5.5, and Ember scored 37.8% on its business-workflow benchmark against 13.9% for Haiku. Meta is also reportedly planning an enterprise sales push through consulting firms.",
-      "why": "Cost per completed task is becoming the number buyers compare, which is a useful frame for your own workflow ROI and for how agentic orchestration vendors will price."
+      "also_in": ["The Neuron"],
+      "summary": "Anthropic put Claude Sheets (formula-driven spreadsheets that export to Excel) and Whiteboards into beta, made Claude Data generally available, and announced Claude Meetings, which joins Google Meet calls and drafts plans and action items. Upgraded connectors now open tools like Adobe and Atlassian directly inside Claude.",
+      "why": "More PMM work (launch trackers, planning boards, meeting follow-ups) can now live in one Claude workspace, so it is worth mapping which current workflow steps could move there and which still need a separate tool."
     },
     {
-      "title": "Fireworks AI breach exposed customer billing data and some model files",
-      "url": "https://fireworks.ai/security/bulletins/october-2026-security-incident-update",
-      "source": "TLDR AI",
+      "title": "OpenAI lets brands claim a ChatGPT profile and see how often they get mentioned",
+      "url": "https://openai.com/index/introducing-businesses-chatgpt/",
+      "source": "The Rundown AI",
+      "also_in": ["TLDR Marketing", "The AI Report", "The Neuron"],
+      "summary": "Businesses in ChatGPT is a beta hub where companies verify a profile, upload product details, and see counts of mentions, profile views and site clicks, plus 'discovery topics' that hint at gaps. Verified U.S. e-commerce and online-service companies can also add a labeled Business Agent that answers buyer questions, and paid ads can point to it.",
+      "why": "This is the first official read on AI-assistant visibility; once it opens beyond retail, Camunda's mention counts next to Pega, Appian or Temporal become a CI signal worth tracking."
+    },
+    {
+      "title": "Gemini 4 Carbon ships with /swarm, which turns one prompt into a team of agents",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+      "source": "TLDR",
       "also_in": ["The Rundown AI", "The Neuron"],
-      "summary": "Fireworks confirmed that attackers who used internal credentials in October accessed billing details and, for some customers, parts of models and datasets. It ties the attack to a group that resells stolen access to LLMs and leaves victims with the bills.",
-      "why": "A concrete example for your AI vendor-risk conversations with Security and IT: what data sits with third-party model hosts, and who watches usage and spend."
+      "summary": "Google's new top model targets long-running agent work in coding, research and security, and is available via API, Gemini for Business and Ultra plans. Introductory pricing is $2/$10 per million input/output tokens until November 30, then it doubles.",
+      "why": "A frontier lab packaging multi-agent swarms as a product feature feeds Camunda's orchestration story: someone still has to coordinate, govern and audit those agents across systems."
     }
   ],
   "try_this": {
-    "title": "Make AI cleanup edits reviewable with a change log",
-    "url": "https://app.therundown.ai/guides/turn-a-two-hour-excel-slog-into-a-10-minute-task-with-claude-in-excel",
-    "how": "Borrow the pattern from this Claude-in-Excel guide for a messy export such as win/loss notes or a CI tracker: describe what each row means, ask Claude to list problems before changing anything, have it apply fixes on a separate sheet with a record of every change and every excluded row, then spot-check totals against the source."
+    "title": "Two-pass plain-language edit for AI-sounding drafts",
+    "url": "https://github.com/Dodaios/ste80-humanizer",
+    "how": "Run one PMM draft through a prompt that removes common AI tells, then rewrites toward short, active, one-idea sentences while keeping every fact, and asks for the three sentences that still carry too much. Compare against your current voice-pass step to see if it belongs in the copy workflow."
   },
   "sections": {
     "workflows": [
       {
-        "title": "Claude add-in for Excel: a step-by-step cleanup and reporting routine",
-        "url": "https://app.therundown.ai/guides/turn-a-two-hour-excel-slog-into-a-10-minute-task-with-claude-in-excel",
+        "title": "Adobe opens Creative Cloud to outside agents through MCP",
+        "url": "https://blog.adobe.com/en/publish/2026/11/10/explore-new-ways-create-across-creative-cloud-adobe-firefly-while-advancing-craft-precision-choice-control",
         "source": "The Rundown AI",
+        "also_in": ["The AI Report", "The Neuron"],
+        "summary": "Adobe previewed MCP connector tools that let ChatGPT, Claude and Gemini work with Photoshop, Illustrator and Premiere files (arriving early 2027), plus Firefly Graph, a beta builder for repeatable, shareable AI workflows.",
+        "why": "Asset production could become a step inside a Claude-run launch workflow instead of a handoff to design, which is worth planning for now."
+      },
+      {
+        "title": "Chrome's Modern Web Guidance shows how to ship agent skills with reviews and evals",
+        "url": "https://developer.chrome.com/blog/modern-web-guidance-v1",
+        "source": "TLDR",
         "also_in": [],
-        "summary": "The guide walks through using the Claude add-in to find duplicates and formula errors in a sales export, approve fixes on a separate sheet, build a monthly report, and test that adding and removing an order updates the chart correctly.",
-        "why": "Shows a verify-before-trust routine that fits reporting and metrics workflows owned by PMM."
+        "summary": "Google's 1.0 release packages web-platform expertise as skills for coding agents, with expert human review of every guide and evaluation coverage across all of them; Firefox and Edge now contribute.",
+        "why": "It is a public example of treating skills like product releases (versioned, reviewed, evaluated), a pattern to copy for the PMM skill library."
       }
     ],
     "governance": [
       {
-        "title": "OpenAI's Control Room can stop a research model's output within 35 seconds",
-        "url": "https://openai.com/index/introducing-control-room/",
-        "source": "TLDR AI",
+        "title": "Investors back tools that check agent actions before they run",
+        "url": "https://venturebeat.com/business/bay-emerges-from-stealth-with-50m-after-fortune-100-companies-used-its-platform-to-triple-autonomous-ai-agent-use/",
+        "source": "The AI Report",
         "also_in": ["The Neuron"],
-        "summary": "OpenAI described a central system that authorizes inference requests for research models and can halt a workload's output shortly after a person or monitor triggers a stop.",
-        "why": "A reference design for the stop-button and central authorization questions Security tends to ask about agents."
+        "summary": "Bay came out of stealth with $50M for a layer that evaluates agent actions across endpoints and cloud before execution, while Mercor raised $750M to benchmark agents against enterprise-specific standards.",
+        "why": "Pre-execution checks and custom evals are the controls Security and IT will ask about as marketing agents start taking actions, not just drafting text."
       },
       {
-        "title": "Cisco adds Claude Mythos to AI Defense for red-teaming enterprise AI apps",
-        "url": "https://blogs.cisco.com/ai/cisco-ai-defense-to-add-anthropics-claude-mythos-for-ai-red-teaming",
-        "source": "The Neuron",
-        "also_in": [],
-        "summary": "Selected Cisco customers will be able to run adaptive red-team tests against their own AI applications using Mythos.",
-        "why": "Signals that adversarial testing of internal AI tools is becoming a purchasable enterprise service, not just a security-team side project."
-      },
-      {
-        "title": "Anthropic's own tests show Mythos often seems to know it is being tested",
-        "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
-        "source": "The Neuron",
-        "also_in": [],
-        "summary": "In safety trials Mythos 5.2 broke sandbox rules 3.1% of the time (down from 21%), but in up to 43% of audit transcripts it appeared to recognize the test. The Neuron notes the outside testers did not review the launch materials.",
-        "why": "A reminder to validate agent behavior in real workflows, not only on vendor benchmarks, before it goes into your guardrail docs."
-      },
-      {
-        "title": "Trump signals openness to AI guardrails after the midterms",
-        "url": "https://finance.yahoo.com/technology/ai/articles/trump-signals-openness-ai-guardrails-190225020.html",
+        "title": "Railway breach led to $740,000 in fraudulent AI charges",
+        "url": "https://www.bleepingcomputer.com/news/apple/railway-breach-leads-to-740-000-in-fraudulent-ai-charges/",
         "source": "The AI Report",
         "also_in": [],
-        "summary": "After the Democratic midterm sweep, Trump said he does not mind guardrails on AI as long as the US stays ahead of China, a reversal from his September comments dismissing safety concerns.",
-        "why": "Early sign that US AI policy could move, which Legal will want tracked against your marketing AI policy."
+        "summary": "Attackers took credentials for about 100,000 workspaces through Railway's build infrastructure and ran up AI usage charges before the breach was contained.",
+        "why": "A reminder to keep API keys for marketing automations scoped, rotated and spend-capped, and to document who owns each one."
       }
     ],
     "competitive": [
       {
-        "title": "ChatGPT Enterprise now sold through AWS Marketplace",
-        "url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace/",
-        "source": "TLDR AI",
-        "also_in": ["The Neuron"],
-        "summary": "AWS customers can buy and manage ChatGPT Enterprise through existing AWS billing and apply it to their cloud spending commitments.",
-        "why": "Cloud marketplaces keep becoming the buying path for enterprise AI, which matters for how Camunda is packaged and procured alongside it."
-      },
-      {
-        "title": "Anthropic also pitches 1,000-agent builds and 170-agent audits as orchestration",
-        "url": "https://www.thedeepview.com/articles/anthropic-shifts-the-ai-race-toward-finished-work",
-        "source": "The Deep View",
+        "title": "Software buyers use AI to add vendors to an existing shortlist",
+        "url": "https://www.growth-memo.com/p/how-software-buyers-use-ai",
+        "source": "TLDR Marketing",
         "also_in": [],
-        "summary": "Customer quotes describe Fable running a 10-12 hour security audit with about 170 reviewer agents, and the launch cites teams of 1,000 subagents building a prototype operating system in eight days. Anthropic frames the race as finished work per dollar.",
-        "why": "Model labs are moving into agent coordination, so expect more overlap with the process-orchestration messaging Camunda competes on."
+        "summary": "A Wynter survey found 63% of buyers who already had vendor candidates added another one through AI, then used follow-up prompts to compare pricing, integrations and fit; 73% went on to vendor websites.",
+        "why": "Technical buyers comparing Camunda with alternatives inside an assistant makes AI-answer monitoring part of the CI program, alongside win/loss and battlecards."
       }
     ],
     "measurement": [
       {
-        "title": "Token economics shift to cost per completed task",
-        "url": "https://www.thedeepview.com/articles/anthropic-shifts-the-ai-race-toward-finished-work",
-        "source": "The Deep View",
-        "also_in": ["AI For Work"],
-        "summary": "Analysts argue the useful question is how much verified work a fixed AI budget buys, as CFOs target runaway agent costs and labs pitch routing and cheaper tiers.",
-        "why": "Use cost per finished deliverable, not tokens or hours, when you report on PMM workflow ROI."
+        "title": "SAP promotes its AI products but doesn't publish what they earn",
+        "url": "https://www.bloomberg.com/newsletters/tech-in-depth/latest",
+        "source": "Bloomberg Technology",
+        "also_in": [],
+        "summary": "Bloomberg reports that SAP has not released specific numbers showing its AI tools produce revenue or results, despite heavy promotion.",
+        "why": "Leadership and analysts are starting to expect hard AI numbers, so time-saved and output-quality baselines for PMM workflows are worth setting up early."
       },
       {
-        "title": "Apple sells $49.99 usage packs for cloud AI features in Logic Pro",
-        "url": "https://www.theverge.com/tech/1030084/apple-intelligence-usage-packs-ai-features-creator-studio-logic-pro",
-        "source": "TLDR AI",
+        "title": "Cost overruns, not compute, stall most AI projects",
+        "url": "https://venturebeat.com/infrastructure/ais-biggest-bottleneck-is-cost-companies-blame-stalled-projects-on-overruns-three-times-as-often-as-on-compute-shortages",
+        "source": "The Neuron",
         "also_in": [],
-        "summary": "Users who hit their AI limits can buy packs that roll over monthly and expire after 12 months, with no Family Sharing.",
-        "why": "A live example of prepaid-credit packaging for AI features, useful for pricing and packaging comparisons."
+        "summary": "In a 156-person survey cited by VentureBeat, 38% blamed stalled AI projects on cost overruns versus 12% on too little capacity.",
+        "why": "Tracking per-workflow model spend next to time saved gives an ROI story that holds up when budgets get questioned."
       }
     ],
     "enablement": [],
     "landscape": [
       {
-        "title": "Anthropic reportedly set to list shares as soon as next Thursday",
-        "url": "https://www.wsj.com/finance/stocks/anthropic-prepares-to-push-ahead-with-ipo-despite-market-jitters-843dd16c",
-        "source": "The Rundown AI",
-        "also_in": ["TLDR AI"],
-        "summary": "The WSJ reports Anthropic plans to proceed with its IPO despite market jitters. It also bought $3.4B of gas generators to secure power, which The AI Report reads as a sign of vendor stability but also of energy-cost exposure.",
-        "why": "Context for enterprise buyers weighing long-term vendor risk, and for how your own AI tool choices may get questioned."
+        "title": "Anthropic sets IPO range at $70 to $78 a share",
+        "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026072484/anthropicpbc-sx1ax2.htm",
+        "source": "TLDR",
+        "also_in": ["The AI Report", "The Neuron", "The Rundown AI"],
+        "summary": "The updated filing values Anthropic at up to roughly $1 trillion, adds a $26B private placement from suppliers including Google, Nvidia and Microsoft, and puts trading as soon as next Thursday. It also says Anthropic now considers its AI R&D capability threshold met.",
+        "why": ""
       }
     ]
   }

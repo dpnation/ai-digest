@@ -1,0 +1,113 @@
+{
+  "date": "2026-11-11",
+  "note": "",
+  "stats": {"newsletters_scanned": 14, "read_in_full": 6},
+  "top": [
+    {
+      "title": "Claude adds Sheets, Whiteboards and Meetings, and connectors now open apps inside Claude",
+      "url": "https://claude.com/resources/articles/more-ways-to-work-with-claude-sheets-whiteboards-and-interactive-connectors",
+      "source": "The Rundown AI",
+      "also_in": ["The Neuron"],
+      "summary": "Anthropic put Claude Sheets (formula-driven spreadsheets that export to Excel) and Whiteboards into beta, made Claude Data generally available, and announced Claude Meetings, which joins Google Meet calls and drafts plans and action items. Upgraded connectors now open tools like Adobe and Atlassian directly inside Claude.",
+      "why": "More PMM work (launch trackers, planning boards, meeting follow-ups) can now live in one Claude workspace, so it is worth mapping which current workflow steps could move there and which still need a separate tool."
+    },
+    {
+      "title": "OpenAI lets brands claim a ChatGPT profile and see how often they get mentioned",
+      "url": "https://openai.com/index/introducing-businesses-chatgpt/",
+      "source": "The Rundown AI",
+      "also_in": ["TLDR Marketing", "The AI Report", "The Neuron"],
+      "summary": "Businesses in ChatGPT is a beta hub where companies verify a profile, upload product details, and see counts of mentions, profile views and site clicks, plus 'discovery topics' that hint at gaps. Verified U.S. e-commerce and online-service companies can also add a labeled Business Agent that answers buyer questions, and paid ads can point to it.",
+      "why": "This is the first official read on AI-assistant visibility; once it opens beyond retail, Camunda's mention counts next to Pega, Appian or Temporal become a CI signal worth tracking."
+    },
+    {
+      "title": "Gemini 4 Carbon ships with /swarm, which turns one prompt into a team of agents",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+      "source": "TLDR",
+      "also_in": ["The Rundown AI", "The Neuron"],
+      "summary": "Google's new top model targets long-running agent work in coding, research and security, and is available via API, Gemini for Business and Ultra plans. Introductory pricing is $2/$10 per million input/output tokens until November 30, then it doubles.",
+      "why": "A frontier lab packaging multi-agent swarms as a product feature feeds Camunda's orchestration story: someone still has to coordinate, govern and audit those agents across systems."
+    }
+  ],
+  "try_this": {
+    "title": "Two-pass plain-language edit for AI-sounding drafts",
+    "url": "https://github.com/Dodaios/ste80-humanizer",
+    "how": "Run one PMM draft through a prompt that removes common AI tells, then rewrites toward short, active, one-idea sentences while keeping every fact, and asks for the three sentences that still carry too much. Compare against your current voice-pass step to see if it belongs in the copy workflow."
+  },
+  "sections": {
+    "workflows": [
+      {
+        "title": "Adobe opens Creative Cloud to outside agents through MCP",
+        "url": "https://blog.adobe.com/en/publish/2026/11/10/explore-new-ways-create-across-creative-cloud-adobe-firefly-while-advancing-craft-precision-choice-control",
+        "source": "The Rundown AI",
+        "also_in": ["The AI Report", "The Neuron"],
+        "summary": "Adobe previewed MCP connector tools that let ChatGPT, Claude and Gemini work with Photoshop, Illustrator and Premiere files (arriving early 2027), plus Firefly Graph, a beta builder for repeatable, shareable AI workflows.",
+        "why": "Asset production could become a step inside a Claude-run launch workflow instead of a handoff to design, which is worth planning for now."
+      },
+      {
+        "title": "Chrome's Modern Web Guidance shows how to ship agent skills with reviews and evals",
+        "url": "https://developer.chrome.com/blog/modern-web-guidance-v1",
+        "source": "TLDR",
+        "also_in": [],
+        "summary": "Google's 1.0 release packages web-platform expertise as skills for coding agents, with expert human review of every guide and evaluation coverage across all of them; Firefox and Edge now contribute.",
+        "why": "It is a public example of treating skills like product releases (versioned, reviewed, evaluated), a pattern to copy for the PMM skill library."
+      }
+    ],
+    "governance": [
+      {
+        "title": "Investors back tools that check agent actions before they run",
+        "url": "https://venturebeat.com/business/bay-emerges-from-stealth-with-50m-after-fortune-100-companies-used-its-platform-to-triple-autonomous-ai-agent-use/",
+        "source": "The AI Report",
+        "also_in": ["The Neuron"],
+        "summary": "Bay came out of stealth with $50M for a layer that evaluates agent actions across endpoints and cloud before execution, while Mercor raised $750M to benchmark agents against enterprise-specific standards.",
+        "why": "Pre-execution checks and custom evals are the controls Security and IT will ask about as marketing agents start taking actions, not just drafting text."
+      },
+      {
+        "title": "Railway breach led to $740,000 in fraudulent AI charges",
+        "url": "https://www.bleepingcomputer.com/news/apple/railway-breach-leads-to-740-000-in-fraudulent-ai-charges/",
+        "source": "The AI Report",
+        "also_in": [],
+        "summary": "Attackers took credentials for about 100,000 workspaces through Railway's build infrastructure and ran up AI usage charges before the breach was contained.",
+        "why": "A reminder to keep API keys for marketing automations scoped, rotated and spend-capped, and to document who owns each one."
+      }
+    ],
+    "competitive": [
+      {
+        "title": "Software buyers use AI to add vendors to an existing shortlist",
+        "url": "https://www.growth-memo.com/p/how-software-buyers-use-ai",
+        "source": "TLDR Marketing",
+        "also_in": [],
+        "summary": "A Wynter survey found 63% of buyers who already had vendor candidates added another one through AI, then used follow-up prompts to compare pricing, integrations and fit; 73% went on to vendor websites.",
+        "why": "Technical buyers comparing Camunda with alternatives inside an assistant makes AI-answer monitoring part of the CI program, alongside win/loss and battlecards."
+      }
+    ],
+    "measurement": [
+      {
+        "title": "SAP promotes its AI products but doesn't publish what they earn",
+        "url": "https://www.bloomberg.com/newsletters/tech-in-depth/latest",
+        "source": "Bloomberg Technology",
+        "also_in": [],
+        "summary": "Bloomberg reports that SAP has not released specific numbers showing its AI tools produce revenue or results, despite heavy promotion.",
+        "why": "Leadership and analysts are starting to expect hard AI numbers, so time-saved and output-quality baselines for PMM workflows are worth setting up early."
+      },
+      {
+        "title": "Cost overruns, not compute, stall most AI projects",
+        "url": "https://venturebeat.com/infrastructure/ais-biggest-bottleneck-is-cost-companies-blame-stalled-projects-on-overruns-three-times-as-often-as-on-compute-shortages",
+        "source": "The Neuron",
+        "also_in": [],
+        "summary": "In a 156-person survey cited by VentureBeat, 38% blamed stalled AI projects on cost overruns versus 12% on too little capacity.",
+        "why": "Tracking per-workflow model spend next to time saved gives an ROI story that holds up when budgets get questioned."
+      }
+    ],
+    "enablement": [],
+    "landscape": [
+      {
+        "title": "Anthropic sets IPO range at $70 to $78 a share",
+        "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026072484/anthropicpbc-sx1ax2.htm",
+        "source": "TLDR",
+        "also_in": ["The AI Report", "The Neuron", "The Rundown AI"],
+        "summary": "The updated filing values Anthropic at up to roughly $1 trillion, adds a $26B private placement from suppliers including Google, Nvidia and Microsoft, and puts trading as soon as next Thursday. It also says Anthropic now considers its AI R&D capability threshold met.",
+        "why": ""
+      }
+    ]
+  }
+}
