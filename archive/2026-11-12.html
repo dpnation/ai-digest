@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily AI Digest — November 12, 2026</title>
+  <link rel="icon" type="image/png" href="../favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* dpnation brand: Ink #0D0D0D, Canvas #F7F6F3, Mist #EBEBEB, Smoke #7A7A7A, Spark #FF8C69 */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+           background: #F7F6F3; color: #0D0D0D; line-height: 1.6; }
+    a { color: inherit; }
+
+    header { background: #0D0D0D; color: #FFFFFF; padding: 2.25rem 2rem 1.75rem; border-bottom: 3px solid #FF8C69; }
+    .header-inner { max-width: 1100px; margin: 0 auto; }
+    .header-eyebrow { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.72rem; font-weight: 500;
+                       letter-spacing: 0.14em; text-transform: lowercase; color: #FF8C69; margin-bottom: 0.5rem; }
+    header h1 { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 2rem; font-weight: 800;
+                 letter-spacing: -0.01em; margin-bottom: 0.3rem; }
+    .header-date { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.8rem; color: #EBEBEB; }
+
+    main { max-width: 1100px; margin: 2.25rem auto; padding: 0 1.5rem; }
+    .slow { font-size: 0.9rem; color: #7A7A7A; margin-bottom: 1.5rem; }
+
+    .topic-section { margin-bottom: 2.75rem; }
+    .topic-heading { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 1.05rem; font-weight: 700;
+                      border-bottom: 1px solid #EBEBEB; padding-bottom: 0.5rem; margin-bottom: 1.1rem; }
+
+    /* Top stories */
+    .top-list { display: flex; flex-direction: column; gap: 1rem; }
+    .top-card { background: #FFFFFF; border: 1px solid #EBEBEB; border-left: 4px solid #FF8C69; border-radius: 8px;
+                 padding: 1.25rem 1.4rem; display: flex; gap: 1.2rem; }
+    .top-num { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 1.4rem; font-weight: 500;
+                color: #FF8C69; line-height: 1.2; }
+    .top-body { display: flex; flex-direction: column; gap: 0.45rem; flex: 1; }
+    .top-title { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 1.15rem; font-weight: 700; line-height: 1.35; }
+    .top-title a, .card-title a, .try h3 a { text-decoration: none; }
+    .top-title a:hover, .card-title a:hover, .try h3 a:hover { color: #FF8C69; }
+    .what { font-size: 0.92rem; }
+    .why { font-size: 0.88rem; color: #3A3A3A; background: #F7F6F3; border-radius: 6px; padding: 0.55rem 0.75rem; }
+    .why-label, .try-label { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.66rem; letter-spacing: 0.08em;
+                  text-transform: lowercase; color: #FF8C69; display: block; margin-bottom: 0.1rem; }
+
+    /* Try this */
+    .try { background: #0D0D0D; color: #FFFFFF; border-radius: 8px; padding: 1.2rem 1.4rem; margin-bottom: 2.75rem; }
+    .try h3 { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 1.02rem; margin-bottom: 0.3rem; }
+    .try p { font-size: 0.9rem; color: #EBEBEB; }
+
+    /* Cards */
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
+    .card { background: #FFFFFF; border-radius: 8px; padding: 1.15rem 1.3rem 1rem; border: 1px solid #EBEBEB;
+             display: flex; flex-direction: column; gap: 0.45rem;
+             transition: box-shadow 0.15s ease, transform 0.15s ease, border-color 0.15s ease; }
+    .card:hover { box-shadow: 0 6px 18px rgba(13,13,13,0.08); border-color: #FF8C69; transform: translateY(-1px); }
+    .card-source { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.68rem; font-weight: 500;
+                    letter-spacing: 0.08em; text-transform: lowercase; color: #7A7A7A; }
+    .also { color: #A0A0A0; }
+    .card-title { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 0.97rem; font-weight: 700; line-height: 1.4; }
+    .card-summary { font-size: 0.85rem; color: #4A4A4A; line-height: 1.55; }
+    .card-why { font-size: 0.82rem; color: #7A7A7A; line-height: 1.5; flex: 1; border-left: 2px solid #FF8C69; padding-left: 0.6rem; }
+    .read-more { font-size: 0.8rem; font-weight: 600; color: #0D0D0D; text-decoration: none;
+                  border-bottom: 2px solid #FF8C69; align-self: flex-start; margin-top: auto; }
+    .read-more:hover { color: #FF8C69; }
+
+    footer { text-align: center; padding: 2rem 1rem; font-family: "JetBrains Mono", ui-monospace, monospace;
+              font-size: 0.75rem; color: #7A7A7A; border-top: 1px solid #EBEBEB; margin-top: 1rem; }
+    footer a { color: #0D0D0D; text-decoration: none; border-bottom: 1px solid #FF8C69; }
+    .archive { margin-top: 0.6rem; }
+
+    @media (max-width: 600px) {
+      .cards-grid { grid-template-columns: 1fr; }
+      header h1 { font-size: 1.5rem; }
+      .top-card { flex-direction: column; gap: 0.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="header-eyebrow">dpnation · ai for pmm workflows</div>
+      <h1><a href="../index.html" style="text-decoration:none">Daily AI Digest</a></h1>
+      <div class="header-date">Thursday, November 12, 2026 · 13 stories · 17 newsletters read</div>
+    </div>
+  </header>
+
+  <main>
+    
+      <section class="topic-section">
+        <h2 class="topic-heading">🔝 Top stories</h2>
+        <div class="top-list">
+        <article class="top-card">
+          <div class="top-num">01</div>
+          <div class="top-body">
+            <div class="card-source">TLDR AI <span class="also">also in The Code, The Neuron, The Rundown AI</span></div>
+            <h3 class="top-title"><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/" target="_blank" rel="noopener">Cheap decision models start replacing frontier LLMs for classification and rubric scoring</a></h3>
+            <p class="what">Google launched the Gemini Decisions API, which answers up to 1,000 yes/no, multiple-choice or rubric questions about text, images, audio, video or PDFs in one pass for $0.10 per 2M input tokens, with free output. Separately, Amazon swapped Claude Sonnet for its own Strands Decider model on internal ticket labeling, matching accuracy at about 98% lower cost while running both side by side so it could roll back in 45 seconds.</p>
+            <p class="why"><span class="why-label">why it matters</span>Many PMM workflow steps are really classification or rubric checks (tagging CI signals, scoring drafts against a messaging checklist), so routing those to a decision model could cut cost and add a consistent, auditable QA gate.</p>
+            <a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </div>
+        </article>
+        <article class="top-card">
+          <div class="top-num">02</div>
+          <div class="top-body">
+            <div class="card-source">The Code</div>
+            <h3 class="top-title"><a href="https://archive.codenewsletter.ai/2119332146485891501" target="_blank" rel="noopener">Managing coding agents looks a lot like managing a team, and the playbook transfers</a></h3>
+            <p class="what">An essay by Anthropic&#x27;s Addy Osmani lays out how to work with agents: give each one a way to check its own work, state the goal and definition of done, write any correction you make twice into CLAUDE.md or a shared skill, and track quality and rework instead of the share of AI-written output.</p>
+            <p class="why"><span class="why-label">why it matters</span>This is a ready-made operating standard for the PMM skills library: a definition of done per workflow, a rule for when a fix becomes a skill update, and rework rate as the quality metric.</p>
+            <a href="https://archive.codenewsletter.ai/2119332146485891501" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </div>
+        </article>
+        <article class="top-card">
+          <div class="top-num">03</div>
+          <div class="top-body">
+            <div class="card-source">The Rundown AI</div>
+            <h3 class="top-title"><a href="https://therundownai.beehiiv.com/p/ai-s-biggest-ceo-may-be-on-his-way-out" target="_blank" rel="noopener">Claude Projects can now write their own knowledge files</a></h3>
+            <p class="what">Claude Projects on the web can now save research and summaries as new knowledge files, so a scheduled task can gather information and add it to a shared Project over time instead of needing a local setup.</p>
+            <p class="why"><span class="why-label">why it matters</span>A scheduled competitor-watch task that saves weekly findings into a shared Project gives the CI program a running, team-visible record that later prompts and battlecard updates can draw on.</p>
+            <a href="https://therundownai.beehiiv.com/p/ai-s-biggest-ceo-may-be-on-his-way-out" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="try">
+        <div class="try-label">🛠️ try this</div>
+        <h3><a href="https://www.theneurondaily.com/p/deepmind-launched-alphagenome-2-for-dna-a377" target="_blank" rel="noopener">Assumption audit for AI-generated analysis</a></h3>
+        <p>After Claude produces an analysis (win-rate summary, adoption numbers, competitor comparison), ask it to list every definition and assumption it used, then paste only your original request and that list into a fresh chat and ask where each term is narrower, broader or different from what you asked. Try it on one recurring report this week and see if it catches a quiet scope change.</p>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">🧩 Workflows, Skills &amp; Agents</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">TLDR Marketing</div>
+            <h3 class="card-title"><a href="https://www.growthunhinged.com/p/5-gtm-plays-working-right-now" target="_blank" rel="noopener">incident.io replaced its ads agency with an AI skill for ABM launches</a></h3>
+            <p class="card-summary">A roundup of working GTM plays says incident.io cut ABM campaign launches from 2-3 days to about 3 minutes with an AI skill, and Vercel doubled its field event cadence with an internal app that automates invites, seating and follow-up.</p>
+            <p class="card-why">These are concrete, named examples of marketing teams automating the manual work around channels that already convert, useful as benchmarks when scoping the next PMM workflow.</p>
+            <a href="https://www.growthunhinged.com/p/5-gtm-plays-working-right-now" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">The Rundown AI <span class="also">· also in The Neuron</span></div>
+            <h3 class="card-title"><a href="https://x.ai/news/grok-bot-1-0" target="_blank" rel="noopener">Grok Bot 1.0 puts shared agent teammates in Slack, Teams and meetings</a></h3>
+            <p class="card-summary">xAI moved Grok Bot out of beta: teams can share bots that join video calls, Slack and Microsoft Teams, learn how the team works, and flag unfinished work on their own.</p>
+            <p class="card-why">Team-shared agents that live in chat and meetings are becoming standard across vendors, which shapes how a PMM &#x27;AI concierge&#x27; should be delivered.</p>
+            <a href="https://x.ai/news/grok-bot-1-0" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">The Neuron</div>
+            <h3 class="card-title"><a href="https://x.com/MSFTCopilot/status/2120625304712499434" target="_blank" rel="noopener">Claude Fable 5.2 now available in Microsoft Copilot Cowork and Copilot Studio</a></h3>
+            <p class="card-summary">Microsoft added Anthropic&#x27;s newest model to Copilot Cowork and Copilot Studio, so Copilot users can now pick among models from three rival labs.</p>
+            <p class="card-why">If parts of the org are on Microsoft 365, Claude-based workflows may be portable into Copilot Studio without a separate Claude seat.</p>
+            <a href="https://x.com/MSFTCopilot/status/2120625304712499434" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">🛡️ AI Guardrails &amp; Governance</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">The AI Report</div>
+            <h3 class="card-title"><a href="https://venturebeat.com/security/attackers-breached-the-fireworks-ai-storage-where-notion-ai-chats-sat-outside-zero-data-retention" target="_blank" rel="noopener">Fireworks AI breach exposed Notion AI chats despite zero-data-retention claims</a></h3>
+            <p class="card-summary">Attackers who reached Fireworks AI&#x27;s stored batch inference data exposed Notion AI chat transcripts for under 1% of workspaces, even though the data was covered by &#x27;zero data retention&#x27; terms.</p>
+            <p class="card-why">A useful case for Legal and Security reviews: ask vendors where batch and async jobs are stored, not only whether real-time prompts are retained.</p>
+            <a href="https://venturebeat.com/security/attackers-breached-the-fireworks-ai-storage-where-notion-ai-chats-sat-outside-zero-data-retention" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">The Neuron <span class="also">· also in The Rundown AI</span></div>
+            <h3 class="card-title"><a href="https://www.united.com/en/us/newsroom/announcements/cision-125496" target="_blank" rel="noopener">United Airlines blocks unauthorized AI agents from booking</a></h3>
+            <p class="card-summary">United restricted third-party AI agents from its site, app and outside booking channels, citing exposed logins, accidental purchases and rules that require a human sign-off; Walmart is taking the opposite path with permissioned agent profiles and spending limits.</p>
+            <p class="card-why">Companies are now choosing between blocking agents and granting them scoped permissions with human approval, a live example of the human-in-the-loop control story Camunda tells.</p>
+            <a href="https://www.united.com/en/us/newsroom/announcements/cision-125496" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">🎯 Competitive Intel &amp; Orchestration Market</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">The Neuron</div>
+            <h3 class="card-title"><a href="https://nod.n8n.io/" target="_blank" rel="noopener">n8n previews Nod, a self-hosted personal agent</a></h3>
+            <p class="card-summary">n8n released Nod as a free, open-source research preview: a personal agent that runs on your own machine or server and handles tasks like chasing invoices, canceling trials and writing pre-call briefs.</p>
+            <p class="card-why">CI signal: a workflow automation neighbor is moving from builder tooling into packaged personal agents, worth tracking for battlecards.</p>
+            <a href="https://nod.n8n.io/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">The AI Report (sponsored)</div>
+            <h3 class="card-title"><a href="https://aws.amazon.com/blogs/awsforsap/how-rivian-accelerated-finance-operations-with-ai-agents-on-amazon-bedrock/" target="_blank" rel="noopener">Rivian used agents on Bedrock to clear manual ERP accrual work</a></h3>
+            <p class="card-summary">AWS describes how Rivian&#x27;s finance team replaced 15+ days per cycle of manual purchase-order accrual work with agents that read plain-language SOPs and route decisions by dollar threshold.</p>
+            <p class="card-why">A reference story for agentic process automation in finance, the kind of SOP-driven, threshold-routed process Camunda positions orchestration for.</p>
+            <a href="https://aws.amazon.com/blogs/awsforsap/how-rivian-accelerated-finance-operations-with-ai-agents-on-amazon-bedrock/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">📊 Measuring AI Impact</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">The AI Report</div>
+            <h3 class="card-title"><a href="https://www.themediastack.co.uk/p/ai-can-edit-but-it-cannot-be-the" target="_blank" rel="noopener">Le Monde: ChatGPT referrals convert to paid at 260x the rate of Google Discover</a></h3>
+            <p class="card-summary">Le Monde&#x27;s CEO says readers who arrive via ChatGPT citations become paying subscribers at about 260 times the rate of Google Discover traffic, so the publisher treats AI citations as a distribution channel.</p>
+            <p class="card-why">Supports tracking AI-assistant referrals as their own channel with conversion quality, not just volume, in marketing dashboards.</p>
+            <a href="https://www.themediastack.co.uk/p/ai-can-edit-but-it-cannot-be-the" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">🌐 Frontier Labs &amp; AI Landscape</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">The AI Report <span class="also">· also in The Rundown AI, TLDR</span></div>
+            <h3 class="card-title"><a href="https://techcrunch.com/2026/11/11/nvidias-stock-drops-as-board-reportedly-preps-to-oust-ceo-jensen-huang/" target="_blank" rel="noopener">Nvidia board weighs replacing CEO Jensen Huang</a></h3>
+            <p class="card-summary">Nvidia&#x27;s board is reportedly preparing to remove Huang and has hired an outside firm to find candidates after reports of two affairs; the stock fell about 8% after hours.</p>
+            
+            <a href="https://techcrunch.com/2026/11/11/nvidias-stock-drops-as-board-reportedly-preps-to-oust-ceo-jensen-huang/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">The AI Report <span class="also">· also in The Rundown AI</span></div>
+            <h3 class="card-title"><a href="https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time/" target="_blank" rel="noopener">OpenAI posts its first $10B quarter</a></h3>
+            <p class="card-summary">OpenAI&#x27;s Q3 revenue reportedly topped $10B, up about 50% from Q2, driven by enterprise adoption of its models and agent tools.</p>
+            
+            <a href="https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+  </main>
+
+  <footer>
+    curated daily by <a href="https://dpnation.com" target="_blank" rel="noopener">dpnation</a> · November 12, 2026
+    <div class="archive">past days: <a href="../archive/2026-11-11.html">2026-11-11</a> · <a href="../archive/2026-11-10.html">2026-11-10</a> · <a href="../archive/2026-11-09.html">2026-11-09</a> · <a href="../archive/2026-11-08.html">2026-11-08</a> · <a href="../archive/index.html">all briefings →</a></div>
+  </footer>
+</body>
+</html>

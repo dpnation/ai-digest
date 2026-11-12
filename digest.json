@@ -1,111 +1,127 @@
 {
-  "date": "2026-11-11",
+  "date": "2026-11-12",
   "note": "",
-  "stats": {"newsletters_scanned": 14, "read_in_full": 6},
+  "stats": {"newsletters_scanned": 17, "read_in_full": 8},
   "top": [
     {
-      "title": "Claude adds Sheets, Whiteboards and Meetings, and connectors now open apps inside Claude",
-      "url": "https://claude.com/resources/articles/more-ways-to-work-with-claude-sheets-whiteboards-and-interactive-connectors",
-      "source": "The Rundown AI",
-      "also_in": ["The Neuron"],
-      "summary": "Anthropic put Claude Sheets (formula-driven spreadsheets that export to Excel) and Whiteboards into beta, made Claude Data generally available, and announced Claude Meetings, which joins Google Meet calls and drafts plans and action items. Upgraded connectors now open tools like Adobe and Atlassian directly inside Claude.",
-      "why": "More PMM work (launch trackers, planning boards, meeting follow-ups) can now live in one Claude workspace, so it is worth mapping which current workflow steps could move there and which still need a separate tool."
+      "title": "Cheap decision models start replacing frontier LLMs for classification and rubric scoring",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+      "source": "TLDR AI",
+      "also_in": ["The Code", "The Neuron", "The Rundown AI"],
+      "summary": "Google launched the Gemini Decisions API, which answers up to 1,000 yes/no, multiple-choice or rubric questions about text, images, audio, video or PDFs in one pass for $0.10 per 2M input tokens, with free output. Separately, Amazon swapped Claude Sonnet for its own Strands Decider model on internal ticket labeling, matching accuracy at about 98% lower cost while running both side by side so it could roll back in 45 seconds.",
+      "why": "Many PMM workflow steps are really classification or rubric checks (tagging CI signals, scoring drafts against a messaging checklist), so routing those to a decision model could cut cost and add a consistent, auditable QA gate."
     },
     {
-      "title": "OpenAI lets brands claim a ChatGPT profile and see how often they get mentioned",
-      "url": "https://openai.com/index/introducing-businesses-chatgpt/",
-      "source": "The Rundown AI",
-      "also_in": ["TLDR Marketing", "The AI Report", "The Neuron"],
-      "summary": "Businesses in ChatGPT is a beta hub where companies verify a profile, upload product details, and see counts of mentions, profile views and site clicks, plus 'discovery topics' that hint at gaps. Verified U.S. e-commerce and online-service companies can also add a labeled Business Agent that answers buyer questions, and paid ads can point to it.",
-      "why": "This is the first official read on AI-assistant visibility; once it opens beyond retail, Camunda's mention counts next to Pega, Appian or Temporal become a CI signal worth tracking."
+      "title": "Managing coding agents looks a lot like managing a team, and the playbook transfers",
+      "url": "https://archive.codenewsletter.ai/2119332146485891501",
+      "source": "The Code",
+      "also_in": [],
+      "summary": "An essay by Anthropic's Addy Osmani lays out how to work with agents: give each one a way to check its own work, state the goal and definition of done, write any correction you make twice into CLAUDE.md or a shared skill, and track quality and rework instead of the share of AI-written output.",
+      "why": "This is a ready-made operating standard for the PMM skills library: a definition of done per workflow, a rule for when a fix becomes a skill update, and rework rate as the quality metric."
     },
     {
-      "title": "Gemini 4 Carbon ships with /swarm, which turns one prompt into a team of agents",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
-      "source": "TLDR",
-      "also_in": ["The Rundown AI", "The Neuron"],
-      "summary": "Google's new top model targets long-running agent work in coding, research and security, and is available via API, Gemini for Business and Ultra plans. Introductory pricing is $2/$10 per million input/output tokens until November 30, then it doubles.",
-      "why": "A frontier lab packaging multi-agent swarms as a product feature feeds Camunda's orchestration story: someone still has to coordinate, govern and audit those agents across systems."
+      "title": "Claude Projects can now write their own knowledge files",
+      "url": "https://therundownai.beehiiv.com/p/ai-s-biggest-ceo-may-be-on-his-way-out",
+      "source": "The Rundown AI",
+      "also_in": [],
+      "summary": "Claude Projects on the web can now save research and summaries as new knowledge files, so a scheduled task can gather information and add it to a shared Project over time instead of needing a local setup.",
+      "why": "A scheduled competitor-watch task that saves weekly findings into a shared Project gives the CI program a running, team-visible record that later prompts and battlecard updates can draw on."
     }
   ],
   "try_this": {
-    "title": "Two-pass plain-language edit for AI-sounding drafts",
-    "url": "https://github.com/Dodaios/ste80-humanizer",
-    "how": "Run one PMM draft through a prompt that removes common AI tells, then rewrites toward short, active, one-idea sentences while keeping every fact, and asks for the three sentences that still carry too much. Compare against your current voice-pass step to see if it belongs in the copy workflow."
+    "title": "Assumption audit for AI-generated analysis",
+    "url": "https://www.theneurondaily.com/p/deepmind-launched-alphagenome-2-for-dna-a377",
+    "how": "After Claude produces an analysis (win-rate summary, adoption numbers, competitor comparison), ask it to list every definition and assumption it used, then paste only your original request and that list into a fresh chat and ask where each term is narrower, broader or different from what you asked. Try it on one recurring report this week and see if it catches a quiet scope change."
   },
   "sections": {
     "workflows": [
       {
-        "title": "Adobe opens Creative Cloud to outside agents through MCP",
-        "url": "https://blog.adobe.com/en/publish/2026/11/10/explore-new-ways-create-across-creative-cloud-adobe-firefly-while-advancing-craft-precision-choice-control",
-        "source": "The Rundown AI",
-        "also_in": ["The AI Report", "The Neuron"],
-        "summary": "Adobe previewed MCP connector tools that let ChatGPT, Claude and Gemini work with Photoshop, Illustrator and Premiere files (arriving early 2027), plus Firefly Graph, a beta builder for repeatable, shareable AI workflows.",
-        "why": "Asset production could become a step inside a Claude-run launch workflow instead of a handoff to design, which is worth planning for now."
+        "title": "incident.io replaced its ads agency with an AI skill for ABM launches",
+        "url": "https://www.growthunhinged.com/p/5-gtm-plays-working-right-now",
+        "source": "TLDR Marketing",
+        "also_in": [],
+        "summary": "A roundup of working GTM plays says incident.io cut ABM campaign launches from 2-3 days to about 3 minutes with an AI skill, and Vercel doubled its field event cadence with an internal app that automates invites, seating and follow-up.",
+        "why": "These are concrete, named examples of marketing teams automating the manual work around channels that already convert, useful as benchmarks when scoping the next PMM workflow."
       },
       {
-        "title": "Chrome's Modern Web Guidance shows how to ship agent skills with reviews and evals",
-        "url": "https://developer.chrome.com/blog/modern-web-guidance-v1",
-        "source": "TLDR",
+        "title": "Grok Bot 1.0 puts shared agent teammates in Slack, Teams and meetings",
+        "url": "https://x.ai/news/grok-bot-1-0",
+        "source": "The Rundown AI",
+        "also_in": ["The Neuron"],
+        "summary": "xAI moved Grok Bot out of beta: teams can share bots that join video calls, Slack and Microsoft Teams, learn how the team works, and flag unfinished work on their own.",
+        "why": "Team-shared agents that live in chat and meetings are becoming standard across vendors, which shapes how a PMM 'AI concierge' should be delivered."
+      },
+      {
+        "title": "Claude Fable 5.2 now available in Microsoft Copilot Cowork and Copilot Studio",
+        "url": "https://x.com/MSFTCopilot/status/2120625304712499434",
+        "source": "The Neuron",
         "also_in": [],
-        "summary": "Google's 1.0 release packages web-platform expertise as skills for coding agents, with expert human review of every guide and evaluation coverage across all of them; Firefox and Edge now contribute.",
-        "why": "It is a public example of treating skills like product releases (versioned, reviewed, evaluated), a pattern to copy for the PMM skill library."
+        "summary": "Microsoft added Anthropic's newest model to Copilot Cowork and Copilot Studio, so Copilot users can now pick among models from three rival labs.",
+        "why": "If parts of the org are on Microsoft 365, Claude-based workflows may be portable into Copilot Studio without a separate Claude seat."
       }
     ],
     "governance": [
       {
-        "title": "Investors back tools that check agent actions before they run",
-        "url": "https://venturebeat.com/business/bay-emerges-from-stealth-with-50m-after-fortune-100-companies-used-its-platform-to-triple-autonomous-ai-agent-use/",
-        "source": "The AI Report",
-        "also_in": ["The Neuron"],
-        "summary": "Bay came out of stealth with $50M for a layer that evaluates agent actions across endpoints and cloud before execution, while Mercor raised $750M to benchmark agents against enterprise-specific standards.",
-        "why": "Pre-execution checks and custom evals are the controls Security and IT will ask about as marketing agents start taking actions, not just drafting text."
-      },
-      {
-        "title": "Railway breach led to $740,000 in fraudulent AI charges",
-        "url": "https://www.bleepingcomputer.com/news/apple/railway-breach-leads-to-740-000-in-fraudulent-ai-charges/",
+        "title": "Fireworks AI breach exposed Notion AI chats despite zero-data-retention claims",
+        "url": "https://venturebeat.com/security/attackers-breached-the-fireworks-ai-storage-where-notion-ai-chats-sat-outside-zero-data-retention",
         "source": "The AI Report",
         "also_in": [],
-        "summary": "Attackers took credentials for about 100,000 workspaces through Railway's build infrastructure and ran up AI usage charges before the breach was contained.",
-        "why": "A reminder to keep API keys for marketing automations scoped, rotated and spend-capped, and to document who owns each one."
+        "summary": "Attackers who reached Fireworks AI's stored batch inference data exposed Notion AI chat transcripts for under 1% of workspaces, even though the data was covered by 'zero data retention' terms.",
+        "why": "A useful case for Legal and Security reviews: ask vendors where batch and async jobs are stored, not only whether real-time prompts are retained."
+      },
+      {
+        "title": "United Airlines blocks unauthorized AI agents from booking",
+        "url": "https://www.united.com/en/us/newsroom/announcements/cision-125496",
+        "source": "The Neuron",
+        "also_in": ["The Rundown AI"],
+        "summary": "United restricted third-party AI agents from its site, app and outside booking channels, citing exposed logins, accidental purchases and rules that require a human sign-off; Walmart is taking the opposite path with permissioned agent profiles and spending limits.",
+        "why": "Companies are now choosing between blocking agents and granting them scoped permissions with human approval, a live example of the human-in-the-loop control story Camunda tells."
       }
     ],
     "competitive": [
       {
-        "title": "Software buyers use AI to add vendors to an existing shortlist",
-        "url": "https://www.growth-memo.com/p/how-software-buyers-use-ai",
-        "source": "TLDR Marketing",
+        "title": "n8n previews Nod, a self-hosted personal agent",
+        "url": "https://nod.n8n.io/",
+        "source": "The Neuron",
         "also_in": [],
-        "summary": "A Wynter survey found 63% of buyers who already had vendor candidates added another one through AI, then used follow-up prompts to compare pricing, integrations and fit; 73% went on to vendor websites.",
-        "why": "Technical buyers comparing Camunda with alternatives inside an assistant makes AI-answer monitoring part of the CI program, alongside win/loss and battlecards."
+        "summary": "n8n released Nod as a free, open-source research preview: a personal agent that runs on your own machine or server and handles tasks like chasing invoices, canceling trials and writing pre-call briefs.",
+        "why": "CI signal: a workflow automation neighbor is moving from builder tooling into packaged personal agents, worth tracking for battlecards."
+      },
+      {
+        "title": "Rivian used agents on Bedrock to clear manual ERP accrual work",
+        "url": "https://aws.amazon.com/blogs/awsforsap/how-rivian-accelerated-finance-operations-with-ai-agents-on-amazon-bedrock/",
+        "source": "The AI Report (sponsored)",
+        "also_in": [],
+        "summary": "AWS describes how Rivian's finance team replaced 15+ days per cycle of manual purchase-order accrual work with agents that read plain-language SOPs and route decisions by dollar threshold.",
+        "why": "A reference story for agentic process automation in finance, the kind of SOP-driven, threshold-routed process Camunda positions orchestration for."
       }
     ],
     "measurement": [
       {
-        "title": "SAP promotes its AI products but doesn't publish what they earn",
-        "url": "https://www.bloomberg.com/newsletters/tech-in-depth/latest",
-        "source": "Bloomberg Technology",
+        "title": "Le Monde: ChatGPT referrals convert to paid at 260x the rate of Google Discover",
+        "url": "https://www.themediastack.co.uk/p/ai-can-edit-but-it-cannot-be-the",
+        "source": "The AI Report",
         "also_in": [],
-        "summary": "Bloomberg reports that SAP has not released specific numbers showing its AI tools produce revenue or results, despite heavy promotion.",
-        "why": "Leadership and analysts are starting to expect hard AI numbers, so time-saved and output-quality baselines for PMM workflows are worth setting up early."
-      },
-      {
-        "title": "Cost overruns, not compute, stall most AI projects",
-        "url": "https://venturebeat.com/infrastructure/ais-biggest-bottleneck-is-cost-companies-blame-stalled-projects-on-overruns-three-times-as-often-as-on-compute-shortages",
-        "source": "The Neuron",
-        "also_in": [],
-        "summary": "In a 156-person survey cited by VentureBeat, 38% blamed stalled AI projects on cost overruns versus 12% on too little capacity.",
-        "why": "Tracking per-workflow model spend next to time saved gives an ROI story that holds up when budgets get questioned."
+        "summary": "Le Monde's CEO says readers who arrive via ChatGPT citations become paying subscribers at about 260 times the rate of Google Discover traffic, so the publisher treats AI citations as a distribution channel.",
+        "why": "Supports tracking AI-assistant referrals as their own channel with conversion quality, not just volume, in marketing dashboards."
       }
     ],
     "enablement": [],
     "landscape": [
       {
-        "title": "Anthropic sets IPO range at $70 to $78 a share",
-        "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026072484/anthropicpbc-sx1ax2.htm",
-        "source": "TLDR",
-        "also_in": ["The AI Report", "The Neuron", "The Rundown AI"],
-        "summary": "The updated filing values Anthropic at up to roughly $1 trillion, adds a $26B private placement from suppliers including Google, Nvidia and Microsoft, and puts trading as soon as next Thursday. It also says Anthropic now considers its AI R&D capability threshold met.",
+        "title": "Nvidia board weighs replacing CEO Jensen Huang",
+        "url": "https://techcrunch.com/2026/11/11/nvidias-stock-drops-as-board-reportedly-preps-to-oust-ceo-jensen-huang/",
+        "source": "The AI Report",
+        "also_in": ["The Rundown AI", "TLDR"],
+        "summary": "Nvidia's board is reportedly preparing to remove Huang and has hired an outside firm to find candidates after reports of two affairs; the stock fell about 8% after hours.",
+        "why": ""
+      },
+      {
+        "title": "OpenAI posts its first $10B quarter",
+        "url": "https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time/",
+        "source": "The AI Report",
+        "also_in": ["The Rundown AI"],
+        "summary": "OpenAI's Q3 revenue reportedly topped $10B, up about 50% from Q2, driven by enterprise adoption of its models and agent tools.",
         "why": ""
       }
     ]
