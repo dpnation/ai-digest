@@ -1,128 +1,78 @@
 {
-  "date": "2026-11-12",
-  "note": "",
+  "date": "2026-11-14",
+  "note": "Lighter Saturday edition: most newsletters were Friday sends or sponsored specials.",
   "stats": {"newsletters_scanned": 17, "read_in_full": 8},
   "top": [
     {
-      "title": "Cheap decision models start replacing frontier LLMs for classification and rubric scoring",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+      "title": "Claude Managed Agents can now run entirely inside your own infrastructure",
+      "url": "https://claude.com/resources/articles/self-hosted-claude-managed-agents",
       "source": "TLDR AI",
-      "also_in": ["The Code", "The Neuron", "The Rundown AI"],
-      "summary": "Google launched the Gemini Decisions API, which answers up to 1,000 yes/no, multiple-choice or rubric questions about text, images, audio, video or PDFs in one pass for $0.10 per 2M input tokens, with free output. Separately, Amazon swapped Claude Sonnet for its own Strands Decider model on internal ticket labeling, matching accuracy at about 98% lower cost while running both side by side so it could roll back in 45 seconds.",
-      "why": "Many PMM workflow steps are really classification or rubric checks (tagging CI signals, scoring drafts against a messaging checklist), so routing those to a decision model could cut cost and add a consistent, auditable QA gate."
+      "also_in": ["The Code"],
+      "summary": "Anthropic opened a private beta of self-hosted Claude Managed Agents, so a company can run the full agent stack (sandboxes, credential handling and session history) in its own cloud or on-premises and keep it in line with zero-data-retention policies.",
+      "why": "This is the deployment answer Legal, Security and IT ask for before approving agents that touch internal data, and it gives Camunda's market story another example of enterprises pulling agent runtime under their own control."
     },
     {
-      "title": "Managing coding agents looks a lot like managing a team, and the playbook transfers",
-      "url": "https://archive.codenewsletter.ai/2119332146485891501",
+      "title": "Gumloop's 'software factory' shows how documented skills cut human rework on agent output",
+      "url": "https://www.gumloop.com/engineering/software-factory",
       "source": "The Code",
       "also_in": [],
-      "summary": "An essay by Anthropic's Addy Osmani lays out how to work with agents: give each one a way to check its own work, state the goal and definition of done, write any correction you make twice into CLAUDE.md or a shared skill, and track quality and rework instead of the share of AI-written output.",
-      "why": "This is a ready-made operating standard for the PMM skills library: a definition of done per workflow, a rule for when a fix becomes a skill update, and rework rate as the quality metric."
+      "summary": "Gumloop routes work into lanes owned by one engineer each, lets an orchestrating worker read team skills and hand tasks to coding agents, and requires proof (such as a failing-then-passing test) with every change. Over five weeks it wrote or updated 94 skills, and the share of agent work merged with no human edits rose from 57% to 89%.",
+      "why": "The pattern maps directly onto a PMM skills library: one owner per workflow, a 'receipt' requirement for every output, and no-human-edit rate as a quality metric worth tracking."
     },
     {
-      "title": "Claude Projects can now write their own knowledge files",
-      "url": "https://therundownai.beehiiv.com/p/ai-s-biggest-ceo-may-be-on-his-way-out",
-      "source": "The Rundown AI",
+      "title": "IAB publishes a framework for crediting sales that AI shaped",
+      "url": "https://martech.org/iab-unveils-framework-for-measuring-ais-part-in-conversions/",
+      "source": "Marketing Monk",
       "also_in": [],
-      "summary": "Claude Projects on the web can now save research and summaries as new knowledge files, so a scheduled task can gather information and add it to a shared Project over time instead of needing a local setup.",
-      "why": "A scheduled competitor-watch task that saves weekly findings into a shared Project gives the CI program a running, team-visible record that later prompts and battlecard updates can draw on."
+      "summary": "The IAB's AI-Era Attribution Blueprint sorts each sale into human-owned, AI-assisted or AI-executed by asking who created the intent, who decided and who completed the purchase. Its research found 44% of ad buyers use branded search and direct traffic as a stand-in for AI influence they can't track.",
+      "why": "A shared human/AI-assisted/AI-executed taxonomy is a useful template for tagging PMM outputs too, so adoption and impact reporting uses the same language marketing leadership will start seeing from the IAB."
     }
   ],
   "try_this": {
-    "title": "Assumption audit for AI-generated analysis",
-    "url": "https://www.theneurondaily.com/p/deepmind-launched-alphagenome-2-for-dna-a377",
-    "how": "After Claude produces an analysis (win-rate summary, adoption numbers, competitor comparison), ask it to list every definition and assumption it used, then paste only your original request and that list into a fresh chat and ask where each term is narrower, broader or different from what you asked. Try it on one recurring report this week and see if it catches a quiet scope change."
+    "title": "A single 'home repo' for shared skills and steering files",
+    "url": "https://www.youtube.com/watch?v=hWe-j78vNpc",
+    "how": "Instead of copying skills and instruction files into each project, keep them in one home repo that every agent setup points to, as shown in this tutorial. Move three of your most-used PMM skills there this week and check whether updates now reach every workflow without manual syncing."
   },
   "sections": {
-    "workflows": [
-      {
-        "title": "incident.io replaced its ads agency with an AI skill for ABM launches",
-        "url": "https://www.growthunhinged.com/p/5-gtm-plays-working-right-now",
-        "source": "TLDR Marketing",
-        "also_in": [],
-        "summary": "A roundup of working GTM plays says incident.io cut ABM campaign launches from 2-3 days to about 3 minutes with an AI skill, and Vercel doubled its field event cadence with an internal app that automates invites, seating and follow-up.",
-        "why": "These are concrete, named examples of marketing teams automating the manual work around channels that already convert, useful as benchmarks when scoping the next PMM workflow."
-      },
-      {
-        "title": "Grok Bot 1.0 puts shared agent teammates in Slack, Teams and meetings",
-        "url": "https://x.ai/news/grok-bot-1-0",
-        "source": "The Rundown AI",
-        "also_in": ["The Neuron"],
-        "summary": "xAI moved Grok Bot out of beta: teams can share bots that join video calls, Slack and Microsoft Teams, learn how the team works, and flag unfinished work on their own.",
-        "why": "Team-shared agents that live in chat and meetings are becoming standard across vendors, which shapes how a PMM 'AI concierge' should be delivered."
-      },
-      {
-        "title": "Claude Fable 5.2 now available in Microsoft Copilot Cowork and Copilot Studio",
-        "url": "https://x.com/MSFTCopilot/status/2120625304712499434",
-        "source": "The Neuron",
-        "also_in": [],
-        "summary": "Microsoft added Anthropic's newest model to Copilot Cowork and Copilot Studio, so Copilot users can now pick among models from three rival labs.",
-        "why": "If parts of the org are on Microsoft 365, Claude-based workflows may be portable into Copilot Studio without a separate Claude seat."
-      }
-    ],
+    "workflows": [],
     "governance": [
       {
-        "title": "Fireworks AI breach exposed Notion AI chats despite zero-data-retention claims",
-        "url": "https://venturebeat.com/security/attackers-breached-the-fireworks-ai-storage-where-notion-ai-chats-sat-outside-zero-data-retention",
-        "source": "The AI Report",
+        "title": "Google tests its agent anomaly detection against outside benchmarks",
+        "url": "https://developers.googleblog.com/how-agent-anomaly-detection-scores-on-benchmarks-we-didnt-write/",
+        "source": "TLDR AI",
         "also_in": [],
-        "summary": "Attackers who reached Fireworks AI's stored batch inference data exposed Notion AI chat transcripts for under 1% of workspaces, even though the data was covered by 'zero data retention' terms.",
-        "why": "A useful case for Legal and Security reviews: ask vendors where batch and async jobs are stored, not only whether real-time prompts are retained."
+        "summary": "Google's Agent Anomaly Detection flagged 87% of harmful instructions that agents actually executed on third-party benchmarks. It did well on goal hijacking and tool misuse, struggled with poisoned memory, and had false-alarm rates up to 16% on tasks using high-impact tools.",
+        "why": "Useful reference numbers when Security asks how agent misuse would be caught, and a reminder that agents with memory and write access need extra human review."
       },
       {
-        "title": "United Airlines blocks unauthorized AI agents from booking",
-        "url": "https://www.united.com/en/us/newsroom/announcements/cision-125496",
-        "source": "The Neuron",
-        "also_in": ["The Rundown AI"],
-        "summary": "United restricted third-party AI agents from its site, app and outside booking channels, citing exposed logins, accidental purchases and rules that require a human sign-off; Walmart is taking the opposite path with permissioned agent profiles and spending limits.",
-        "why": "Companies are now choosing between blocking agents and granting them scoped permissions with human approval, a live example of the human-in-the-loop control story Camunda tells."
+        "title": "OpenAI launches Daybreak agents for security teams",
+        "url": "https://openai.com/cyber-at-the-frontier/",
+        "source": "AI For Work",
+        "also_in": [],
+        "summary": "OpenAI introduced Daybreak Red Team, a set of coordinated agents that test whether code flaws can be exploited, and Daybreak Defense Factory, which scans code changes, reviews pull requests and proposes patches to the responsible engineer.",
+        "why": "Another sign that security is becoming a main enterprise entry point for frontier labs, which shapes the questions IT will ask about any AI tool marketing adopts."
       }
     ],
     "competitive": [
       {
-        "title": "n8n previews Nod, a self-hosted personal agent",
-        "url": "https://nod.n8n.io/",
-        "source": "The Neuron",
+        "title": "HubSpot's co-founder returns as CEO to 'refound' the company around AI",
+        "url": "https://www.cmswire.com/digital-marketing/brian-halligan-returns-as-hubspot-ceo-replacing-yamini-rangan/",
+        "source": "Marketing Monk",
         "also_in": [],
-        "summary": "n8n released Nod as a free, open-source research preview: a personal agent that runs on your own machine or server and handles tasks like chasing invoices, canceling trials and writing pre-call briefs.",
-        "why": "CI signal: a workflow automation neighbor is moving from builder tooling into packaged personal agents, worth tracking for battlecards."
-      },
-      {
-        "title": "Rivian used agents on Bedrock to clear manual ERP accrual work",
-        "url": "https://aws.amazon.com/blogs/awsforsap/how-rivian-accelerated-finance-operations-with-ai-agents-on-amazon-bedrock/",
-        "source": "The AI Report (sponsored)",
-        "also_in": [],
-        "summary": "AWS describes how Rivian's finance team replaced 15+ days per cycle of manual purchase-order accrual work with agents that read plain-language SOPs and route decisions by dollar threshold.",
-        "why": "A reference story for agentic process automation in finance, the kind of SOP-driven, threshold-routed process Camunda positions orchestration for."
+        "summary": "Brian Halligan replaced Yamini Rangan as HubSpot CEO, with the stock down about 47% over the year and investors worried customers will build their own tools with AI. HubSpot already moved some AI tools from per-seat fees to per-result pricing this year.",
+        "why": "An established SaaS leader rebuilding around agents and outcome-based pricing is a useful data point for how workflow and automation vendors may reposition, and a renewal risk to watch if the marketing stack runs on HubSpot."
       }
     ],
-    "measurement": [
-      {
-        "title": "Le Monde: ChatGPT referrals convert to paid at 260x the rate of Google Discover",
-        "url": "https://www.themediastack.co.uk/p/ai-can-edit-but-it-cannot-be-the",
-        "source": "The AI Report",
-        "also_in": [],
-        "summary": "Le Monde's CEO says readers who arrive via ChatGPT citations become paying subscribers at about 260 times the rate of Google Discover traffic, so the publisher treats AI citations as a distribution channel.",
-        "why": "Supports tracking AI-assistant referrals as their own channel with conversion quality, not just volume, in marketing dashboards."
-      }
-    ],
+    "measurement": [],
     "enablement": [],
     "landscape": [
       {
-        "title": "Nvidia board weighs replacing CEO Jensen Huang",
-        "url": "https://techcrunch.com/2026/11/11/nvidias-stock-drops-as-board-reportedly-preps-to-oust-ceo-jensen-huang/",
-        "source": "The AI Report",
-        "also_in": ["The Rundown AI", "TLDR"],
-        "summary": "Nvidia's board is reportedly preparing to remove Huang and has hired an outside firm to find candidates after reports of two affairs; the stock fell about 8% after hours.",
-        "why": ""
-      },
-      {
-        "title": "OpenAI posts its first $10B quarter",
-        "url": "https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time/",
-        "source": "The AI Report",
-        "also_in": ["The Rundown AI"],
-        "summary": "OpenAI's Q3 revenue reportedly topped $10B, up about 50% from Q2, driven by enterprise adoption of its models and agent tools.",
-        "why": ""
+        "title": "Google's Gemini 4 Hydrogen targets fast, cheap agent work",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+        "source": "TLDR AI",
+        "also_in": ["The Code", "AI For Work"],
+        "summary": "Google released Gemini 4 Hydrogen, a lighter model for coding and agentic tasks priced at $1.50/$7.50 per million input/output tokens. A new Orchestrator in Antigravity pairs it with the larger Carbon model to get near-Carbon results on 24% less quota.",
+        "why": "Pairing a cheap model with a stronger one for hard steps is becoming a standard vendor pattern, worth applying when routing high-volume PMM workflow steps."
       }
     ]
   }

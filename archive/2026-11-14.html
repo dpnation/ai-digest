@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily AI Digest — November 14, 2026</title>
+  <link rel="icon" type="image/png" href="../favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* dpnation brand: Ink #0D0D0D, Canvas #F7F6F3, Mist #EBEBEB, Smoke #7A7A7A, Spark #FF8C69 */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+           background: #F7F6F3; color: #0D0D0D; line-height: 1.6; }
+    a { color: inherit; }
+
+    header { background: #0D0D0D; color: #FFFFFF; padding: 2.25rem 2rem 1.75rem; border-bottom: 3px solid #FF8C69; }
+    .header-inner { max-width: 1100px; margin: 0 auto; }
+    .header-eyebrow { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.72rem; font-weight: 500;
+                       letter-spacing: 0.14em; text-transform: lowercase; color: #FF8C69; margin-bottom: 0.5rem; }
+    header h1 { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 2rem; font-weight: 800;
+                 letter-spacing: -0.01em; margin-bottom: 0.3rem; }
+    .header-date { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.8rem; color: #EBEBEB; }
+
+    main { max-width: 1100px; margin: 2.25rem auto; padding: 0 1.5rem; }
+    .slow { font-size: 0.9rem; color: #7A7A7A; margin-bottom: 1.5rem; }
+
+    .topic-section { margin-bottom: 2.75rem; }
+    .topic-heading { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 1.05rem; font-weight: 700;
+                      border-bottom: 1px solid #EBEBEB; padding-bottom: 0.5rem; margin-bottom: 1.1rem; }
+
+    /* Top stories */
+    .top-list { display: flex; flex-direction: column; gap: 1rem; }
+    .top-card { background: #FFFFFF; border: 1px solid #EBEBEB; border-left: 4px solid #FF8C69; border-radius: 8px;
+                 padding: 1.25rem 1.4rem; display: flex; gap: 1.2rem; }
+    .top-num { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 1.4rem; font-weight: 500;
+                color: #FF8C69; line-height: 1.2; }
+    .top-body { display: flex; flex-direction: column; gap: 0.45rem; flex: 1; }
+    .top-title { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 1.15rem; font-weight: 700; line-height: 1.35; }
+    .top-title a, .card-title a, .try h3 a { text-decoration: none; }
+    .top-title a:hover, .card-title a:hover, .try h3 a:hover { color: #FF8C69; }
+    .what { font-size: 0.92rem; }
+    .why { font-size: 0.88rem; color: #3A3A3A; background: #F7F6F3; border-radius: 6px; padding: 0.55rem 0.75rem; }
+    .why-label, .try-label { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.66rem; letter-spacing: 0.08em;
+                  text-transform: lowercase; color: #FF8C69; display: block; margin-bottom: 0.1rem; }
+
+    /* Try this */
+    .try { background: #0D0D0D; color: #FFFFFF; border-radius: 8px; padding: 1.2rem 1.4rem; margin-bottom: 2.75rem; }
+    .try h3 { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 1.02rem; margin-bottom: 0.3rem; }
+    .try p { font-size: 0.9rem; color: #EBEBEB; }
+
+    /* Cards */
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
+    .card { background: #FFFFFF; border-radius: 8px; padding: 1.15rem 1.3rem 1rem; border: 1px solid #EBEBEB;
+             display: flex; flex-direction: column; gap: 0.45rem;
+             transition: box-shadow 0.15s ease, transform 0.15s ease, border-color 0.15s ease; }
+    .card:hover { box-shadow: 0 6px 18px rgba(13,13,13,0.08); border-color: #FF8C69; transform: translateY(-1px); }
+    .card-source { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.68rem; font-weight: 500;
+                    letter-spacing: 0.08em; text-transform: lowercase; color: #7A7A7A; }
+    .also { color: #A0A0A0; }
+    .card-title { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 0.97rem; font-weight: 700; line-height: 1.4; }
+    .card-summary { font-size: 0.85rem; color: #4A4A4A; line-height: 1.55; }
+    .card-why { font-size: 0.82rem; color: #7A7A7A; line-height: 1.5; flex: 1; border-left: 2px solid #FF8C69; padding-left: 0.6rem; }
+    .read-more { font-size: 0.8rem; font-weight: 600; color: #0D0D0D; text-decoration: none;
+                  border-bottom: 2px solid #FF8C69; align-self: flex-start; margin-top: auto; }
+    .read-more:hover { color: #FF8C69; }
+
+    footer { text-align: center; padding: 2rem 1rem; font-family: "JetBrains Mono", ui-monospace, monospace;
+              font-size: 0.75rem; color: #7A7A7A; border-top: 1px solid #EBEBEB; margin-top: 1rem; }
+    footer a { color: #0D0D0D; text-decoration: none; border-bottom: 1px solid #FF8C69; }
+    .archive { margin-top: 0.6rem; }
+
+    @media (max-width: 600px) {
+      .cards-grid { grid-template-columns: 1fr; }
+      header h1 { font-size: 1.5rem; }
+      .top-card { flex-direction: column; gap: 0.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="header-eyebrow">dpnation · ai for pmm workflows</div>
+      <h1><a href="../index.html" style="text-decoration:none">Daily AI Digest</a></h1>
+      <div class="header-date">Saturday, November 14, 2026 · 7 stories · 17 newsletters read</div>
+    </div>
+  </header>
+
+  <main>
+    <p class="slow">Lighter Saturday edition: most newsletters were Friday sends or sponsored specials.</p>
+      <section class="topic-section">
+        <h2 class="topic-heading">🔝 Top stories</h2>
+        <div class="top-list">
+        <article class="top-card">
+          <div class="top-num">01</div>
+          <div class="top-body">
+            <div class="card-source">TLDR AI <span class="also">also in The Code</span></div>
+            <h3 class="top-title"><a href="https://claude.com/resources/articles/self-hosted-claude-managed-agents" target="_blank" rel="noopener">Claude Managed Agents can now run entirely inside your own infrastructure</a></h3>
+            <p class="what">Anthropic opened a private beta of self-hosted Claude Managed Agents, so a company can run the full agent stack (sandboxes, credential handling and session history) in its own cloud or on-premises and keep it in line with zero-data-retention policies.</p>
+            <p class="why"><span class="why-label">why it matters</span>This is the deployment answer Legal, Security and IT ask for before approving agents that touch internal data, and it gives Camunda&#x27;s market story another example of enterprises pulling agent runtime under their own control.</p>
+            <a href="https://claude.com/resources/articles/self-hosted-claude-managed-agents" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </div>
+        </article>
+        <article class="top-card">
+          <div class="top-num">02</div>
+          <div class="top-body">
+            <div class="card-source">The Code</div>
+            <h3 class="top-title"><a href="https://www.gumloop.com/engineering/software-factory" target="_blank" rel="noopener">Gumloop&#x27;s &#x27;software factory&#x27; shows how documented skills cut human rework on agent output</a></h3>
+            <p class="what">Gumloop routes work into lanes owned by one engineer each, lets an orchestrating worker read team skills and hand tasks to coding agents, and requires proof (such as a failing-then-passing test) with every change. Over five weeks it wrote or updated 94 skills, and the share of agent work merged with no human edits rose from 57% to 89%.</p>
+            <p class="why"><span class="why-label">why it matters</span>The pattern maps directly onto a PMM skills library: one owner per workflow, a &#x27;receipt&#x27; requirement for every output, and no-human-edit rate as a quality metric worth tracking.</p>
+            <a href="https://www.gumloop.com/engineering/software-factory" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </div>
+        </article>
+        <article class="top-card">
+          <div class="top-num">03</div>
+          <div class="top-body">
+            <div class="card-source">Marketing Monk</div>
+            <h3 class="top-title"><a href="https://martech.org/iab-unveils-framework-for-measuring-ais-part-in-conversions/" target="_blank" rel="noopener">IAB publishes a framework for crediting sales that AI shaped</a></h3>
+            <p class="what">The IAB&#x27;s AI-Era Attribution Blueprint sorts each sale into human-owned, AI-assisted or AI-executed by asking who created the intent, who decided and who completed the purchase. Its research found 44% of ad buyers use branded search and direct traffic as a stand-in for AI influence they can&#x27;t track.</p>
+            <p class="why"><span class="why-label">why it matters</span>A shared human/AI-assisted/AI-executed taxonomy is a useful template for tagging PMM outputs too, so adoption and impact reporting uses the same language marketing leadership will start seeing from the IAB.</p>
+            <a href="https://martech.org/iab-unveils-framework-for-measuring-ais-part-in-conversions/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="try">
+        <div class="try-label">🛠️ try this</div>
+        <h3><a href="https://www.youtube.com/watch?v=hWe-j78vNpc" target="_blank" rel="noopener">A single &#x27;home repo&#x27; for shared skills and steering files</a></h3>
+        <p>Instead of copying skills and instruction files into each project, keep them in one home repo that every agent setup points to, as shown in this tutorial. Move three of your most-used PMM skills there this week and check whether updates now reach every workflow without manual syncing.</p>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">🛡️ AI Guardrails &amp; Governance</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">TLDR AI</div>
+            <h3 class="card-title"><a href="https://developers.googleblog.com/how-agent-anomaly-detection-scores-on-benchmarks-we-didnt-write/" target="_blank" rel="noopener">Google tests its agent anomaly detection against outside benchmarks</a></h3>
+            <p class="card-summary">Google&#x27;s Agent Anomaly Detection flagged 87% of harmful instructions that agents actually executed on third-party benchmarks. It did well on goal hijacking and tool misuse, struggled with poisoned memory, and had false-alarm rates up to 16% on tasks using high-impact tools.</p>
+            <p class="card-why">Useful reference numbers when Security asks how agent misuse would be caught, and a reminder that agents with memory and write access need extra human review.</p>
+            <a href="https://developers.googleblog.com/how-agent-anomaly-detection-scores-on-benchmarks-we-didnt-write/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">AI For Work</div>
+            <h3 class="card-title"><a href="https://openai.com/cyber-at-the-frontier/" target="_blank" rel="noopener">OpenAI launches Daybreak agents for security teams</a></h3>
+            <p class="card-summary">OpenAI introduced Daybreak Red Team, a set of coordinated agents that test whether code flaws can be exploited, and Daybreak Defense Factory, which scans code changes, reviews pull requests and proposes patches to the responsible engineer.</p>
+            <p class="card-why">Another sign that security is becoming a main enterprise entry point for frontier labs, which shapes the questions IT will ask about any AI tool marketing adopts.</p>
+            <a href="https://openai.com/cyber-at-the-frontier/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">🎯 Competitive Intel &amp; Orchestration Market</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">Marketing Monk</div>
+            <h3 class="card-title"><a href="https://www.cmswire.com/digital-marketing/brian-halligan-returns-as-hubspot-ceo-replacing-yamini-rangan/" target="_blank" rel="noopener">HubSpot&#x27;s co-founder returns as CEO to &#x27;refound&#x27; the company around AI</a></h3>
+            <p class="card-summary">Brian Halligan replaced Yamini Rangan as HubSpot CEO, with the stock down about 47% over the year and investors worried customers will build their own tools with AI. HubSpot already moved some AI tools from per-seat fees to per-result pricing this year.</p>
+            <p class="card-why">An established SaaS leader rebuilding around agents and outcome-based pricing is a useful data point for how workflow and automation vendors may reposition, and a renewal risk to watch if the marketing stack runs on HubSpot.</p>
+            <a href="https://www.cmswire.com/digital-marketing/brian-halligan-returns-as-hubspot-ceo-replacing-yamini-rangan/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">🌐 Frontier Labs &amp; AI Landscape</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">TLDR AI <span class="also">· also in The Code, AI For Work</span></div>
+            <h3 class="card-title"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/" target="_blank" rel="noopener">Google&#x27;s Gemini 4 Hydrogen targets fast, cheap agent work</a></h3>
+            <p class="card-summary">Google released Gemini 4 Hydrogen, a lighter model for coding and agentic tasks priced at $1.50/$7.50 per million input/output tokens. A new Orchestrator in Antigravity pairs it with the larger Carbon model to get near-Carbon results on 24% less quota.</p>
+            <p class="card-why">Pairing a cheap model with a stronger one for hard steps is becoming a standard vendor pattern, worth applying when routing high-volume PMM workflow steps.</p>
+            <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+  </main>
+
+  <footer>
+    curated daily by <a href="https://dpnation.com" target="_blank" rel="noopener">dpnation</a> · November 14, 2026
+    <div class="archive">past days: <a href="../archive/2026-11-12.html">2026-11-12</a> · <a href="../archive/2026-11-11.html">2026-11-11</a> · <a href="../archive/2026-11-10.html">2026-11-10</a> · <a href="../archive/2026-11-09.html">2026-11-09</a> · <a href="../archive/2026-11-08.html">2026-11-08</a> · <a href="../archive/index.html">all briefings →</a></div>
+  </footer>
+</body>
+</html>

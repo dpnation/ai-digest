@@ -1,0 +1,79 @@
+{
+  "date": "2026-11-14",
+  "note": "Lighter Saturday edition: most newsletters were Friday sends or sponsored specials.",
+  "stats": {"newsletters_scanned": 17, "read_in_full": 8},
+  "top": [
+    {
+      "title": "Claude Managed Agents can now run entirely inside your own infrastructure",
+      "url": "https://claude.com/resources/articles/self-hosted-claude-managed-agents",
+      "source": "TLDR AI",
+      "also_in": ["The Code"],
+      "summary": "Anthropic opened a private beta of self-hosted Claude Managed Agents, so a company can run the full agent stack (sandboxes, credential handling and session history) in its own cloud or on-premises and keep it in line with zero-data-retention policies.",
+      "why": "This is the deployment answer Legal, Security and IT ask for before approving agents that touch internal data, and it gives Camunda's market story another example of enterprises pulling agent runtime under their own control."
+    },
+    {
+      "title": "Gumloop's 'software factory' shows how documented skills cut human rework on agent output",
+      "url": "https://www.gumloop.com/engineering/software-factory",
+      "source": "The Code",
+      "also_in": [],
+      "summary": "Gumloop routes work into lanes owned by one engineer each, lets an orchestrating worker read team skills and hand tasks to coding agents, and requires proof (such as a failing-then-passing test) with every change. Over five weeks it wrote or updated 94 skills, and the share of agent work merged with no human edits rose from 57% to 89%.",
+      "why": "The pattern maps directly onto a PMM skills library: one owner per workflow, a 'receipt' requirement for every output, and no-human-edit rate as a quality metric worth tracking."
+    },
+    {
+      "title": "IAB publishes a framework for crediting sales that AI shaped",
+      "url": "https://martech.org/iab-unveils-framework-for-measuring-ais-part-in-conversions/",
+      "source": "Marketing Monk",
+      "also_in": [],
+      "summary": "The IAB's AI-Era Attribution Blueprint sorts each sale into human-owned, AI-assisted or AI-executed by asking who created the intent, who decided and who completed the purchase. Its research found 44% of ad buyers use branded search and direct traffic as a stand-in for AI influence they can't track.",
+      "why": "A shared human/AI-assisted/AI-executed taxonomy is a useful template for tagging PMM outputs too, so adoption and impact reporting uses the same language marketing leadership will start seeing from the IAB."
+    }
+  ],
+  "try_this": {
+    "title": "A single 'home repo' for shared skills and steering files",
+    "url": "https://www.youtube.com/watch?v=hWe-j78vNpc",
+    "how": "Instead of copying skills and instruction files into each project, keep them in one home repo that every agent setup points to, as shown in this tutorial. Move three of your most-used PMM skills there this week and check whether updates now reach every workflow without manual syncing."
+  },
+  "sections": {
+    "workflows": [],
+    "governance": [
+      {
+        "title": "Google tests its agent anomaly detection against outside benchmarks",
+        "url": "https://developers.googleblog.com/how-agent-anomaly-detection-scores-on-benchmarks-we-didnt-write/",
+        "source": "TLDR AI",
+        "also_in": [],
+        "summary": "Google's Agent Anomaly Detection flagged 87% of harmful instructions that agents actually executed on third-party benchmarks. It did well on goal hijacking and tool misuse, struggled with poisoned memory, and had false-alarm rates up to 16% on tasks using high-impact tools.",
+        "why": "Useful reference numbers when Security asks how agent misuse would be caught, and a reminder that agents with memory and write access need extra human review."
+      },
+      {
+        "title": "OpenAI launches Daybreak agents for security teams",
+        "url": "https://openai.com/cyber-at-the-frontier/",
+        "source": "AI For Work",
+        "also_in": [],
+        "summary": "OpenAI introduced Daybreak Red Team, a set of coordinated agents that test whether code flaws can be exploited, and Daybreak Defense Factory, which scans code changes, reviews pull requests and proposes patches to the responsible engineer.",
+        "why": "Another sign that security is becoming a main enterprise entry point for frontier labs, which shapes the questions IT will ask about any AI tool marketing adopts."
+      }
+    ],
+    "competitive": [
+      {
+        "title": "HubSpot's co-founder returns as CEO to 'refound' the company around AI",
+        "url": "https://www.cmswire.com/digital-marketing/brian-halligan-returns-as-hubspot-ceo-replacing-yamini-rangan/",
+        "source": "Marketing Monk",
+        "also_in": [],
+        "summary": "Brian Halligan replaced Yamini Rangan as HubSpot CEO, with the stock down about 47% over the year and investors worried customers will build their own tools with AI. HubSpot already moved some AI tools from per-seat fees to per-result pricing this year.",
+        "why": "An established SaaS leader rebuilding around agents and outcome-based pricing is a useful data point for how workflow and automation vendors may reposition, and a renewal risk to watch if the marketing stack runs on HubSpot."
+      }
+    ],
+    "measurement": [],
+    "enablement": [],
+    "landscape": [
+      {
+        "title": "Google's Gemini 4 Hydrogen targets fast, cheap agent work",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+        "source": "TLDR AI",
+        "also_in": ["The Code", "AI For Work"],
+        "summary": "Google released Gemini 4 Hydrogen, a lighter model for coding and agentic tasks priced at $1.50/$7.50 per million input/output tokens. A new Orchestrator in Antigravity pairs it with the larger Carbon model to get near-Carbon results on 24% less quota.",
+        "why": "Pairing a cheap model with a stronger one for hard steps is becoming a standard vendor pattern, worth applying when routing high-volume PMM workflow steps."
+      }
+    ]
+  }
+}
