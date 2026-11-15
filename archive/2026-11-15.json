@@ -1,0 +1,70 @@
+{
+  "date": "2026-11-15",
+  "note": "Quiet Sunday: only a handful of AI sends, one of them fully sponsored.",
+  "stats": {"newsletters_scanned": 9, "read_in_full": 5},
+  "top": [
+    {
+      "title": "Morgan Stanley's rollout playbook: race the AI against an expert, then keep grading it",
+      "url": "https://www.neatprompts.com/p/morganstanley",
+      "source": "Neatprompts",
+      "also_in": [],
+      "summary": "Before launch, Morgan Stanley gave its adviser assistant and a subject expert 25 real questions and an hour each, then built a 500-question regression suite it reruns after every change and grades a daily sample of live answers against a rubric. Advisers have since made nearly 50,000 attempts at building their own agents, many of them used once and abandoned.",
+      "why": "This is a ready-made quality gate for PMM workflows (fixed test set, rerun on every change, daily spot checks), and the abandoned-agent number is a warning for any self-serve agent building program you run."
+    },
+    {
+      "title": "Study of 260 multi-agent setups finds more agents often add overhead, not quality",
+      "url": "https://www.theneurondaily.com/p/deep-dive-the-future-of-work-is-multiplayer",
+      "source": "The Neuron (sponsored)",
+      "also_in": [],
+      "summary": "A sponsored deep dive on shared human-agent workspaces cites a Nature Machine Intelligence study where adding agents did not reliably improve results, and argues agents need shared context, an owner, scoped permissions and a record of state. It recommends letting agents prepare work freely but requiring human approval before anything is sent outside, changed in a system of record, or paid for.",
+      "why": "The 'preparation vs. commitment' line is a clean rule for where to put human review in PMM workflows, and the coordination argument supports Camunda's story that agents need orchestration, not just more agents."
+    },
+    {
+      "title": "44% of marketers run AI agents with customers, but only 19% can report results",
+      "url": "https://martech.org/marketers-deploying-ai-agents-faster-than-they-can-measure-them/",
+      "source": "Marketing Monk",
+      "also_in": [],
+      "summary": "An Invoca survey of 451 US marketers found 44% already have AI agents talking to customers, yet only 19% can send chat outcomes back to ad platforms and 26% can tie a chat to the ad that started it. Invoca sells call tracking, so it has a stake in the finding.",
+      "why": "A concrete data point that agent deployment is outrunning measurement, useful both for framing AI impact reporting and as an orchestration-and-visibility proof point in Camunda messaging."
+    }
+  ],
+  "try_this": {
+    "title": "Run a 25-question expert race on one PMM workflow",
+    "url": "https://scale.com/blog/hitl-ep13-ai-evals-in-practice",
+    "how": "Pick 25 real questions your team fields (positioning, competitor claims, product facts), give your AI workflow and a subject expert an hour each, and grade both on accuracy and completeness. Save the set as a regression test and rerun it whenever you change the prompt or skill."
+  },
+  "sections": {
+    "workflows": [],
+    "governance": [],
+    "competitive": [],
+    "measurement": [
+      {
+        "title": "Morgan Stanley reports 1.4 million developer hours saved, with no dollar figure",
+        "url": "https://www.morganstanley.com/press-releases/morgan-stanley-announces-cohort-of-distinguished-engineers",
+        "source": "Neatprompts",
+        "also_in": [],
+        "summary": "The bank says its DevGen.AI tool and related use cases have saved more than 1.4 million hours across 950+ onboarded use cases, and 98% of adviser teams adopted its assistant. It has not published accuracy scores or total AI spend.",
+        "why": "A reminder that hours-saved claims land better with a stated method and cost side, which is worth building into your own time-saved reporting."
+      }
+    ],
+    "enablement": [],
+    "landscape": [
+      {
+        "title": "Forrester expects brands to put human-made content back at the top in 2027",
+        "url": "https://www.forrester.com/blogs/predictions-2027-humans-reclaim-content-creation-machines-dominate-content-consumption/",
+        "source": "Marketing Monk",
+        "also_in": [],
+        "summary": "Forrester predicts half of brands will prioritize human-made content next year as buyers look for proof of real expertise, and reports only 18% of US online adults trust information from AI.",
+        "why": "Helps decide which PMM outputs AI should draft versus which need visible human expertise, especially thought leadership aimed at technical buyers."
+      },
+      {
+        "title": "The Ringer drops its ChatGPT podcast sponsorship after listener pushback",
+        "url": "https://www.thewrap.com/industry-news/tech/bill-simmons-ringer-chatgpt-sponsorship-canceled/",
+        "source": "Marketing Monk",
+        "also_in": [],
+        "summary": "The Ringer ended ChatGPT segments on its biggest shows because its audience disliked them, even as OpenAI spent about $11.2 million on podcast ads over three months.",
+        "why": ""
+      }
+    ]
+  }
+}

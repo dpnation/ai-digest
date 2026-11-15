@@ -1,78 +1,69 @@
 {
-  "date": "2026-11-14",
-  "note": "Lighter Saturday edition: most newsletters were Friday sends or sponsored specials.",
-  "stats": {"newsletters_scanned": 17, "read_in_full": 8},
+  "date": "2026-11-15",
+  "note": "Quiet Sunday: only a handful of AI sends, one of them fully sponsored.",
+  "stats": {"newsletters_scanned": 9, "read_in_full": 5},
   "top": [
     {
-      "title": "Claude Managed Agents can now run entirely inside your own infrastructure",
-      "url": "https://claude.com/resources/articles/self-hosted-claude-managed-agents",
-      "source": "TLDR AI",
-      "also_in": ["The Code"],
-      "summary": "Anthropic opened a private beta of self-hosted Claude Managed Agents, so a company can run the full agent stack (sandboxes, credential handling and session history) in its own cloud or on-premises and keep it in line with zero-data-retention policies.",
-      "why": "This is the deployment answer Legal, Security and IT ask for before approving agents that touch internal data, and it gives Camunda's market story another example of enterprises pulling agent runtime under their own control."
-    },
-    {
-      "title": "Gumloop's 'software factory' shows how documented skills cut human rework on agent output",
-      "url": "https://www.gumloop.com/engineering/software-factory",
-      "source": "The Code",
+      "title": "Morgan Stanley's rollout playbook: race the AI against an expert, then keep grading it",
+      "url": "https://www.neatprompts.com/p/morganstanley",
+      "source": "Neatprompts",
       "also_in": [],
-      "summary": "Gumloop routes work into lanes owned by one engineer each, lets an orchestrating worker read team skills and hand tasks to coding agents, and requires proof (such as a failing-then-passing test) with every change. Over five weeks it wrote or updated 94 skills, and the share of agent work merged with no human edits rose from 57% to 89%.",
-      "why": "The pattern maps directly onto a PMM skills library: one owner per workflow, a 'receipt' requirement for every output, and no-human-edit rate as a quality metric worth tracking."
+      "summary": "Before launch, Morgan Stanley gave its adviser assistant and a subject expert 25 real questions and an hour each, then built a 500-question regression suite it reruns after every change and grades a daily sample of live answers against a rubric. Advisers have since made nearly 50,000 attempts at building their own agents, many of them used once and abandoned.",
+      "why": "This is a ready-made quality gate for PMM workflows (fixed test set, rerun on every change, daily spot checks), and the abandoned-agent number is a warning for any self-serve agent building program you run."
     },
     {
-      "title": "IAB publishes a framework for crediting sales that AI shaped",
-      "url": "https://martech.org/iab-unveils-framework-for-measuring-ais-part-in-conversions/",
+      "title": "Study of 260 multi-agent setups finds more agents often add overhead, not quality",
+      "url": "https://www.theneurondaily.com/p/deep-dive-the-future-of-work-is-multiplayer",
+      "source": "The Neuron (sponsored)",
+      "also_in": [],
+      "summary": "A sponsored deep dive on shared human-agent workspaces cites a Nature Machine Intelligence study where adding agents did not reliably improve results, and argues agents need shared context, an owner, scoped permissions and a record of state. It recommends letting agents prepare work freely but requiring human approval before anything is sent outside, changed in a system of record, or paid for.",
+      "why": "The 'preparation vs. commitment' line is a clean rule for where to put human review in PMM workflows, and the coordination argument supports Camunda's story that agents need orchestration, not just more agents."
+    },
+    {
+      "title": "44% of marketers run AI agents with customers, but only 19% can report results",
+      "url": "https://martech.org/marketers-deploying-ai-agents-faster-than-they-can-measure-them/",
       "source": "Marketing Monk",
       "also_in": [],
-      "summary": "The IAB's AI-Era Attribution Blueprint sorts each sale into human-owned, AI-assisted or AI-executed by asking who created the intent, who decided and who completed the purchase. Its research found 44% of ad buyers use branded search and direct traffic as a stand-in for AI influence they can't track.",
-      "why": "A shared human/AI-assisted/AI-executed taxonomy is a useful template for tagging PMM outputs too, so adoption and impact reporting uses the same language marketing leadership will start seeing from the IAB."
+      "summary": "An Invoca survey of 451 US marketers found 44% already have AI agents talking to customers, yet only 19% can send chat outcomes back to ad platforms and 26% can tie a chat to the ad that started it. Invoca sells call tracking, so it has a stake in the finding.",
+      "why": "A concrete data point that agent deployment is outrunning measurement, useful both for framing AI impact reporting and as an orchestration-and-visibility proof point in Camunda messaging."
     }
   ],
   "try_this": {
-    "title": "A single 'home repo' for shared skills and steering files",
-    "url": "https://www.youtube.com/watch?v=hWe-j78vNpc",
-    "how": "Instead of copying skills and instruction files into each project, keep them in one home repo that every agent setup points to, as shown in this tutorial. Move three of your most-used PMM skills there this week and check whether updates now reach every workflow without manual syncing."
+    "title": "Run a 25-question expert race on one PMM workflow",
+    "url": "https://scale.com/blog/hitl-ep13-ai-evals-in-practice",
+    "how": "Pick 25 real questions your team fields (positioning, competitor claims, product facts), give your AI workflow and a subject expert an hour each, and grade both on accuracy and completeness. Save the set as a regression test and rerun it whenever you change the prompt or skill."
   },
   "sections": {
     "workflows": [],
-    "governance": [
+    "governance": [],
+    "competitive": [],
+    "measurement": [
       {
-        "title": "Google tests its agent anomaly detection against outside benchmarks",
-        "url": "https://developers.googleblog.com/how-agent-anomaly-detection-scores-on-benchmarks-we-didnt-write/",
-        "source": "TLDR AI",
+        "title": "Morgan Stanley reports 1.4 million developer hours saved, with no dollar figure",
+        "url": "https://www.morganstanley.com/press-releases/morgan-stanley-announces-cohort-of-distinguished-engineers",
+        "source": "Neatprompts",
         "also_in": [],
-        "summary": "Google's Agent Anomaly Detection flagged 87% of harmful instructions that agents actually executed on third-party benchmarks. It did well on goal hijacking and tool misuse, struggled with poisoned memory, and had false-alarm rates up to 16% on tasks using high-impact tools.",
-        "why": "Useful reference numbers when Security asks how agent misuse would be caught, and a reminder that agents with memory and write access need extra human review."
-      },
-      {
-        "title": "OpenAI launches Daybreak agents for security teams",
-        "url": "https://openai.com/cyber-at-the-frontier/",
-        "source": "AI For Work",
-        "also_in": [],
-        "summary": "OpenAI introduced Daybreak Red Team, a set of coordinated agents that test whether code flaws can be exploited, and Daybreak Defense Factory, which scans code changes, reviews pull requests and proposes patches to the responsible engineer.",
-        "why": "Another sign that security is becoming a main enterprise entry point for frontier labs, which shapes the questions IT will ask about any AI tool marketing adopts."
+        "summary": "The bank says its DevGen.AI tool and related use cases have saved more than 1.4 million hours across 950+ onboarded use cases, and 98% of adviser teams adopted its assistant. It has not published accuracy scores or total AI spend.",
+        "why": "A reminder that hours-saved claims land better with a stated method and cost side, which is worth building into your own time-saved reporting."
       }
     ],
-    "competitive": [
-      {
-        "title": "HubSpot's co-founder returns as CEO to 'refound' the company around AI",
-        "url": "https://www.cmswire.com/digital-marketing/brian-halligan-returns-as-hubspot-ceo-replacing-yamini-rangan/",
-        "source": "Marketing Monk",
-        "also_in": [],
-        "summary": "Brian Halligan replaced Yamini Rangan as HubSpot CEO, with the stock down about 47% over the year and investors worried customers will build their own tools with AI. HubSpot already moved some AI tools from per-seat fees to per-result pricing this year.",
-        "why": "An established SaaS leader rebuilding around agents and outcome-based pricing is a useful data point for how workflow and automation vendors may reposition, and a renewal risk to watch if the marketing stack runs on HubSpot."
-      }
-    ],
-    "measurement": [],
     "enablement": [],
     "landscape": [
       {
-        "title": "Google's Gemini 4 Hydrogen targets fast, cheap agent work",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
-        "source": "TLDR AI",
-        "also_in": ["The Code", "AI For Work"],
-        "summary": "Google released Gemini 4 Hydrogen, a lighter model for coding and agentic tasks priced at $1.50/$7.50 per million input/output tokens. A new Orchestrator in Antigravity pairs it with the larger Carbon model to get near-Carbon results on 24% less quota.",
-        "why": "Pairing a cheap model with a stronger one for hard steps is becoming a standard vendor pattern, worth applying when routing high-volume PMM workflow steps."
+        "title": "Forrester expects brands to put human-made content back at the top in 2027",
+        "url": "https://www.forrester.com/blogs/predictions-2027-humans-reclaim-content-creation-machines-dominate-content-consumption/",
+        "source": "Marketing Monk",
+        "also_in": [],
+        "summary": "Forrester predicts half of brands will prioritize human-made content next year as buyers look for proof of real expertise, and reports only 18% of US online adults trust information from AI.",
+        "why": "Helps decide which PMM outputs AI should draft versus which need visible human expertise, especially thought leadership aimed at technical buyers."
+      },
+      {
+        "title": "The Ringer drops its ChatGPT podcast sponsorship after listener pushback",
+        "url": "https://www.thewrap.com/industry-news/tech/bill-simmons-ringer-chatgpt-sponsorship-canceled/",
+        "source": "Marketing Monk",
+        "also_in": [],
+        "summary": "The Ringer ended ChatGPT segments on its biggest shows because its audience disliked them, even as OpenAI spent about $11.2 million on podcast ads over three months.",
+        "why": ""
       }
     ]
   }

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily AI Digest — November 15, 2026</title>
+  <link rel="icon" type="image/png" href="../favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* dpnation brand: Ink #0D0D0D, Canvas #F7F6F3, Mist #EBEBEB, Smoke #7A7A7A, Spark #FF8C69 */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+           background: #F7F6F3; color: #0D0D0D; line-height: 1.6; }
+    a { color: inherit; }
+
+    header { background: #0D0D0D; color: #FFFFFF; padding: 2.25rem 2rem 1.75rem; border-bottom: 3px solid #FF8C69; }
+    .header-inner { max-width: 1100px; margin: 0 auto; }
+    .header-eyebrow { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.72rem; font-weight: 500;
+                       letter-spacing: 0.14em; text-transform: lowercase; color: #FF8C69; margin-bottom: 0.5rem; }
+    header h1 { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 2rem; font-weight: 800;
+                 letter-spacing: -0.01em; margin-bottom: 0.3rem; }
+    .header-date { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.8rem; color: #EBEBEB; }
+
+    main { max-width: 1100px; margin: 2.25rem auto; padding: 0 1.5rem; }
+    .slow { font-size: 0.9rem; color: #7A7A7A; margin-bottom: 1.5rem; }
+
+    .topic-section { margin-bottom: 2.75rem; }
+    .topic-heading { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 1.05rem; font-weight: 700;
+                      border-bottom: 1px solid #EBEBEB; padding-bottom: 0.5rem; margin-bottom: 1.1rem; }
+
+    /* Top stories */
+    .top-list { display: flex; flex-direction: column; gap: 1rem; }
+    .top-card { background: #FFFFFF; border: 1px solid #EBEBEB; border-left: 4px solid #FF8C69; border-radius: 8px;
+                 padding: 1.25rem 1.4rem; display: flex; gap: 1.2rem; }
+    .top-num { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 1.4rem; font-weight: 500;
+                color: #FF8C69; line-height: 1.2; }
+    .top-body { display: flex; flex-direction: column; gap: 0.45rem; flex: 1; }
+    .top-title { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 1.15rem; font-weight: 700; line-height: 1.35; }
+    .top-title a, .card-title a, .try h3 a { text-decoration: none; }
+    .top-title a:hover, .card-title a:hover, .try h3 a:hover { color: #FF8C69; }
+    .what { font-size: 0.92rem; }
+    .why { font-size: 0.88rem; color: #3A3A3A; background: #F7F6F3; border-radius: 6px; padding: 0.55rem 0.75rem; }
+    .why-label, .try-label { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.66rem; letter-spacing: 0.08em;
+                  text-transform: lowercase; color: #FF8C69; display: block; margin-bottom: 0.1rem; }
+
+    /* Try this */
+    .try { background: #0D0D0D; color: #FFFFFF; border-radius: 8px; padding: 1.2rem 1.4rem; margin-bottom: 2.75rem; }
+    .try h3 { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 1.02rem; margin-bottom: 0.3rem; }
+    .try p { font-size: 0.9rem; color: #EBEBEB; }
+
+    /* Cards */
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
+    .card { background: #FFFFFF; border-radius: 8px; padding: 1.15rem 1.3rem 1rem; border: 1px solid #EBEBEB;
+             display: flex; flex-direction: column; gap: 0.45rem;
+             transition: box-shadow 0.15s ease, transform 0.15s ease, border-color 0.15s ease; }
+    .card:hover { box-shadow: 0 6px 18px rgba(13,13,13,0.08); border-color: #FF8C69; transform: translateY(-1px); }
+    .card-source { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.68rem; font-weight: 500;
+                    letter-spacing: 0.08em; text-transform: lowercase; color: #7A7A7A; }
+    .also { color: #A0A0A0; }
+    .card-title { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 0.97rem; font-weight: 700; line-height: 1.4; }
+    .card-summary { font-size: 0.85rem; color: #4A4A4A; line-height: 1.55; }
+    .card-why { font-size: 0.82rem; color: #7A7A7A; line-height: 1.5; flex: 1; border-left: 2px solid #FF8C69; padding-left: 0.6rem; }
+    .read-more { font-size: 0.8rem; font-weight: 600; color: #0D0D0D; text-decoration: none;
+                  border-bottom: 2px solid #FF8C69; align-self: flex-start; margin-top: auto; }
+    .read-more:hover { color: #FF8C69; }
+
+    footer { text-align: center; padding: 2rem 1rem; font-family: "JetBrains Mono", ui-monospace, monospace;
+              font-size: 0.75rem; color: #7A7A7A; border-top: 1px solid #EBEBEB; margin-top: 1rem; }
+    footer a { color: #0D0D0D; text-decoration: none; border-bottom: 1px solid #FF8C69; }
+    .archive { margin-top: 0.6rem; }
+
+    @media (max-width: 600px) {
+      .cards-grid { grid-template-columns: 1fr; }
+      header h1 { font-size: 1.5rem; }
+      .top-card { flex-direction: column; gap: 0.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="header-eyebrow">dpnation · ai for pmm workflows</div>
+      <h1><a href="../index.html" style="text-decoration:none">Daily AI Digest</a></h1>
+      <div class="header-date">Sunday, November 15, 2026 · 6 stories · 9 newsletters read</div>
+    </div>
+  </header>
+
+  <main>
+    <p class="slow">Quiet Sunday: only a handful of AI sends, one of them fully sponsored.</p>
+      <section class="topic-section">
+        <h2 class="topic-heading">🔝 Top stories</h2>
+        <div class="top-list">
+        <article class="top-card">
+          <div class="top-num">01</div>
+          <div class="top-body">
+            <div class="card-source">Neatprompts</div>
+            <h3 class="top-title"><a href="https://www.neatprompts.com/p/morganstanley" target="_blank" rel="noopener">Morgan Stanley&#x27;s rollout playbook: race the AI against an expert, then keep grading it</a></h3>
+            <p class="what">Before launch, Morgan Stanley gave its adviser assistant and a subject expert 25 real questions and an hour each, then built a 500-question regression suite it reruns after every change and grades a daily sample of live answers against a rubric. Advisers have since made nearly 50,000 attempts at building their own agents, many of them used once and abandoned.</p>
+            <p class="why"><span class="why-label">why it matters</span>This is a ready-made quality gate for PMM workflows (fixed test set, rerun on every change, daily spot checks), and the abandoned-agent number is a warning for any self-serve agent building program you run.</p>
+            <a href="https://www.neatprompts.com/p/morganstanley" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </div>
+        </article>
+        <article class="top-card">
+          <div class="top-num">02</div>
+          <div class="top-body">
+            <div class="card-source">The Neuron (sponsored)</div>
+            <h3 class="top-title"><a href="https://www.theneurondaily.com/p/deep-dive-the-future-of-work-is-multiplayer" target="_blank" rel="noopener">Study of 260 multi-agent setups finds more agents often add overhead, not quality</a></h3>
+            <p class="what">A sponsored deep dive on shared human-agent workspaces cites a Nature Machine Intelligence study where adding agents did not reliably improve results, and argues agents need shared context, an owner, scoped permissions and a record of state. It recommends letting agents prepare work freely but requiring human approval before anything is sent outside, changed in a system of record, or paid for.</p>
+            <p class="why"><span class="why-label">why it matters</span>The &#x27;preparation vs. commitment&#x27; line is a clean rule for where to put human review in PMM workflows, and the coordination argument supports Camunda&#x27;s story that agents need orchestration, not just more agents.</p>
+            <a href="https://www.theneurondaily.com/p/deep-dive-the-future-of-work-is-multiplayer" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </div>
+        </article>
+        <article class="top-card">
+          <div class="top-num">03</div>
+          <div class="top-body">
+            <div class="card-source">Marketing Monk</div>
+            <h3 class="top-title"><a href="https://martech.org/marketers-deploying-ai-agents-faster-than-they-can-measure-them/" target="_blank" rel="noopener">44% of marketers run AI agents with customers, but only 19% can report results</a></h3>
+            <p class="what">An Invoca survey of 451 US marketers found 44% already have AI agents talking to customers, yet only 19% can send chat outcomes back to ad platforms and 26% can tie a chat to the ad that started it. Invoca sells call tracking, so it has a stake in the finding.</p>
+            <p class="why"><span class="why-label">why it matters</span>A concrete data point that agent deployment is outrunning measurement, useful both for framing AI impact reporting and as an orchestration-and-visibility proof point in Camunda messaging.</p>
+            <a href="https://martech.org/marketers-deploying-ai-agents-faster-than-they-can-measure-them/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="try">
+        <div class="try-label">🛠️ try this</div>
+        <h3><a href="https://scale.com/blog/hitl-ep13-ai-evals-in-practice" target="_blank" rel="noopener">Run a 25-question expert race on one PMM workflow</a></h3>
+        <p>Pick 25 real questions your team fields (positioning, competitor claims, product facts), give your AI workflow and a subject expert an hour each, and grade both on accuracy and completeness. Save the set as a regression test and rerun it whenever you change the prompt or skill.</p>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">📊 Measuring AI Impact</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">Neatprompts</div>
+            <h3 class="card-title"><a href="https://www.morganstanley.com/press-releases/morgan-stanley-announces-cohort-of-distinguished-engineers" target="_blank" rel="noopener">Morgan Stanley reports 1.4 million developer hours saved, with no dollar figure</a></h3>
+            <p class="card-summary">The bank says its DevGen.AI tool and related use cases have saved more than 1.4 million hours across 950+ onboarded use cases, and 98% of adviser teams adopted its assistant. It has not published accuracy scores or total AI spend.</p>
+            <p class="card-why">A reminder that hours-saved claims land better with a stated method and cost side, which is worth building into your own time-saved reporting.</p>
+            <a href="https://www.morganstanley.com/press-releases/morgan-stanley-announces-cohort-of-distinguished-engineers" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">🌐 Frontier Labs &amp; AI Landscape</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">Marketing Monk</div>
+            <h3 class="card-title"><a href="https://www.forrester.com/blogs/predictions-2027-humans-reclaim-content-creation-machines-dominate-content-consumption/" target="_blank" rel="noopener">Forrester expects brands to put human-made content back at the top in 2027</a></h3>
+            <p class="card-summary">Forrester predicts half of brands will prioritize human-made content next year as buyers look for proof of real expertise, and reports only 18% of US online adults trust information from AI.</p>
+            <p class="card-why">Helps decide which PMM outputs AI should draft versus which need visible human expertise, especially thought leadership aimed at technical buyers.</p>
+            <a href="https://www.forrester.com/blogs/predictions-2027-humans-reclaim-content-creation-machines-dominate-content-consumption/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">Marketing Monk</div>
+            <h3 class="card-title"><a href="https://www.thewrap.com/industry-news/tech/bill-simmons-ringer-chatgpt-sponsorship-canceled/" target="_blank" rel="noopener">The Ringer drops its ChatGPT podcast sponsorship after listener pushback</a></h3>
+            <p class="card-summary">The Ringer ended ChatGPT segments on its biggest shows because its audience disliked them, even as OpenAI spent about $11.2 million on podcast ads over three months.</p>
+            
+            <a href="https://www.thewrap.com/industry-news/tech/bill-simmons-ringer-chatgpt-sponsorship-canceled/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+  </main>
+
+  <footer>
+    curated daily by <a href="https://dpnation.com" target="_blank" rel="noopener">dpnation</a> · November 15, 2026
+    <div class="archive">past days: <a href="../archive/2026-11-14.html">2026-11-14</a> · <a href="../archive/2026-11-12.html">2026-11-12</a> · <a href="../archive/2026-11-11.html">2026-11-11</a> · <a href="../archive/2026-11-10.html">2026-11-10</a> · <a href="../archive/2026-11-09.html">2026-11-09</a> · <a href="../archive/2026-11-08.html">2026-11-08</a> · <a href="../archive/index.html">all briefings →</a></div>
+  </footer>
+</body>
+</html>
