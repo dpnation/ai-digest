@@ -1,0 +1,88 @@
+{
+  "date": "2026-11-16",
+  "note": "Monday catch-up: most weekend AI sends were about Nvidia's leadership crisis, so the list stays short.",
+  "stats": {"newsletters_scanned": 26, "read_in_full": 9},
+  "top": [
+    {
+      "title": "One compromised MCP server got an agent to misuse its other, trusted tools 78% of the time",
+      "url": "https://venturebeat.com/orchestration/one-compromised-mcp-server-can-trick-an-ai-agent-into-misusing-tools-you-already-trust",
+      "source": "The Neuron",
+      "also_in": [],
+      "summary": "In security testing of an agent wired to five MCP servers, a single poisoned server hid instructions in its output that the agent then carried into calls to the other servers, succeeding 78.3% of the time. The trial count and success definition weren't published, so treat the number as directional; the fix is mapping which tools can act on which tool's output, scoping credentials narrowly and gating irreversible actions.",
+      "why": "Any PMM workflow that pairs a web-reading or inbox-reading connector with one that can send, publish or write to a system of record has exactly this risk, so it belongs in your guardrail checklist and in the case for orchestrated, auditable agent flows."
+    },
+    {
+      "title": "Nearly 90% of senior marketers use AI insights daily, but only 36% usually check them",
+      "url": "https://www.marketingdive.com/news/ai-derived-audience-insights-hurt-results-what-the-numbers-say/874565/",
+      "source": "Marketing Monk",
+      "also_in": [],
+      "summary": "A GWI survey of 1,883 senior marketing and insights staff found eight in ten often see wrong or misleading AI findings, more than half made a big decision on one, and 82% reported a bad outcome such as rework, complaints or lost money. Audience work was the weakest spot, and GWI sells audience data, so it has a stake in the result.",
+      "why": "Gives you a hard number for why PMM workflows need a source-and-date rule for AI-sourced claims before they reach positioning or persona docs, and a quality metric worth tracking alongside time saved."
+    },
+    {
+      "title": "Two real Claude workflows: a weekly stats report and a support-inbox digest routed to each team",
+      "url": "https://therundownai.beehiiv.com/p/jensen-huang-weighs-a-comeback-at-nvidia",
+      "source": "The Rundown AI",
+      "also_in": [],
+      "summary": "Rundown staff described connecting Claude to their newsletter platform for a scheduled weekly stats report with bot-click filtering, and connecting it to a Gmail support inbox, Slack and scheduled tasks so it groups the week's questions by theme and owning team and drafts one post per team for human review. A monthly pass audits ticket drivers and checks saved replies against what people actually asked.",
+      "why": "The inbox-to-themes-to-team-post pattern maps directly onto PMM signal work (field questions, win/loss notes, CI tips), with the human review step already built in."
+    }
+  ],
+  "try_this": {
+    "title": "Map the trust chain of your most-connected Claude setup",
+    "url": "https://venturebeat.com/orchestration/one-compromised-mcp-server-can-trick-an-ai-agent-into-misusing-tools-you-already-trust",
+    "how": "List every connector one of your PMM workflows can call, with its permissions and what it can put into context, then ask Claude to flag pairings where a tool reading untrusted content sits next to a tool that can send, publish or overwrite. Put your first approval gate on the riskiest pairing and narrow that connector to read-only where you can."
+  },
+  "sections": {
+    "workflows": [
+      {
+        "title": "Anthropic explains the building blocks of always-on agents",
+        "url": "https://claude.com/resources/articles/building-always-on-agents",
+        "source": "TLDR",
+        "also_in": [],
+        "summary": "A guide on agents that run indefinitely, keep context across sessions and act without someone watching, breaking down the primitives behind them and how they fit together.",
+        "why": "Useful reference before you turn a scheduled PMM task (signal monitoring, digest building) into something that runs and acts on its own."
+      }
+    ],
+    "governance": [
+      {
+        "title": "Coder argues for governing where AI runs instead of which tools people use",
+        "url": "https://coder.com/ai-operating-layer",
+        "source": "The Deep View (sponsored)",
+        "also_in": [],
+        "summary": "A vendor whitepaper says single-tool approvals get routed around and proposes five rules enforced in the runtime environment: keep data in, limit each task to the data it needs, allow only approved models, log every action, and track AI spend by person and team.",
+        "why": "A clean five-rule frame to bring to Legal, Security and IT when marketing wants to use more than one AI tool."
+      }
+    ],
+    "competitive": [],
+    "measurement": [],
+    "enablement": [
+      {
+        "title": "Sales leaders rate AI research tools nearly twice as useful as AI writing tools",
+        "url": "https://scienceofscaling.co/",
+        "source": "The Science of Scaling",
+        "also_in": [],
+        "summary": "In HubSpot surveys of 300+ sales leaders, 21% said AI research tools had the biggest positive effect on prospecting versus 12% for AI writing tools, and the top barrier to value was reps using AI as a shortcut instead of a research aid (32%). Demonstrated preparation was the top trait of cold calls that convert.",
+        "why": "Supports pitching sales-facing AI assets (account research, competitor context) over drafting tools, and suggests measuring whether reps use them before calls."
+      }
+    ],
+    "landscape": [
+      {
+        "title": "Congress moves toward tighter AI chip export rules, with Anthropic backing all three bills",
+        "url": "https://www.semafor.com/article/11/12/2026/a-high-probability-congress-pushes-tighter-export-controls-following-nvidia-scandal",
+        "source": "The AI Report",
+        "also_in": ["The Rundown AI", "The Neuron", "TLDR"],
+        "summary": "After the Nvidia leadership scandal, bipartisan leaders say chip-location checks, equipment loophole fixes and congressional oversight of sales could pass via the year-end defense bill, and reporting says remote rental of chips to Chinese customers is also in scope. Anthropic publicly supports the bills and OpenAI is reportedly warming to them.",
+        "why": ""
+      },
+      {
+        "title": "OpenAI launches ChatGPT Wallet so agents can pay without seeing card numbers",
+        "url": "https://openai.com/index/introducing-chatgpt-wallet/",
+        "source": "The Rundown AI",
+        "also_in": [],
+        "summary": "Built with American Express, Mastercard and Visa, the wallet lets ChatGPT agents buy things on a user's behalf using tokenized payment details.",
+        "why": "Another step toward agents that commit money and actions, which raises the stakes on approval gates in any agent workflow."
+      }
+    ]
+  }
+}
