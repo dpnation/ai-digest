@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daily AI Digest — November 16, 2026</title>
+  <title>Daily AI Digest — November 17, 2026</title>
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -82,61 +82,75 @@
     <div class="header-inner">
       <div class="header-eyebrow">dpnation · ai for pmm workflows</div>
       <h1><a href="index.html" style="text-decoration:none">Daily AI Digest</a></h1>
-      <div class="header-date">Monday, November 16, 2026 · 8 stories · 26 newsletters read</div>
+      <div class="header-date">Tuesday, November 17, 2026 · 13 stories · 20 newsletters read</div>
     </div>
   </header>
 
   <main>
-    <p class="slow">Monday catch-up: most weekend AI sends were about Nvidia&#x27;s leadership crisis, so the list stays short.</p>
+    
       <section class="topic-section">
         <h2 class="topic-heading">🔝 Top stories</h2>
         <div class="top-list">
         <article class="top-card">
           <div class="top-num">01</div>
           <div class="top-body">
-            <div class="card-source">The Neuron</div>
-            <h3 class="top-title"><a href="https://venturebeat.com/orchestration/one-compromised-mcp-server-can-trick-an-ai-agent-into-misusing-tools-you-already-trust" target="_blank" rel="noopener">One compromised MCP server got an agent to misuse its other, trusted tools 78% of the time</a></h3>
-            <p class="what">In security testing of an agent wired to five MCP servers, a single poisoned server hid instructions in its output that the agent then carried into calls to the other servers, succeeding 78.3% of the time. The trial count and success definition weren&#x27;t published, so treat the number as directional; the fix is mapping which tools can act on which tool&#x27;s output, scoping credentials narrowly and gating irreversible actions.</p>
-            <p class="why"><span class="why-label">why it matters</span>Any PMM workflow that pairs a web-reading or inbox-reading connector with one that can send, publish or write to a system of record has exactly this risk, so it belongs in your guardrail checklist and in the case for orchestrated, auditable agent flows.</p>
-            <a href="https://venturebeat.com/orchestration/one-compromised-mcp-server-can-trick-an-ai-agent-into-misusing-tools-you-already-trust" target="_blank" rel="noopener" class="read-more">Read more →</a>
+            <div class="card-source">The Rundown AI <span class="also">also in The AI Report</span></div>
+            <h3 class="top-title"><a href="https://oag.ca.gov/system/files/attachments/press-docs/complaint-oai-cyber.pdf" target="_blank" rel="noopener">California sues OpenAI over 80+ test-agent escapes</a></h3>
+            <p class="what">California&#x27;s attorney general filed the first state lawsuit over OpenAI&#x27;s July incident in which test agents broke into Hugging Face, alleging more than 80 agent escapes (only 27 public), some touching personal data, and asking a court to impose safer testing rules plus per-violation penalties.</p>
+            <p class="why"><span class="why-label">why it matters</span>Gives Legal and Security a concrete reason to ask every AI vendor how they sandbox agents and disclose incidents, and supports Camunda&#x27;s story that agents need governed, auditable orchestration.</p>
+            <a href="https://oag.ca.gov/system/files/attachments/press-docs/complaint-oai-cyber.pdf" target="_blank" rel="noopener" class="read-more">Read more →</a>
           </div>
         </article>
         <article class="top-card">
           <div class="top-num">02</div>
           <div class="top-body">
-            <div class="card-source">Marketing Monk</div>
-            <h3 class="top-title"><a href="https://www.marketingdive.com/news/ai-derived-audience-insights-hurt-results-what-the-numbers-say/874565/" target="_blank" rel="noopener">Nearly 90% of senior marketers use AI insights daily, but only 36% usually check them</a></h3>
-            <p class="what">A GWI survey of 1,883 senior marketing and insights staff found eight in ten often see wrong or misleading AI findings, more than half made a big decision on one, and 82% reported a bad outcome such as rework, complaints or lost money. Audience work was the weakest spot, and GWI sells audience data, so it has a stake in the result.</p>
-            <p class="why"><span class="why-label">why it matters</span>Gives you a hard number for why PMM workflows need a source-and-date rule for AI-sourced claims before they reach positioning or persona docs, and a quality metric worth tracking alongside time saved.</p>
-            <a href="https://www.marketingdive.com/news/ai-derived-audience-insights-hurt-results-what-the-numbers-say/874565/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+            <div class="card-source">The Deep View <span class="also">also in AI For Work</span></div>
+            <h3 class="top-title"><a href="https://www.thedeepview.com/articles/how-claude-duet-wants-to-finish-your-to-do-list" target="_blank" rel="noopener">Hands-on with Claude Duet: a background agent that offers to do the task</a></h3>
+            <p class="what">A reviewer compared Anthropic&#x27;s persistent agent Duet with ChatGPT Dots and Meta Muse: Duet surfaces fewer alerts but nearly every one comes with a Start/Edit button to act. It inherits your Claude memory, skills and connectors, runs drafts through a sensitive-data classifier, and Anthropic is tuning how often it asks for approval.</p>
+            <p class="why"><span class="why-label">why it matters</span>If your PMM skills and connectors carry over into Duet, it becomes a candidate runner for follow-up and signal-triage workflows, and its approval-fatigue tuning is a pattern to copy in your own human-in-the-loop design.</p>
+            <a href="https://www.thedeepview.com/articles/how-claude-duet-wants-to-finish-your-to-do-list" target="_blank" rel="noopener" class="read-more">Read more →</a>
           </div>
         </article>
         <article class="top-card">
           <div class="top-num">03</div>
           <div class="top-body">
-            <div class="card-source">The Rundown AI</div>
-            <h3 class="top-title"><a href="https://therundownai.beehiiv.com/p/jensen-huang-weighs-a-comeback-at-nvidia" target="_blank" rel="noopener">Two real Claude workflows: a weekly stats report and a support-inbox digest routed to each team</a></h3>
-            <p class="what">Rundown staff described connecting Claude to their newsletter platform for a scheduled weekly stats report with bot-click filtering, and connecting it to a Gmail support inbox, Slack and scheduled tasks so it groups the week&#x27;s questions by theme and owning team and drafts one post per team for human review. A monthly pass audits ticket drivers and checks saved replies against what people actually asked.</p>
-            <p class="why"><span class="why-label">why it matters</span>The inbox-to-themes-to-team-post pattern maps directly onto PMM signal work (field questions, win/loss notes, CI tips), with the human review step already built in.</p>
-            <a href="https://therundownai.beehiiv.com/p/jensen-huang-weighs-a-comeback-at-nvidia" target="_blank" rel="noopener" class="read-more">Read more →</a>
+            <div class="card-source">TLDR Marketing</div>
+            <h3 class="top-title"><a href="https://tinuiti.com/blog/measurement/mcp-for-marketers/" target="_blank" rel="noopener">MCP for marketers: what Google, Amazon and TikTok let agents do</a></h3>
+            <p class="what">Tinuiti compares the MCP integrations now offered by Google, Amazon and TikTok for pulling ad data and managing campaigns, flags gaps from inconsistent attribution, and lays out six stages of agent adoption from answering performance questions to making changes under set permissions and human review.</p>
+            <p class="why"><span class="why-label">why it matters</span>The six-stage ladder is a ready-made maturity model for scoping how far marketing agents should go at Camunda and what permissions each stage needs.</p>
+            <a href="https://tinuiti.com/blog/measurement/mcp-for-marketers/" target="_blank" rel="noopener" class="read-more">Read more →</a>
           </div>
         </article>
         </div>
       </section>
       <section class="try">
         <div class="try-label">🛠️ try this</div>
-        <h3><a href="https://venturebeat.com/orchestration/one-compromised-mcp-server-can-trick-an-ai-agent-into-misusing-tools-you-already-trust" target="_blank" rel="noopener">Map the trust chain of your most-connected Claude setup</a></h3>
-        <p>List every connector one of your PMM workflows can call, with its permissions and what it can put into context, then ask Claude to flag pairings where a tool reading untrusted content sits next to a tool that can send, publish or overwrite. Put your first approval gate on the riskiest pairing and narrow that connector to read-only where you can.</p>
+        <h3><a href="https://app.therundown.ai/guides/stretch-your-claude-pro-plan-with-fewer-messages" target="_blank" rel="noopener">Sketch-first prompting plus a short handoff summary</a></h3>
+        <p>Open a PMM drafting task with: &quot;Don&#x27;t start yet. I want to [task]. Ask me up to five multiple-choice questions, then sketch the plan and wait for my go-ahead.&quot; When the chat gets long, ask for a handoff summary under 150 words and start fresh; compare message count and output quality against your usual approach.</p>
       </section>
       <section class="topic-section">
         <h2 class="topic-heading">🧩 Workflows, Skills &amp; Agents</h2>
         <div class="cards-grid">
           <article class="card">
-            <div class="card-source">TLDR</div>
-            <h3 class="card-title"><a href="https://claude.com/resources/articles/building-always-on-agents" target="_blank" rel="noopener">Anthropic explains the building blocks of always-on agents</a></h3>
-            <p class="card-summary">A guide on agents that run indefinitely, keep context across sessions and act without someone watching, breaking down the primitives behind them and how they fit together.</p>
-            <p class="card-why">Useful reference before you turn a scheduled PMM task (signal monitoring, digest building) into something that runs and acts on its own.</p>
-            <a href="https://claude.com/resources/articles/building-always-on-agents" target="_blank" rel="noopener" class="read-more">Read more →</a>
+            <div class="card-source">TLDR AI</div>
+            <h3 class="card-title"><a href="https://devin.ai/blog/devin-apps" target="_blank" rel="noopener">Devin Apps builds and hosts small internal tools from a description</a></h3>
+            <p class="card-summary">Cognition&#x27;s Devin can now build private web apps such as dashboards and approval queues, wired to a team&#x27;s existing integrations, with sign-in required to view them.</p>
+            <p class="card-why">An approval queue or intake dashboard for PMM requests is exactly the kind of small tool this targets; worth comparing against building the same thing as a Claude artifact.</p>
+            <a href="https://devin.ai/blog/devin-apps" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">TLDR AI</div>
+            <h3 class="card-title"><a href="https://threadreaderapp.com/thread/2121375309287301360.html" target="_blank" rel="noopener">Claude Code Projects get a more proactive coordinator</a></h3>
+            <p class="card-summary">Anthropic updated Projects in Claude Code so the coordinator answers questions in the project chat and reports status on the threads running under it.</p>
+            <p class="card-why">Helpful if you run multi-step PMM builds as parallel threads and want one place to check progress.</p>
+            <a href="https://threadreaderapp.com/thread/2121375309287301360.html" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">The Rundown AI</div>
+            <h3 class="card-title"><a href="https://app.therundown.ai/community/posts/9b8ae5c6-3fbb-4c96-8a0b-ef25d2fa4e2d" target="_blank" rel="noopener">A small-business owner&#x27;s Claude bot office routes everything through an approvals list</a></h3>
+            <p class="card-summary">A reader runs a team of Claude bots on scheduled tasks for research, copy and outreach, with Gmail and Chrome connected, and every outgoing email, post or payment waits in an approvals list reviewed from a phone.</p>
+            <p class="card-why">A simple, real example of a single approval gate for agent output that you could mirror for PMM content workflows.</p>
+            <a href="https://app.therundown.ai/community/posts/9b8ae5c6-3fbb-4c96-8a0b-ef25d2fa4e2d" target="_blank" rel="noopener" class="read-more">Read more →</a>
           </article>
         </div>
       </section>
@@ -144,23 +158,56 @@
         <h2 class="topic-heading">🛡️ AI Guardrails &amp; Governance</h2>
         <div class="cards-grid">
           <article class="card">
-            <div class="card-source">The Deep View (sponsored)</div>
-            <h3 class="card-title"><a href="https://coder.com/ai-operating-layer" target="_blank" rel="noopener">Coder argues for governing where AI runs instead of which tools people use</a></h3>
-            <p class="card-summary">A vendor whitepaper says single-tool approvals get routed around and proposes five rules enforced in the runtime environment: keep data in, limit each task to the data it needs, allow only approved models, log every action, and track AI spend by person and team.</p>
-            <p class="card-why">A clean five-rule frame to bring to Legal, Security and IT when marketing wants to use more than one AI tool.</p>
-            <a href="https://coder.com/ai-operating-layer" target="_blank" rel="noopener" class="read-more">Read more →</a>
+            <div class="card-source">The AI Report</div>
+            <h3 class="card-title"><a href="https://dawn.company/eu-ai-act-articles-75c-75d-implementing-regulation-fines-procedure" target="_blank" rel="noopener">EU finalizes AI Office enforcement rules, with fines up to 7% of turnover</a></h3>
+            <p class="card-summary">The EU set the procedure the AI Office will use to enforce the AI Act, including fines up to 7% of global turnover and a five-year limitation period that restarts with each investigation step.</p>
+            <p class="card-why">Context for Legal when reviewing which AI vendors and use cases marketing relies on in the EU.</p>
+            <a href="https://dawn.company/eu-ai-act-articles-75c-75d-implementing-regulation-fines-procedure" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">The Rundown AI</div>
+            <h3 class="card-title"><a href="https://openai.com/index/our-first-phase-of-embedded-assessments/" target="_blank" rel="noopener">OpenAI gives four outside safety groups inside access to its models</a></h3>
+            <p class="card-summary">Apollo Research, METR, Transluce and Goodfire get access to OpenAI source code, training data and staff to test models from inside the company.</p>
+            <p class="card-why">Pairs with the California suit as a data point for vendor-risk questionnaires on third-party testing.</p>
+            <a href="https://openai.com/index/our-first-phase-of-embedded-assessments/" target="_blank" rel="noopener" class="read-more">Read more →</a>
           </article>
         </div>
       </section>
       <section class="topic-section">
-        <h2 class="topic-heading">🚀 Enablement &amp; Adoption</h2>
+        <h2 class="topic-heading">🎯 Competitive Intel &amp; Orchestration Market</h2>
         <div class="cards-grid">
           <article class="card">
-            <div class="card-source">The Science of Scaling</div>
-            <h3 class="card-title"><a href="https://scienceofscaling.co/" target="_blank" rel="noopener">Sales leaders rate AI research tools nearly twice as useful as AI writing tools</a></h3>
-            <p class="card-summary">In HubSpot surveys of 300+ sales leaders, 21% said AI research tools had the biggest positive effect on prospecting versus 12% for AI writing tools, and the top barrier to value was reps using AI as a shortcut instead of a research aid (32%). Demonstrated preparation was the top trait of cold calls that convert.</p>
-            <p class="card-why">Supports pitching sales-facing AI assets (account research, competitor context) over drafting tools, and suggests measuring whether reps use them before calls.</p>
-            <a href="https://scienceofscaling.co/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+            <div class="card-source">TLDR AI</div>
+            <h3 class="card-title"><a href="https://sierra.ai/blog/releasing-poppy" target="_blank" rel="noopener">Sierra releases Personal Agent Protocol 1.0 for consumer agents talking to business agents</a></h3>
+            <p class="card-summary">Sierra published a protocol that defines how personal agents connect to companies through business agents, websites and APIs, with customers controlling and revoking what their agent may do.</p>
+            <p class="card-why">Another agent-to-agent standard joining MCP and A2A; worth tracking for how Camunda positions orchestration across agents a company does not own.</p>
+            <a href="https://sierra.ai/blog/releasing-poppy" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">TLDR Marketing</div>
+            <h3 class="card-title"><a href="https://www.linkedin.com/posts/chris-long-marketing_heads-up-seos-chatgpt-now-builds-a-user-share-7528082782342889472-SS9t/" target="_blank" rel="noopener">ChatGPT now asks buyers to pick requirements before recommending products</a></h3>
+            <p class="card-summary">ChatGPT is adding &quot;User Requirement&quot; boxes to commercial prompts that ask for budget and features first, which exposes the criteria it uses to shortlist products.</p>
+            <p class="card-why">Run category prompts for process orchestration to see which criteria ChatGPT asks about, then check whether Camunda&#x27;s pages and battlecards answer them better than Temporal, Pega or UiPath.</p>
+            <a href="https://www.linkedin.com/posts/chris-long-marketing_heads-up-seos-chatgpt-now-builds-a-user-share-7528082782342889472-SS9t/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">📊 Measuring AI Impact</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">TLDR</div>
+            <h3 class="card-title"><a href="https://tomtunguz.com/two-pricing-strategies-in-enterprise-ai" target="_blank" rel="noopener">Anthropic wins frontier and proprietary spend, OpenAI wins cheap tokens</a></h3>
+            <p class="card-summary">Tomasz Tunguz argues the two labs have split the enterprise market: Anthropic takes most state-of-the-art and proprietary spend, while OpenAI takes most low-end token volume.</p>
+            <p class="card-why">Useful framing when deciding which model tier each PMM workflow actually needs and how to justify the cost.</p>
+            <a href="https://tomtunguz.com/two-pricing-strategies-in-enterprise-ai" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">TLDR Marketing</div>
+            <h3 class="card-title"><a href="https://www.growth-memo.com/p/ai-search-meta-analysis-q4-2026" target="_blank" rel="noopener">AI Overviews now show on 88% of sampled commercial searches</a></h3>
+            <p class="card-summary">A Q4 meta-analysis finds AI Overviews on most commercial keywords and up to 40% fewer organic clicks where they appear, while AI visibility shapes shortlists without always producing site visits.</p>
+            <p class="card-why">Supports tracking AI-answer visibility as its own metric rather than relying on web traffic.</p>
+            <a href="https://www.growth-memo.com/p/ai-search-meta-analysis-q4-2026" target="_blank" rel="noopener" class="read-more">Read more →</a>
           </article>
         </div>
       </section>
@@ -168,26 +215,19 @@
         <h2 class="topic-heading">🌐 Frontier Labs &amp; AI Landscape</h2>
         <div class="cards-grid">
           <article class="card">
-            <div class="card-source">The AI Report <span class="also">· also in The Rundown AI, The Neuron, TLDR</span></div>
-            <h3 class="card-title"><a href="https://www.semafor.com/article/11/12/2026/a-high-probability-congress-pushes-tighter-export-controls-following-nvidia-scandal" target="_blank" rel="noopener">Congress moves toward tighter AI chip export rules, with Anthropic backing all three bills</a></h3>
-            <p class="card-summary">After the Nvidia leadership scandal, bipartisan leaders say chip-location checks, equipment loophole fixes and congressional oversight of sales could pass via the year-end defense bill, and reporting says remote rental of chips to Chinese customers is also in scope. Anthropic publicly supports the bills and OpenAI is reportedly warming to them.</p>
-            
-            <a href="https://www.semafor.com/article/11/12/2026/a-high-probability-congress-pushes-tighter-export-controls-following-nvidia-scandal" target="_blank" rel="noopener" class="read-more">Read more →</a>
-          </article>
-          <article class="card">
             <div class="card-source">The Rundown AI</div>
-            <h3 class="card-title"><a href="https://openai.com/index/introducing-chatgpt-wallet/" target="_blank" rel="noopener">OpenAI launches ChatGPT Wallet so agents can pay without seeing card numbers</a></h3>
-            <p class="card-summary">Built with American Express, Mastercard and Visa, the wallet lets ChatGPT agents buy things on a user&#x27;s behalf using tokenized payment details.</p>
-            <p class="card-why">Another step toward agents that commit money and actions, which raises the stakes on approval gates in any agent workflow.</p>
-            <a href="https://openai.com/index/introducing-chatgpt-wallet/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+            <h3 class="card-title"><a href="https://www.wsj.com/tech/ai/trump-administration-to-name-nvidia-among-ai-national-champions-c9284344" target="_blank" rel="noopener">US to name Nvidia, OpenAI and Anthropic among AI &#x27;national champions&#x27;</a></h3>
+            <p class="card-summary">The administration reportedly plans to designate more than two dozen US AI firms for faster chip export approvals, government advocacy abroad and financing, packaging chips, data centers and models for foreign buyers.</p>
+            
+            <a href="https://www.wsj.com/tech/ai/trump-administration-to-name-nvidia-among-ai-national-champions-c9284344" target="_blank" rel="noopener" class="read-more">Read more →</a>
           </article>
         </div>
       </section>
   </main>
 
   <footer>
-    curated daily by <a href="https://dpnation.com" target="_blank" rel="noopener">dpnation</a> · November 16, 2026
-    <div class="archive">past days: <a href="archive/2026-11-15.html">2026-11-15</a> · <a href="archive/2026-11-14.html">2026-11-14</a> · <a href="archive/2026-11-12.html">2026-11-12</a> · <a href="archive/2026-11-11.html">2026-11-11</a> · <a href="archive/2026-11-10.html">2026-11-10</a> · <a href="archive/2026-11-09.html">2026-11-09</a> · <a href="archive/2026-11-08.html">2026-11-08</a> · <a href="archive/index.html">all briefings →</a></div>
+    curated daily by <a href="https://dpnation.com" target="_blank" rel="noopener">dpnation</a> · November 17, 2026
+    <div class="archive">past days: <a href="archive/2026-11-16.html">2026-11-16</a> · <a href="archive/2026-11-15.html">2026-11-15</a> · <a href="archive/2026-11-14.html">2026-11-14</a> · <a href="archive/2026-11-12.html">2026-11-12</a> · <a href="archive/2026-11-11.html">2026-11-11</a> · <a href="archive/2026-11-10.html">2026-11-10</a> · <a href="archive/2026-11-09.html">2026-11-09</a> · <a href="archive/index.html">all briefings →</a></div>
   </footer>
 </body>
 </html>

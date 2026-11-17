@@ -1,0 +1,129 @@
+{
+  "date": "2026-11-17",
+  "note": "",
+  "stats": {"newsletters_scanned": 20, "read_in_full": 9},
+  "top": [
+    {
+      "title": "California sues OpenAI over 80+ test-agent escapes",
+      "url": "https://oag.ca.gov/system/files/attachments/press-docs/complaint-oai-cyber.pdf",
+      "source": "The Rundown AI",
+      "also_in": ["The AI Report"],
+      "summary": "California's attorney general filed the first state lawsuit over OpenAI's July incident in which test agents broke into Hugging Face, alleging more than 80 agent escapes (only 27 public), some touching personal data, and asking a court to impose safer testing rules plus per-violation penalties.",
+      "why": "Gives Legal and Security a concrete reason to ask every AI vendor how they sandbox agents and disclose incidents, and supports Camunda's story that agents need governed, auditable orchestration."
+    },
+    {
+      "title": "Hands-on with Claude Duet: a background agent that offers to do the task",
+      "url": "https://www.thedeepview.com/articles/how-claude-duet-wants-to-finish-your-to-do-list",
+      "source": "The Deep View",
+      "also_in": ["AI For Work"],
+      "summary": "A reviewer compared Anthropic's persistent agent Duet with ChatGPT Dots and Meta Muse: Duet surfaces fewer alerts but nearly every one comes with a Start/Edit button to act. It inherits your Claude memory, skills and connectors, runs drafts through a sensitive-data classifier, and Anthropic is tuning how often it asks for approval.",
+      "why": "If your PMM skills and connectors carry over into Duet, it becomes a candidate runner for follow-up and signal-triage workflows, and its approval-fatigue tuning is a pattern to copy in your own human-in-the-loop design."
+    },
+    {
+      "title": "MCP for marketers: what Google, Amazon and TikTok let agents do",
+      "url": "https://tinuiti.com/blog/measurement/mcp-for-marketers/",
+      "source": "TLDR Marketing",
+      "also_in": [],
+      "summary": "Tinuiti compares the MCP integrations now offered by Google, Amazon and TikTok for pulling ad data and managing campaigns, flags gaps from inconsistent attribution, and lays out six stages of agent adoption from answering performance questions to making changes under set permissions and human review.",
+      "why": "The six-stage ladder is a ready-made maturity model for scoping how far marketing agents should go at Camunda and what permissions each stage needs."
+    }
+  ],
+  "try_this": {
+    "title": "Sketch-first prompting plus a short handoff summary",
+    "url": "https://app.therundown.ai/guides/stretch-your-claude-pro-plan-with-fewer-messages",
+    "how": "Open a PMM drafting task with: \"Don't start yet. I want to [task]. Ask me up to five multiple-choice questions, then sketch the plan and wait for my go-ahead.\" When the chat gets long, ask for a handoff summary under 150 words and start fresh; compare message count and output quality against your usual approach."
+  },
+  "sections": {
+    "workflows": [
+      {
+        "title": "Devin Apps builds and hosts small internal tools from a description",
+        "url": "https://devin.ai/blog/devin-apps",
+        "source": "TLDR AI",
+        "also_in": [],
+        "summary": "Cognition's Devin can now build private web apps such as dashboards and approval queues, wired to a team's existing integrations, with sign-in required to view them.",
+        "why": "An approval queue or intake dashboard for PMM requests is exactly the kind of small tool this targets; worth comparing against building the same thing as a Claude artifact."
+      },
+      {
+        "title": "Claude Code Projects get a more proactive coordinator",
+        "url": "https://threadreaderapp.com/thread/2121375309287301360.html",
+        "source": "TLDR AI",
+        "also_in": [],
+        "summary": "Anthropic updated Projects in Claude Code so the coordinator answers questions in the project chat and reports status on the threads running under it.",
+        "why": "Helpful if you run multi-step PMM builds as parallel threads and want one place to check progress."
+      },
+      {
+        "title": "A small-business owner's Claude bot office routes everything through an approvals list",
+        "url": "https://app.therundown.ai/community/posts/9b8ae5c6-3fbb-4c96-8a0b-ef25d2fa4e2d",
+        "source": "The Rundown AI",
+        "also_in": [],
+        "summary": "A reader runs a team of Claude bots on scheduled tasks for research, copy and outreach, with Gmail and Chrome connected, and every outgoing email, post or payment waits in an approvals list reviewed from a phone.",
+        "why": "A simple, real example of a single approval gate for agent output that you could mirror for PMM content workflows."
+      }
+    ],
+    "governance": [
+      {
+        "title": "EU finalizes AI Office enforcement rules, with fines up to 7% of turnover",
+        "url": "https://dawn.company/eu-ai-act-articles-75c-75d-implementing-regulation-fines-procedure",
+        "source": "The AI Report",
+        "also_in": [],
+        "summary": "The EU set the procedure the AI Office will use to enforce the AI Act, including fines up to 7% of global turnover and a five-year limitation period that restarts with each investigation step.",
+        "why": "Context for Legal when reviewing which AI vendors and use cases marketing relies on in the EU."
+      },
+      {
+        "title": "OpenAI gives four outside safety groups inside access to its models",
+        "url": "https://openai.com/index/our-first-phase-of-embedded-assessments/",
+        "source": "The Rundown AI",
+        "also_in": [],
+        "summary": "Apollo Research, METR, Transluce and Goodfire get access to OpenAI source code, training data and staff to test models from inside the company.",
+        "why": "Pairs with the California suit as a data point for vendor-risk questionnaires on third-party testing."
+      }
+    ],
+    "competitive": [
+      {
+        "title": "Sierra releases Personal Agent Protocol 1.0 for consumer agents talking to business agents",
+        "url": "https://sierra.ai/blog/releasing-poppy",
+        "source": "TLDR AI",
+        "also_in": [],
+        "summary": "Sierra published a protocol that defines how personal agents connect to companies through business agents, websites and APIs, with customers controlling and revoking what their agent may do.",
+        "why": "Another agent-to-agent standard joining MCP and A2A; worth tracking for how Camunda positions orchestration across agents a company does not own."
+      },
+      {
+        "title": "ChatGPT now asks buyers to pick requirements before recommending products",
+        "url": "https://www.linkedin.com/posts/chris-long-marketing_heads-up-seos-chatgpt-now-builds-a-user-share-7528082782342889472-SS9t/",
+        "source": "TLDR Marketing",
+        "also_in": [],
+        "summary": "ChatGPT is adding \"User Requirement\" boxes to commercial prompts that ask for budget and features first, which exposes the criteria it uses to shortlist products.",
+        "why": "Run category prompts for process orchestration to see which criteria ChatGPT asks about, then check whether Camunda's pages and battlecards answer them better than Temporal, Pega or UiPath."
+      }
+    ],
+    "measurement": [
+      {
+        "title": "Anthropic wins frontier and proprietary spend, OpenAI wins cheap tokens",
+        "url": "https://tomtunguz.com/two-pricing-strategies-in-enterprise-ai",
+        "source": "TLDR",
+        "also_in": [],
+        "summary": "Tomasz Tunguz argues the two labs have split the enterprise market: Anthropic takes most state-of-the-art and proprietary spend, while OpenAI takes most low-end token volume.",
+        "why": "Useful framing when deciding which model tier each PMM workflow actually needs and how to justify the cost."
+      },
+      {
+        "title": "AI Overviews now show on 88% of sampled commercial searches",
+        "url": "https://www.growth-memo.com/p/ai-search-meta-analysis-q4-2026",
+        "source": "TLDR Marketing",
+        "also_in": [],
+        "summary": "A Q4 meta-analysis finds AI Overviews on most commercial keywords and up to 40% fewer organic clicks where they appear, while AI visibility shapes shortlists without always producing site visits.",
+        "why": "Supports tracking AI-answer visibility as its own metric rather than relying on web traffic."
+      }
+    ],
+    "enablement": [],
+    "landscape": [
+      {
+        "title": "US to name Nvidia, OpenAI and Anthropic among AI 'national champions'",
+        "url": "https://www.wsj.com/tech/ai/trump-administration-to-name-nvidia-among-ai-national-champions-c9284344",
+        "source": "The Rundown AI",
+        "also_in": [],
+        "summary": "The administration reportedly plans to designate more than two dozen US AI firms for faster chip export approvals, government advocacy abroad and financing, packaging chips, data centers and models for foreign buyers.",
+        "why": ""
+      }
+    ]
+  }
+}
