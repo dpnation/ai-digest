@@ -1,0 +1,114 @@
+{
+  "date": "2026-11-18",
+  "note": "",
+  "stats": {"newsletters_scanned": 22, "read_in_full": 8},
+  "top": [
+    {
+      "title": "Microsoft ships seven MAI models and puts Office inside Copilot",
+      "url": "https://microsoft.ai/news/microsoft-ignite-2026/",
+      "source": "The AI Report",
+      "also_in": ["The Rundown AI", "The Neuron", "TLDR"],
+      "summary": "At Ignite, Microsoft released seven in-house MAI models for coding, cybersecurity, images, audio and decisions, priced well below OpenAI and Anthropic equivalents, plus Licensed Weights so enterprises can tune models on their own data inside Azure. Word, Excel and PowerPoint are now generally available inside Copilot, which Nadella pitched as the new OS for work, alongside new agent experiences.",
+      "why": "Microsoft is bundling cheap specialized models, agents and Office into one surface, which raises the bar for Power Automate as a Camunda competitor and is worth a CI note on where Copilot agents stop and governed process orchestration starts."
+    },
+    {
+      "title": "OpenAI's GPT-6.2 Astra and Sol land to rough early reviews",
+      "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+      "source": "The Rundown AI",
+      "also_in": ["The Neuron", "TLDR"],
+      "summary": "OpenAI released GPT-6.2 Astra for hard professional work and the cheaper Sol for everyday tasks, both in ChatGPT Work, Codex and the API. Astra ranks second behind Fable 5.2 on Artificial Analysis and Sol matches September's Astra at about 15% of the cost per task, but power users call Astra hard to steer, and coding shows no gain.",
+      "why": "If any PMM workflows run on OpenAI models, test Sol on high-volume steps like summarizing and tagging before switching anything, and keep Claude as the default for drafting until the reviews settle."
+    },
+    {
+      "title": "Google says autonomous AI attacks have arrived",
+      "url": "https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold",
+      "source": "The Rundown AI",
+      "also_in": ["The Deep View", "AI For Work", "TLDR"],
+      "summary": "Google's threat intelligence group reports that attackers now use agents to turn freshly published software patches into working exploits with no human involved. It lands during a week of outages at Microsoft, the FAA, JPMorgan and Apple, which officials say were not attacks but reflect how hard it has become to patch fast without breaking things.",
+      "why": "Expect Security and IT to tighten reviews of new connectors, MCP servers and agent permissions; having a short inventory of what each PMM workflow can touch will speed those approvals."
+    }
+  ],
+  "try_this": {
+    "title": "Claude Data dashboards with every number traced to its query",
+    "url": "https://app.therundown.ai/guides/claude-data-dashboard-data-story",
+    "how": "Upload a CSV of content or enablement usage to a Claude Data artifact, say who it's for and what they need to decide, then open Sources to check each chart's figures against the file before sharing. Use History to roll back changes, and ask Claude what the numbers can't tell you."
+  },
+  "sections": {
+    "workflows": [
+      {
+        "title": "Anthropic: agents work better with less context, not more",
+        "url": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+        "source": "The Neuron",
+        "also_in": [],
+        "summary": "Anthropic's context engineering guide argues that stuffing an agent with every document, tool description and past conversation makes it less reliable, and recommends clear instructions, pulling information in only when needed, and compressing long histories.",
+        "why": "A useful checklist for auditing PMM skills that load full messaging docs or battlecards up front when they could fetch only the relevant section."
+      },
+      {
+        "title": "Zapier found Claude reads a Markdown copy of its pages, not the HTML",
+        "url": "https://zapier.com/blog/what-we-learned-watching-claude-read-zapier/",
+        "source": "TLDR Marketing",
+        "also_in": [],
+        "summary": "Zapier built a tool to watch how Claude interprets its site and found the agent fetched a Markdown version of a page and ran it through another model first, so edits to the HTML never reached it.",
+        "why": "Worth checking what agents actually see on Camunda's product and docs pages before investing in AI-search page changes."
+      }
+    ],
+    "governance": [
+      {
+        "title": "A three-line guard against prompt injection when agents browse",
+        "url": "",
+        "source": "The Neuron",
+        "also_in": [],
+        "summary": "The Neuron suggests a simple boundary for any agent with web or file access: state the single task, label webpage and file text as untrusted evidence rather than instructions, and require approval before sending, sharing or buying anything.",
+        "why": "This belongs in the standard preamble of every competitor-research and web-summary skill, since those read pages written by rivals."
+      }
+    ],
+    "competitive": [
+      {
+        "title": "Perplexity launches Multiagent for mixed-model agent teams",
+        "url": "https://x.com/perplexity_ai/status/2122728603909783741",
+        "source": "The Neuron",
+        "also_in": [],
+        "summary": "Perplexity's new Multiagent mode coordinates teams of agents running on different models for hard research tasks, available to Max and Enterprise Max web users.",
+        "why": "Another consumer-facing take on multi-agent coordination; a useful contrast point for Camunda's story that enterprise agent teams need explicit, auditable orchestration."
+      },
+      {
+        "title": "JPMorgan agents completed FX trades with no human in the loop",
+        "url": "https://www.cnbc.com/2026/11/18/jpmorgan-hyundai-card-ai-agents-payments.html",
+        "source": "The AI Report",
+        "also_in": [],
+        "summary": "JPMorgan and Hyundai Card finished a proof of concept in which AI agents executed simulated foreign exchange transactions on their own, with multi-agent tests involving negotiation and autonomous payments planned for the first half of 2027.",
+        "why": "A concrete financial-services example of agents running end-to-end transactions, the kind of use case where Camunda's governed agentic orchestration pitch fits."
+      }
+    ],
+    "measurement": [
+      {
+        "title": "One founder's data: 146 leads from SEO vs. 5 from AI search",
+        "url": "https://www.linkedin.com/posts/jayleejanet_can-we-pause-seo-and-move-the-retainer-to-share-7528124733410762752-F4A8/",
+        "source": "TLDR Marketing",
+        "also_in": [],
+        "summary": "Over six months, Google organic search drove 146 qualified leads versus 5 from AI search, so the author recommends roughly 80% of effort on SEO basics and 20% on AI search experiments. A separate test of 1,000 identical ChatGPT queries found model updates changed which businesses got recommended, so one-off visibility checks are unreliable.",
+        "why": "Argues for measuring AI-search work on pipeline, not visibility screenshots, and for sampling many runs if you track how assistants describe Camunda versus competitors."
+      }
+    ],
+    "enablement": [
+      {
+        "title": "Breaking an AI plateau with a shared 'marketing brain' in GitHub",
+        "url": "https://evidently.beehiiv.com/p/how-i-broke-through-my-ai-plateau",
+        "source": "TLDR Marketing",
+        "also_in": [],
+        "summary": "A marketer describes getting unstuck by building small personal tools and keeping a shared marketing knowledge base in GitHub with Claude, while trading practical learnings with peers and protecting skills like writing.",
+        "why": "A model for a team-wide, versioned context repo that champions can contribute to, and a reminder that peer show-and-tell keeps adoption going after the first wave."
+      }
+    ],
+    "landscape": [
+      {
+        "title": "Gemini Tasks goes free in six countries",
+        "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
+        "source": "The Rundown AI",
+        "also_in": ["The Neuron", "The AI Report"],
+        "summary": "Google is opening Gemini's Tasks mode to free users, letting the assistant run background research, build itineraries and, under separate permissions, call businesses and make purchases.",
+        "why": ""
+      }
+    ]
+  }
+}

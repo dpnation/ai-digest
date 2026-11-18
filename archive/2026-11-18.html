@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily AI Digest — November 18, 2026</title>
+  <link rel="icon" type="image/png" href="../favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* dpnation brand: Ink #0D0D0D, Canvas #F7F6F3, Mist #EBEBEB, Smoke #7A7A7A, Spark #FF8C69 */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+           background: #F7F6F3; color: #0D0D0D; line-height: 1.6; }
+    a { color: inherit; }
+
+    header { background: #0D0D0D; color: #FFFFFF; padding: 2.25rem 2rem 1.75rem; border-bottom: 3px solid #FF8C69; }
+    .header-inner { max-width: 1100px; margin: 0 auto; }
+    .header-eyebrow { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.72rem; font-weight: 500;
+                       letter-spacing: 0.14em; text-transform: lowercase; color: #FF8C69; margin-bottom: 0.5rem; }
+    header h1 { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 2rem; font-weight: 800;
+                 letter-spacing: -0.01em; margin-bottom: 0.3rem; }
+    .header-date { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.8rem; color: #EBEBEB; }
+
+    main { max-width: 1100px; margin: 2.25rem auto; padding: 0 1.5rem; }
+    .slow { font-size: 0.9rem; color: #7A7A7A; margin-bottom: 1.5rem; }
+
+    .topic-section { margin-bottom: 2.75rem; }
+    .topic-heading { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 1.05rem; font-weight: 700;
+                      border-bottom: 1px solid #EBEBEB; padding-bottom: 0.5rem; margin-bottom: 1.1rem; }
+
+    /* Top stories */
+    .top-list { display: flex; flex-direction: column; gap: 1rem; }
+    .top-card { background: #FFFFFF; border: 1px solid #EBEBEB; border-left: 4px solid #FF8C69; border-radius: 8px;
+                 padding: 1.25rem 1.4rem; display: flex; gap: 1.2rem; }
+    .top-num { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 1.4rem; font-weight: 500;
+                color: #FF8C69; line-height: 1.2; }
+    .top-body { display: flex; flex-direction: column; gap: 0.45rem; flex: 1; }
+    .top-title { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 1.15rem; font-weight: 700; line-height: 1.35; }
+    .top-title a, .card-title a, .try h3 a { text-decoration: none; }
+    .top-title a:hover, .card-title a:hover, .try h3 a:hover { color: #FF8C69; }
+    .what { font-size: 0.92rem; }
+    .why { font-size: 0.88rem; color: #3A3A3A; background: #F7F6F3; border-radius: 6px; padding: 0.55rem 0.75rem; }
+    .why-label, .try-label { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.66rem; letter-spacing: 0.08em;
+                  text-transform: lowercase; color: #FF8C69; display: block; margin-bottom: 0.1rem; }
+
+    /* Try this */
+    .try { background: #0D0D0D; color: #FFFFFF; border-radius: 8px; padding: 1.2rem 1.4rem; margin-bottom: 2.75rem; }
+    .try h3 { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 1.02rem; margin-bottom: 0.3rem; }
+    .try p { font-size: 0.9rem; color: #EBEBEB; }
+
+    /* Cards */
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
+    .card { background: #FFFFFF; border-radius: 8px; padding: 1.15rem 1.3rem 1rem; border: 1px solid #EBEBEB;
+             display: flex; flex-direction: column; gap: 0.45rem;
+             transition: box-shadow 0.15s ease, transform 0.15s ease, border-color 0.15s ease; }
+    .card:hover { box-shadow: 0 6px 18px rgba(13,13,13,0.08); border-color: #FF8C69; transform: translateY(-1px); }
+    .card-source { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.68rem; font-weight: 500;
+                    letter-spacing: 0.08em; text-transform: lowercase; color: #7A7A7A; }
+    .also { color: #A0A0A0; }
+    .card-title { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 0.97rem; font-weight: 700; line-height: 1.4; }
+    .card-summary { font-size: 0.85rem; color: #4A4A4A; line-height: 1.55; }
+    .card-why { font-size: 0.82rem; color: #7A7A7A; line-height: 1.5; flex: 1; border-left: 2px solid #FF8C69; padding-left: 0.6rem; }
+    .read-more { font-size: 0.8rem; font-weight: 600; color: #0D0D0D; text-decoration: none;
+                  border-bottom: 2px solid #FF8C69; align-self: flex-start; margin-top: auto; }
+    .read-more:hover { color: #FF8C69; }
+
+    footer { text-align: center; padding: 2rem 1rem; font-family: "JetBrains Mono", ui-monospace, monospace;
+              font-size: 0.75rem; color: #7A7A7A; border-top: 1px solid #EBEBEB; margin-top: 1rem; }
+    footer a { color: #0D0D0D; text-decoration: none; border-bottom: 1px solid #FF8C69; }
+    .archive { margin-top: 0.6rem; }
+
+    @media (max-width: 600px) {
+      .cards-grid { grid-template-columns: 1fr; }
+      header h1 { font-size: 1.5rem; }
+      .top-card { flex-direction: column; gap: 0.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="header-eyebrow">dpnation · ai for pmm workflows</div>
+      <h1><a href="../index.html" style="text-decoration:none">Daily AI Digest</a></h1>
+      <div class="header-date">Wednesday, November 18, 2026 · 11 stories · 22 newsletters read</div>
+    </div>
+  </header>
+
+  <main>
+    
+      <section class="topic-section">
+        <h2 class="topic-heading">🔝 Top stories</h2>
+        <div class="top-list">
+        <article class="top-card">
+          <div class="top-num">01</div>
+          <div class="top-body">
+            <div class="card-source">The AI Report <span class="also">also in The Rundown AI, The Neuron, TLDR</span></div>
+            <h3 class="top-title"><a href="https://microsoft.ai/news/microsoft-ignite-2026/" target="_blank" rel="noopener">Microsoft ships seven MAI models and puts Office inside Copilot</a></h3>
+            <p class="what">At Ignite, Microsoft released seven in-house MAI models for coding, cybersecurity, images, audio and decisions, priced well below OpenAI and Anthropic equivalents, plus Licensed Weights so enterprises can tune models on their own data inside Azure. Word, Excel and PowerPoint are now generally available inside Copilot, which Nadella pitched as the new OS for work, alongside new agent experiences.</p>
+            <p class="why"><span class="why-label">why it matters</span>Microsoft is bundling cheap specialized models, agents and Office into one surface, which raises the bar for Power Automate as a Camunda competitor and is worth a CI note on where Copilot agents stop and governed process orchestration starts.</p>
+            <a href="https://microsoft.ai/news/microsoft-ignite-2026/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </div>
+        </article>
+        <article class="top-card">
+          <div class="top-num">02</div>
+          <div class="top-body">
+            <div class="card-source">The Rundown AI <span class="also">also in The Neuron, TLDR</span></div>
+            <h3 class="top-title"><a href="https://openai.com/index/introducing-gpt-6-2-astra-sol/" target="_blank" rel="noopener">OpenAI&#x27;s GPT-6.2 Astra and Sol land to rough early reviews</a></h3>
+            <p class="what">OpenAI released GPT-6.2 Astra for hard professional work and the cheaper Sol for everyday tasks, both in ChatGPT Work, Codex and the API. Astra ranks second behind Fable 5.2 on Artificial Analysis and Sol matches September&#x27;s Astra at about 15% of the cost per task, but power users call Astra hard to steer, and coding shows no gain.</p>
+            <p class="why"><span class="why-label">why it matters</span>If any PMM workflows run on OpenAI models, test Sol on high-volume steps like summarizing and tagging before switching anything, and keep Claude as the default for drafting until the reviews settle.</p>
+            <a href="https://openai.com/index/introducing-gpt-6-2-astra-sol/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </div>
+        </article>
+        <article class="top-card">
+          <div class="top-num">03</div>
+          <div class="top-body">
+            <div class="card-source">The Rundown AI <span class="also">also in The Deep View, AI For Work, TLDR</span></div>
+            <h3 class="top-title"><a href="https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold" target="_blank" rel="noopener">Google says autonomous AI attacks have arrived</a></h3>
+            <p class="what">Google&#x27;s threat intelligence group reports that attackers now use agents to turn freshly published software patches into working exploits with no human involved. It lands during a week of outages at Microsoft, the FAA, JPMorgan and Apple, which officials say were not attacks but reflect how hard it has become to patch fast without breaking things.</p>
+            <p class="why"><span class="why-label">why it matters</span>Expect Security and IT to tighten reviews of new connectors, MCP servers and agent permissions; having a short inventory of what each PMM workflow can touch will speed those approvals.</p>
+            <a href="https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="try">
+        <div class="try-label">🛠️ try this</div>
+        <h3><a href="https://app.therundown.ai/guides/claude-data-dashboard-data-story" target="_blank" rel="noopener">Claude Data dashboards with every number traced to its query</a></h3>
+        <p>Upload a CSV of content or enablement usage to a Claude Data artifact, say who it&#x27;s for and what they need to decide, then open Sources to check each chart&#x27;s figures against the file before sharing. Use History to roll back changes, and ask Claude what the numbers can&#x27;t tell you.</p>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">🧩 Workflows, Skills &amp; Agents</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">The Neuron</div>
+            <h3 class="card-title"><a href="https://www.anthropic.com/research/effective-context-engineering-for-ai-agents" target="_blank" rel="noopener">Anthropic: agents work better with less context, not more</a></h3>
+            <p class="card-summary">Anthropic&#x27;s context engineering guide argues that stuffing an agent with every document, tool description and past conversation makes it less reliable, and recommends clear instructions, pulling information in only when needed, and compressing long histories.</p>
+            <p class="card-why">A useful checklist for auditing PMM skills that load full messaging docs or battlecards up front when they could fetch only the relevant section.</p>
+            <a href="https://www.anthropic.com/research/effective-context-engineering-for-ai-agents" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">TLDR Marketing</div>
+            <h3 class="card-title"><a href="https://zapier.com/blog/what-we-learned-watching-claude-read-zapier/" target="_blank" rel="noopener">Zapier found Claude reads a Markdown copy of its pages, not the HTML</a></h3>
+            <p class="card-summary">Zapier built a tool to watch how Claude interprets its site and found the agent fetched a Markdown version of a page and ran it through another model first, so edits to the HTML never reached it.</p>
+            <p class="card-why">Worth checking what agents actually see on Camunda&#x27;s product and docs pages before investing in AI-search page changes.</p>
+            <a href="https://zapier.com/blog/what-we-learned-watching-claude-read-zapier/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">🛡️ AI Guardrails &amp; Governance</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">The Neuron</div>
+            <h3 class="card-title">A three-line guard against prompt injection when agents browse</h3>
+            <p class="card-summary">The Neuron suggests a simple boundary for any agent with web or file access: state the single task, label webpage and file text as untrusted evidence rather than instructions, and require approval before sending, sharing or buying anything.</p>
+            <p class="card-why">This belongs in the standard preamble of every competitor-research and web-summary skill, since those read pages written by rivals.</p>
+            
+          </article>
+        </div>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">🎯 Competitive Intel &amp; Orchestration Market</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">The Neuron</div>
+            <h3 class="card-title"><a href="https://x.com/perplexity_ai/status/2122728603909783741" target="_blank" rel="noopener">Perplexity launches Multiagent for mixed-model agent teams</a></h3>
+            <p class="card-summary">Perplexity&#x27;s new Multiagent mode coordinates teams of agents running on different models for hard research tasks, available to Max and Enterprise Max web users.</p>
+            <p class="card-why">Another consumer-facing take on multi-agent coordination; a useful contrast point for Camunda&#x27;s story that enterprise agent teams need explicit, auditable orchestration.</p>
+            <a href="https://x.com/perplexity_ai/status/2122728603909783741" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">The AI Report</div>
+            <h3 class="card-title"><a href="https://www.cnbc.com/2026/11/18/jpmorgan-hyundai-card-ai-agents-payments.html" target="_blank" rel="noopener">JPMorgan agents completed FX trades with no human in the loop</a></h3>
+            <p class="card-summary">JPMorgan and Hyundai Card finished a proof of concept in which AI agents executed simulated foreign exchange transactions on their own, with multi-agent tests involving negotiation and autonomous payments planned for the first half of 2027.</p>
+            <p class="card-why">A concrete financial-services example of agents running end-to-end transactions, the kind of use case where Camunda&#x27;s governed agentic orchestration pitch fits.</p>
+            <a href="https://www.cnbc.com/2026/11/18/jpmorgan-hyundai-card-ai-agents-payments.html" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">📊 Measuring AI Impact</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">TLDR Marketing</div>
+            <h3 class="card-title"><a href="https://www.linkedin.com/posts/jayleejanet_can-we-pause-seo-and-move-the-retainer-to-share-7528124733410762752-F4A8/" target="_blank" rel="noopener">One founder&#x27;s data: 146 leads from SEO vs. 5 from AI search</a></h3>
+            <p class="card-summary">Over six months, Google organic search drove 146 qualified leads versus 5 from AI search, so the author recommends roughly 80% of effort on SEO basics and 20% on AI search experiments. A separate test of 1,000 identical ChatGPT queries found model updates changed which businesses got recommended, so one-off visibility checks are unreliable.</p>
+            <p class="card-why">Argues for measuring AI-search work on pipeline, not visibility screenshots, and for sampling many runs if you track how assistants describe Camunda versus competitors.</p>
+            <a href="https://www.linkedin.com/posts/jayleejanet_can-we-pause-seo-and-move-the-retainer-to-share-7528124733410762752-F4A8/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">🚀 Enablement &amp; Adoption</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">TLDR Marketing</div>
+            <h3 class="card-title"><a href="https://evidently.beehiiv.com/p/how-i-broke-through-my-ai-plateau" target="_blank" rel="noopener">Breaking an AI plateau with a shared &#x27;marketing brain&#x27; in GitHub</a></h3>
+            <p class="card-summary">A marketer describes getting unstuck by building small personal tools and keeping a shared marketing knowledge base in GitHub with Claude, while trading practical learnings with peers and protecting skills like writing.</p>
+            <p class="card-why">A model for a team-wide, versioned context repo that champions can contribute to, and a reminder that peer show-and-tell keeps adoption going after the first wave.</p>
+            <a href="https://evidently.beehiiv.com/p/how-i-broke-through-my-ai-plateau" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">🌐 Frontier Labs &amp; AI Landscape</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">The Rundown AI <span class="also">· also in The Neuron, The AI Report</span></div>
+            <h3 class="card-title"><a href="https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/" target="_blank" rel="noopener">Gemini Tasks goes free in six countries</a></h3>
+            <p class="card-summary">Google is opening Gemini&#x27;s Tasks mode to free users, letting the assistant run background research, build itineraries and, under separate permissions, call businesses and make purchases.</p>
+            
+            <a href="https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+  </main>
+
+  <footer>
+    curated daily by <a href="https://dpnation.com" target="_blank" rel="noopener">dpnation</a> · November 18, 2026
+    <div class="archive">past days: <a href="../archive/2026-11-17.html">2026-11-17</a> · <a href="../archive/2026-11-16.html">2026-11-16</a> · <a href="../archive/2026-11-15.html">2026-11-15</a> · <a href="../archive/2026-11-14.html">2026-11-14</a> · <a href="../archive/2026-11-12.html">2026-11-12</a> · <a href="../archive/2026-11-11.html">2026-11-11</a> · <a href="../archive/2026-11-10.html">2026-11-10</a> · <a href="../archive/index.html">all briefings →</a></div>
+  </footer>
+</body>
+</html>
