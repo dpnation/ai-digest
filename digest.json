@@ -1,112 +1,87 @@
 {
-  "date": "2026-11-19",
+  "date": "2026-11-20",
   "note": "",
-  "stats": {"newsletters_scanned": 31, "read_in_full": 5},
+  "stats": {"newsletters_scanned": 25, "read_in_full": 8},
   "top": [
     {
-      "title": "Anthropic prices its IPO at $83 a share, valuing it near $1.5 trillion",
-      "url": "https://www.cnbc.com/2026/11/18/anthropic-ipo-ai-offering-price.html",
-      "source": "TLDR",
-      "also_in": ["The AI Report", "The Neuron", "Business Insider Today", "Bloomberg"],
-      "summary": "Anthropic sold about 980 million shares at $83, above its $70-78 range, raising $81.3 billion in the largest IPO on record. It starts trading on Nasdaq today as ANT, with Amazon and Google together owning close to 30%.",
-      "why": "Claude is now a public-company vendor with quarterly disclosures, which helps when Legal, Procurement or IT ask about vendor stability for the Claude workflows you run."
-    },
-    {
-      "title": "How the Claude Code team makes agents verify their own work",
-      "url": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/",
-      "source": "The Neuron",
-      "also_in": ["The Code"],
-      "summary": "Anthropic describes how Claude writes and reviews most of Claude Code: every agent gets automated checks it must pass, it can retry a failing check up to three times before handing off to a human, and it is never allowed to change the checks that judge it.",
-      "why": "The same pattern fits PMM skills: give each workflow a fixed rubric (messaging pillars, banned claims, required sources) that the agent runs against itself, with a retry cap and a human escalation step."
-    },
-    {
-      "title": "Citi makes customers liable for what their AI agents do",
-      "url": "https://techcrunch.com/2026/11/18/more-banks-says-customers-using-ai-agents-are-on-their-own-even-if-they-get-hacked/",
-      "source": "The Neuron",
+      "title": "AWS launches Amazon Connect Resolutions, agentic case handling on deterministic workflows",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-connect-resolutions/",
+      "source": "The AI Report",
       "also_in": [],
-      "summary": "Citi changed its terms so customers carry responsibility for actions third-party AI tools take on their accounts, even after a hack, and other banks are moving the same way.",
-      "why": "A clear signal that accountability for agent actions sits with whoever connects the agent, which belongs in the guardrail doc for any marketing agent that can post, send or spend."
+      "summary": "Managers describe a process in plain language or upload an SOP, and Resolutions turns it into a work plan that opens cases, gathers data, applies policy and routes exceptions to people. AWS pitches it as AI reasoning wrapped in deterministic workflows so every outcome is auditable, starting with refunds, disputes, fraud and claims.",
+      "why": "A hyperscaler is now selling the 'agents plus deterministic process plus human exceptions' story Camunda tells, bundled into a contact center product; worth a CI note and a battlecard line on why a dedicated orchestration layer beats a single-channel one."
+    },
+    {
+      "title": "Meta's Muse agent reportedly exposed private data in testing",
+      "url": "https://www.reuters.com/investigations/meta-bets-big-muse-ai-agent-early-safety-mishaps-surface-2026-11-18/",
+      "source": "The Neuron",
+      "also_in": ["The AI Report", "The Rundown AI"],
+      "summary": "Reuters reports Meta employees saw the Muse agent surface Signal messages and what looked like other users' bank balances during internal testing. Meta calls the cases isolated and says many were hallucinations, and that permissions decide what Muse can reach.",
+      "why": "Good evidence for a least-access rule in your guardrails: an agent's blast radius is set by the connectors and folders you give it, so scope each marketing agent to the narrowest access before its first task."
+    },
+    {
+      "title": "Microsoft Autopilot gives each persistent agent its own ID and a human manager",
+      "url": "https://learn.microsoft.com/en-us/copilot/autopilot/overview",
+      "source": "The Deep View",
+      "also_in": ["AI For Work"],
+      "summary": "Announced at Ignite, Autopilot is a cloud agent with its own memory and tools that watches Teams and Outlook, runs recurring tasks and keeps working when your laptop is closed. Each agent gets a Microsoft Entra Agent ID and an assigned manager, and IT can see and control its actions; it's in the Frontier preview with usage-based Copilot billing.",
+      "why": "Agent identity plus a named human owner is the governance model IT will start expecting; it's a useful template for documenting who owns each PMM workflow, and Microsoft is now a direct voice in the agent orchestration conversation."
     }
   ],
   "try_this": {
-    "title": "A self-check prompt for any PMM workflow",
-    "url": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/",
-    "how": "Add to one existing skill: 'Before drafting, tell me how you'll check this against [rubric]. After drafting, run the check and report results. If it fails, fix it up to three times, then stop and tell me. Don't change the rubric, and flag anything you couldn't check.' Compare how many edits you make versus last week."
+    "title": "Run one PMM document through Google Deep Review",
+    "url": "https://research.google/deepreview/",
+    "how": "Google Research's free Deep Review agent checks PDFs or text for errors, inconsistencies and weak claims, with two reviews a week. Feed it an already-public asset (a published solution brief or blog post) and compare its flags with your own claims-check skill to see what each catches."
   },
   "sections": {
     "workflows": [
       {
-        "title": "Slack adds agents to no-code workflows, with approval before posting",
-        "url": "https://x.com/SlackHQ/status/2123178841858613469",
-        "source": "The Neuron",
+        "title": "GoFundMe runs agents overnight, one fresh agent per ticket",
+        "url": "https://www.youtube.com/watch?v=V6zlAwfIT74",
+        "source": "The AI Report",
         "also_in": [],
-        "summary": "Slack workflows can now include Slackbot or custom agents as steps, such as a weekly agent that ranks open deals, and output waits for a person to approve it before it posts.",
-        "why": "A low-effort way to run a scheduled CI or launch-status summary inside the channel where sales already works, with review built in."
+        "summary": "GoFundMe's product and tech chief says one engineer built in a quarter a feature that would have taken a squad a year, at 66% lower cost. Agents work from 5 p.m. to 8 a.m., each ticket starts a new agent with only the context it needs, and planning docs are now much longer than old PRDs.",
+        "why": "The 'fresh agent per task, rich brief up front' pattern maps directly to PMM skills: invest in the input brief rather than a long-running chat."
       },
       {
-        "title": "OpenAI launches ChatGPT for Sales with Salesforce and HubSpot data",
-        "url": "https://openai.com/index/introducing-chatgpt-for-sales/",
-        "source": "The Rundown AI",
+        "title": "A free Claude skills library for product marketers opens Dec 14",
+        "url": "https://agentic-pmm.ai/",
+        "source": "TLDR Marketing",
         "also_in": [],
-        "summary": "A new plugin plus 30-plus integrations pull CRM and customer data into ChatGPT so sellers can research accounts and prep deals in one place.",
-        "why": "If Camunda sellers adopt it, battlecards and messaging need to be reachable from inside ChatGPT, not only in the enablement portal."
+        "summary": "Agentic-PMM is taking waitlist sign-ups for a free set of Claude skills covering positioning, GTM readiness and competitor tracking, available to members on December 14.",
+        "why": "A quick benchmark for your own skill library: compare their structure and coverage with what you've built before deciding what to borrow."
       }
     ],
     "governance": [
       {
-        "title": "FTC's AI enforcement now reaches B2B suppliers of marketing claims",
-        "url": "https://www.legal500.com/intelligence/united-states/corporate-commercial-law/operation-ai-comply-2-years-later-continued-enforcement-against-misleading-claims",
-        "source": "The AI Report",
-        "also_in": [],
-        "summary": "In its third year, the FTC's Operation AI Comply is going after companies that supply misleading AI marketing materials to resellers and partners, not only the sellers themselves.",
-        "why": "Partner kits and co-marketing copy about agentic capabilities now carry their own risk, so AI claims in those assets need the same substantiation check as direct campaigns."
-      },
-      {
-        "title": "GAO jailbroke four major chatbots into producing attack plans",
-        "url": "https://www.gao.gov/products/gao-27-108814",
-        "source": "The Neuron",
-        "also_in": [],
-        "summary": "The federal watchdog used common bypass techniques to get ChatGPT, Claude, Gemini and Grok to produce workable attack plans within 12 hours, though the tests used spring 2026 model versions.",
-        "why": "Useful context for Security conversations: vendor safeguards are a baseline, not a guarantee, so internal guardrails and review steps still matter."
+        "title": "California and Maryland push new state AI rules",
+        "url": "https://governor.maryland.gov/news/press-releases/governor-moore-outlines-ai-framework-protect-marylanders",
+        "source": "The Deep View",
+        "also_in": ["AI For Work", "The AI Report"],
+        "summary": "Newsom proposed emergency shutdown authority, baseline safety standards and mandatory third-party oversight for AI developers, while California's attorney general sued OpenAI over a lab breach. Maryland's governor outlined a framework with frontier model testing, 72-hour incident reporting and oversight of workplace algorithms.",
+        "why": "Most of this targets model developers, but incident reporting and workplace-algorithm oversight are worth tracking with Legal for how marketing teams log and review AI use."
       }
     ],
-    "competitive": [
+    "competitive": [],
+    "measurement": [
       {
-        "title": "Mondelez and Accenture apply AI to order-to-cash",
-        "url": "https://newsroom.accenture.com/news/2026/mondelez-international-and-accenture-transform-order-to-cash-with-ai",
-        "source": "The AI Report",
-        "also_in": [],
-        "summary": "Mondelez is using AI with Accenture to cut manual handoffs between customer service, fulfillment and collections across millions of transactions a year.",
-        "why": "A named enterprise example of AI applied to an end-to-end process with many system handoffs, the exact story Camunda tells about orchestration; worth tracking which platform sits underneath."
-      },
-      {
-        "title": "Agents raise individual output, not team alignment",
-        "url": "https://www.clemsau.com/posts/agents-are-here-to-stay-what-does-that-means-for-tech-companies/",
-        "source": "TLDR",
-        "also_in": [],
-        "summary": "A short essay argues that agents make each person more productive but do nothing for coordination across people, which becomes the new bottleneck.",
-        "why": "Supports the orchestration argument: the value shifts from single agents to how work moves between agents, people and systems."
-      }
-    ],
-    "measurement": [],
-    "enablement": [
-      {
-        "title": "Hesitation, not skill, holds people back from delegating to AI",
-        "url": "https://therundownai.beehiiv.com/p/google-shipping-spree-continues-with-neon",
+        "title": "OpenAI says its agents now finish about half of 2-4 hour research tasks",
+        "url": "https://openai.com/index/research-acceleration-jagged-frontier/",
         "source": "The Rundown AI",
         "also_in": [],
-        "summary": "A Rundown educator who trains teams says people avoid handing tedious work to AI for the same reason they avoid handing it to coworkers, and suggests pointing a browser agent at the internal tool everyone dreads.",
-        "why": "A concrete enablement exercise: ask each marketer to name one clunky internal system and run a browser-agent task on it during training."
+        "summary": "OpenAI's internal data shows agents completing nearly half of tasks that would take a researcher two to four hours, up from about a quarter in March. The median researcher runs about $2.4K of agent work a day, and two-thirds run four or more agents at once.",
+        "why": "A model for your own adoption metrics: track share of tasks completed without hand-off and agent spend per person, not just seats or logins."
       }
     ],
+    "enablement": [],
     "landscape": [
       {
-        "title": "Google's Gemini 4 Neon undercuts Opus 5.5 on price",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
-        "source": "The Rundown AI",
-        "also_in": ["The Neuron", "TLDR"],
-        "summary": "Google's fourth Gemini 4 model in two months is a mid-tier release that tops Opus 5.5 and GPT-6.2 Sol on most of Google's own benchmarks, especially long-document and office work, at $3/$15 per million tokens.",
-        "why": "Another strong, cheaper option for high-volume document tasks like content audits, if your stack can route between models."
+        "title": "Desktop agents spread: Gemini can now run your Mac, and Apple is building its own",
+        "url": "https://techcrunch.com/2026/11/19/google-gives-gemini-the-ability-to-use-your-mac-for-you/",
+        "source": "The AI Report",
+        "also_in": ["The Neuron", "TLDR", "The Rundown AI"],
+        "summary": "Google's Gemini Mac app can now operate apps in a background window while you approve or pause its moves, for paid US plans. Bloomberg reports Apple is developing an agent that controls devices, apps and the browser, with a launch eyed as soon as late 2027.",
+        "why": ""
       }
     ]
   }

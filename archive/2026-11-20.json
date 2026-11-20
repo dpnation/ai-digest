@@ -1,0 +1,88 @@
+{
+  "date": "2026-11-20",
+  "note": "",
+  "stats": {"newsletters_scanned": 25, "read_in_full": 8},
+  "top": [
+    {
+      "title": "AWS launches Amazon Connect Resolutions, agentic case handling on deterministic workflows",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-connect-resolutions/",
+      "source": "The AI Report",
+      "also_in": [],
+      "summary": "Managers describe a process in plain language or upload an SOP, and Resolutions turns it into a work plan that opens cases, gathers data, applies policy and routes exceptions to people. AWS pitches it as AI reasoning wrapped in deterministic workflows so every outcome is auditable, starting with refunds, disputes, fraud and claims.",
+      "why": "A hyperscaler is now selling the 'agents plus deterministic process plus human exceptions' story Camunda tells, bundled into a contact center product; worth a CI note and a battlecard line on why a dedicated orchestration layer beats a single-channel one."
+    },
+    {
+      "title": "Meta's Muse agent reportedly exposed private data in testing",
+      "url": "https://www.reuters.com/investigations/meta-bets-big-muse-ai-agent-early-safety-mishaps-surface-2026-11-18/",
+      "source": "The Neuron",
+      "also_in": ["The AI Report", "The Rundown AI"],
+      "summary": "Reuters reports Meta employees saw the Muse agent surface Signal messages and what looked like other users' bank balances during internal testing. Meta calls the cases isolated and says many were hallucinations, and that permissions decide what Muse can reach.",
+      "why": "Good evidence for a least-access rule in your guardrails: an agent's blast radius is set by the connectors and folders you give it, so scope each marketing agent to the narrowest access before its first task."
+    },
+    {
+      "title": "Microsoft Autopilot gives each persistent agent its own ID and a human manager",
+      "url": "https://learn.microsoft.com/en-us/copilot/autopilot/overview",
+      "source": "The Deep View",
+      "also_in": ["AI For Work"],
+      "summary": "Announced at Ignite, Autopilot is a cloud agent with its own memory and tools that watches Teams and Outlook, runs recurring tasks and keeps working when your laptop is closed. Each agent gets a Microsoft Entra Agent ID and an assigned manager, and IT can see and control its actions; it's in the Frontier preview with usage-based Copilot billing.",
+      "why": "Agent identity plus a named human owner is the governance model IT will start expecting; it's a useful template for documenting who owns each PMM workflow, and Microsoft is now a direct voice in the agent orchestration conversation."
+    }
+  ],
+  "try_this": {
+    "title": "Run one PMM document through Google Deep Review",
+    "url": "https://research.google/deepreview/",
+    "how": "Google Research's free Deep Review agent checks PDFs or text for errors, inconsistencies and weak claims, with two reviews a week. Feed it an already-public asset (a published solution brief or blog post) and compare its flags with your own claims-check skill to see what each catches."
+  },
+  "sections": {
+    "workflows": [
+      {
+        "title": "GoFundMe runs agents overnight, one fresh agent per ticket",
+        "url": "https://www.youtube.com/watch?v=V6zlAwfIT74",
+        "source": "The AI Report",
+        "also_in": [],
+        "summary": "GoFundMe's product and tech chief says one engineer built in a quarter a feature that would have taken a squad a year, at 66% lower cost. Agents work from 5 p.m. to 8 a.m., each ticket starts a new agent with only the context it needs, and planning docs are now much longer than old PRDs.",
+        "why": "The 'fresh agent per task, rich brief up front' pattern maps directly to PMM skills: invest in the input brief rather than a long-running chat."
+      },
+      {
+        "title": "A free Claude skills library for product marketers opens Dec 14",
+        "url": "https://agentic-pmm.ai/",
+        "source": "TLDR Marketing",
+        "also_in": [],
+        "summary": "Agentic-PMM is taking waitlist sign-ups for a free set of Claude skills covering positioning, GTM readiness and competitor tracking, available to members on December 14.",
+        "why": "A quick benchmark for your own skill library: compare their structure and coverage with what you've built before deciding what to borrow."
+      }
+    ],
+    "governance": [
+      {
+        "title": "California and Maryland push new state AI rules",
+        "url": "https://governor.maryland.gov/news/press-releases/governor-moore-outlines-ai-framework-protect-marylanders",
+        "source": "The Deep View",
+        "also_in": ["AI For Work", "The AI Report"],
+        "summary": "Newsom proposed emergency shutdown authority, baseline safety standards and mandatory third-party oversight for AI developers, while California's attorney general sued OpenAI over a lab breach. Maryland's governor outlined a framework with frontier model testing, 72-hour incident reporting and oversight of workplace algorithms.",
+        "why": "Most of this targets model developers, but incident reporting and workplace-algorithm oversight are worth tracking with Legal for how marketing teams log and review AI use."
+      }
+    ],
+    "competitive": [],
+    "measurement": [
+      {
+        "title": "OpenAI says its agents now finish about half of 2-4 hour research tasks",
+        "url": "https://openai.com/index/research-acceleration-jagged-frontier/",
+        "source": "The Rundown AI",
+        "also_in": [],
+        "summary": "OpenAI's internal data shows agents completing nearly half of tasks that would take a researcher two to four hours, up from about a quarter in March. The median researcher runs about $2.4K of agent work a day, and two-thirds run four or more agents at once.",
+        "why": "A model for your own adoption metrics: track share of tasks completed without hand-off and agent spend per person, not just seats or logins."
+      }
+    ],
+    "enablement": [],
+    "landscape": [
+      {
+        "title": "Desktop agents spread: Gemini can now run your Mac, and Apple is building its own",
+        "url": "https://techcrunch.com/2026/11/19/google-gives-gemini-the-ability-to-use-your-mac-for-you/",
+        "source": "The AI Report",
+        "also_in": ["The Neuron", "TLDR", "The Rundown AI"],
+        "summary": "Google's Gemini Mac app can now operate apps in a background window while you approve or pause its moves, for paid US plans. Bloomberg reports Apple is developing an agent that controls devices, apps and the browser, with a launch eyed as soon as late 2027.",
+        "why": ""
+      }
+    ]
+  }
+}
