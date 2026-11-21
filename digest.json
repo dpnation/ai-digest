@@ -1,88 +1,137 @@
 {
-  "date": "2026-11-20",
-  "note": "",
-  "stats": {"newsletters_scanned": 25, "read_in_full": 8},
+  "date": "2026-11-21",
+  "note": "Light weekend edition. The Anthropic IPO and OpenAI's agent research numbers were covered earlier this week, so they're skipped here.",
+  "stats": {"newsletters_scanned": 15, "read_in_full": 9},
   "top": [
     {
-      "title": "AWS launches Amazon Connect Resolutions, agentic case handling on deterministic workflows",
-      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-connect-resolutions/",
-      "source": "The AI Report",
+      "title": "Gartner: 91% of executives expect AI to do a quarter of the CMO's job within two years",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2026-11-19-gartner-survey-finds-91-percent-of-c-level-executives-expect-ai-to-perform-at-least-25-percent-of-cmo-responsibilities-within-two-years1",
+      "source": "Marketing Monk",
       "also_in": [],
-      "summary": "Managers describe a process in plain language or upload an SOP, and Resolutions turns it into a work plan that opens cases, gathers data, applies policy and routes exceptions to people. AWS pitches it as AI reasoning wrapped in deterministic workflows so every outcome is auditable, starting with refunds, disputes, fraud and claims.",
-      "why": "A hyperscaler is now selling the 'agents plus deterministic process plus human exceptions' story Camunda tells, bundled into a contact center product; worth a CI note and a battlecard line on why a dedicated orchestration layer beats a single-channel one."
+      "summary": "A Gartner survey of 282 senior executives found 91% expect AI to take on at least 25% of CMO responsibilities in two years, and one in five expect it to cover half or more. Gartner says routine work moves to AI while growth bets made on incomplete data stay with people.",
+      "why": "This is the budget-holder view that will shape marketing headcount next cycle, so a task-level map of what PMM workflows automate versus where people decide is the evidence to bring to that conversation."
     },
     {
-      "title": "Meta's Muse agent reportedly exposed private data in testing",
-      "url": "https://www.reuters.com/investigations/meta-bets-big-muse-ai-agent-early-safety-mishaps-surface-2026-11-18/",
-      "source": "The Neuron",
-      "also_in": ["The AI Report", "The Rundown AI"],
-      "summary": "Reuters reports Meta employees saw the Muse agent surface Signal messages and what looked like other users' bank balances during internal testing. Meta calls the cases isolated and says many were hallucinations, and that permissions decide what Muse can reach.",
-      "why": "Good evidence for a least-access rule in your guardrails: an agent's blast radius is set by the connectors and folders you give it, so scope each marketing agent to the narrowest access before its first task."
+      "title": "OneTrust's math: a $100M AI case keeps about $30M in production, $51M with better governance",
+      "url": "https://archive.thedeepview.com/p/why-ai-value-shrinks-after-the-pilot",
+      "source": "The Deep View (sponsored)",
+      "also_in": [],
+      "summary": "OneTrust modeled how pilot value erodes once you apply realistic reliability, adoption and realization rates, then subtract run costs and expected losses. Modestly better numbers from standard intake, reusable controls and monitoring raise retained value from about $30M to $51M.",
+      "why": "A ready-made frame for reporting PMM workflow ROI honestly: discount time-saved claims by adoption and reliability, and show governance as the lever that raises what you keep."
     },
     {
-      "title": "Microsoft Autopilot gives each persistent agent its own ID and a human manager",
-      "url": "https://learn.microsoft.com/en-us/copilot/autopilot/overview",
-      "source": "The Deep View",
-      "also_in": ["AI For Work"],
-      "summary": "Announced at Ignite, Autopilot is a cloud agent with its own memory and tools that watches Teams and Outlook, runs recurring tasks and keeps working when your laptop is closed. Each agent gets a Microsoft Entra Agent ID and an assigned manager, and IT can see and control its actions; it's in the Frontier preview with usage-based Copilot billing.",
-      "why": "Agent identity plus a named human owner is the governance model IT will start expecting; it's a useful template for documenting who owns each PMM workflow, and Microsoft is now a direct voice in the agent orchestration conversation."
+      "title": "Perplexity Computer now writes and updates its own skills from past sessions",
+      "url": "https://www.perplexity.ai/hub/blog/self-improving-skills",
+      "source": "TLDR AI",
+      "also_in": ["The Deep View", "AI For Work"],
+      "summary": "Perplexity's Brain system watches each user's past sessions and turns repeated work into skills it builds and revises on its own.",
+      "why": "Self-editing skills cut maintenance work but break versioning and review, so if this pattern reaches Claude or Copilot you'll want a rule that auto-generated skill changes get diffed and approved before teams use them."
     }
   ],
   "try_this": {
-    "title": "Run one PMM document through Google Deep Review",
-    "url": "https://research.google/deepreview/",
-    "how": "Google Research's free Deep Review agent checks PDFs or text for errors, inconsistencies and weak claims, with two reviews a week. Feed it an already-public asset (a published solution brief or blog post) and compare its flags with your own claims-check skill to see what each catches."
+    "title": "Split one PMM role into AI does it, AI drafts and I decide, and only me",
+    "url": "https://www.onetonline.org/link/summary/11-2021.00",
+    "how": "Copy the O*NET task list for marketing managers into a sheet, tag each task with one of the three labels, and add last month's hours. The 'AI drafts, I decide' rows are your shortlist for the next workflows to build, with a human-review step already defined."
   },
   "sections": {
     "workflows": [
       {
-        "title": "GoFundMe runs agents overnight, one fresh agent per ticket",
-        "url": "https://www.youtube.com/watch?v=V6zlAwfIT74",
-        "source": "The AI Report",
+        "title": "Gemini API adds Tool Retrieval, picking the right function from a large registry",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+        "source": "TLDR AI",
         "also_in": [],
-        "summary": "GoFundMe's product and tech chief says one engineer built in a quarter a feature that would have taken a squad a year, at 66% lower cost. Agents work from 5 p.m. to 8 a.m., each ticket starts a new agent with only the context it needs, and planning docs are now much longer than old PRDs.",
-        "why": "The 'fresh agent per task, rich brief up front' pattern maps directly to PMM skills: invest in the input brief rather than a long-running chat."
+        "summary": "Developers register many functions and the Gemini API finds and runs the relevant one based on the request, instead of loading every tool into each call.",
+        "why": "The same problem shows up as PMM agents gain connectors and skills; on-demand tool loading keeps context lean and behavior predictable."
       },
       {
-        "title": "A free Claude skills library for product marketers opens Dec 14",
-        "url": "https://agentic-pmm.ai/",
-        "source": "TLDR Marketing",
+        "title": "Replit: 32 agents beat one on a speedup task, but only when work split cleanly",
+        "url": "https://frontier.replit.com/throwing-headcount-at-the-problem/",
+        "source": "TLDR AI",
         "also_in": [],
-        "summary": "Agentic-PMM is taking waitlist sign-ups for a free set of Claude skills covering positioning, GTM readiness and competitor tracking, available to members on December 14.",
-        "why": "A quick benchmark for your own skill library: compare their structure and coverage with what you've built before deciding what to borrow."
+        "summary": "A team of 32 agents reached an 18.9x speedup versus 3.7x for a single agent in two hours, using more compute. Gains depended on separable tasks and a shared coordination board.",
+        "why": "A useful test before going multi-agent in marketing: if the job can't be split into independent pieces with a shared status board, one agent is likely the better design."
+      },
+      {
+        "title": "Google Cloud's five patterns for orchestrating agents without making them worse",
+        "url": "https://archive.codenewsletter.ai/2123428849262248255",
+        "source": "The Code",
+        "also_in": [],
+        "summary": "The cookbook covers splitting work, verification steps, parallel agents, model councils and specialist reviewers, plus when a multi-agent setup actually beats one agent.",
+        "why": "Specialist reviewers and verification steps map directly to a PMM content pipeline, such as a separate claims-check or brand-voice reviewer after drafting."
       }
     ],
     "governance": [
       {
-        "title": "California and Maryland push new state AI rules",
-        "url": "https://governor.maryland.gov/news/press-releases/governor-moore-outlines-ai-framework-protect-marylanders",
-        "source": "The Deep View",
-        "also_in": ["AI For Work", "The AI Report"],
-        "summary": "Newsom proposed emergency shutdown authority, baseline safety standards and mandatory third-party oversight for AI developers, while California's attorney general sued OpenAI over a lab breach. Maryland's governor outlined a framework with frontier model testing, 72-hour incident reporting and oversight of workplace algorithms.",
-        "why": "Most of this targets model developers, but incident reporting and workplace-algorithm oversight are worth tracking with Legal for how marketing teams log and review AI use."
+        "title": "Attacker swapped a hosted model for a jailbreak-prone copy for two days",
+        "url": "https://archive.codenewsletter.ai/2123430257697157587",
+        "source": "The Code",
+        "also_in": [],
+        "summary": "Prime Intellect says an attacker replaced its DeepSeek endpoint from November 8 to 10 with a copy that refused only 1 in 100 jailbreak prompts. Developers spotted it through OpenRouter and are now asking for model attestation.",
+        "why": "A concrete case for Security reviews: approved-model lists only help if you can confirm which model a third-party endpoint actually serves."
+      },
+      {
+        "title": "Canva lets users switch off its generative AI features",
+        "url": "https://petapixel.com/2026/11/19/canva-now-lets-users-turn-off-generative-ai-features/",
+        "source": "TLDR Design",
+        "also_in": [],
+        "summary": "New settings disable Magic Write, Magic Design, Dream Lab, Canva Code and similar tools, and a separate preference reduces AI-generated templates in search.",
+        "why": "Gives brand or Legal a simple control if certain assets must stay free of generated content."
+      },
+      {
+        "title": "53% of creatives have used AI on important client work without saying so",
+        "url": "https://www.creativeboom.com/insight/its-official-creatives-are-using-ai-daily-but-theyre-not-making-extra-money/",
+        "source": "TLDR Design",
+        "also_in": [],
+        "summary": "Envato surveyed 1,033 creatives: 87% use AI at work and 58% daily, but few earn more from it. Taste and judgment ranked as the most valuable skills and prompting ranked last.",
+        "why": "Undisclosed use is the norm, so agency and freelancer contracts need an explicit AI disclosure clause."
       }
     ],
-    "competitive": [],
+    "competitive": [
+      {
+        "title": "Docker repositions as a trusted runtime for AI agents",
+        "url": "https://containersecurity.dev/blog/docker-rebrand-2026",
+        "source": "TLDR Design",
+        "also_in": [],
+        "summary": "Docker's rebrand adds the line 'Run on Trust' and positions it as secure execution infrastructure for autonomous agents as well as apps.",
+        "why": "Another infrastructure vendor is claiming the 'safe place to run agents' message, which overlaps with how orchestration platforms pitch governed agent execution."
+      },
+      {
+        "title": "Vercel Board: a message board where agents claim tasks and share context",
+        "url": "https://vercel.com/blog/introducing-vercel-board",
+        "source": "TLDR AI",
+        "also_in": [],
+        "summary": "Vercel released an experimental board where AI agents pick up tasks, post updates and pass context to each other.",
+        "why": "A lightweight take on agent coordination from a developer platform; worth tracking as a signal of how developers may handle multi-agent work without a full orchestration engine."
+      }
+    ],
     "measurement": [
       {
-        "title": "OpenAI says its agents now finish about half of 2-4 hour research tasks",
-        "url": "https://openai.com/index/research-acceleration-jagged-frontier/",
-        "source": "The Rundown AI",
+        "title": "Stripe's method for scoring coding agents on realistic integration jobs",
+        "url": "https://stripe.dev/blog/stripe-integration-evals-methodology",
+        "source": "TLDR AI",
         "also_in": [],
-        "summary": "OpenAI's internal data shows agents completing nearly half of tasks that would take a researcher two to four hours, up from about a quarter in March. The median researcher runs about $2.4K of agent work a day, and two-thirds run four or more agents at once.",
-        "why": "A model for your own adoption metrics: track share of tasks completed without hand-off and agent spend per person, not just seats or logins."
+        "summary": "Stripe built an eval that uses a role-playing agent to give coding agents realistic, well-specified scenarios, then grades how well the resulting integrations follow best practice.",
+        "why": "The role-played requester plus a quality rubric is a pattern you could borrow to score PMM workflow outputs consistently."
+      },
+      {
+        "title": "A four-question audit for whether a feature should use AI at all",
+        "url": "https://www.smashingmagazine.com/2026/11/should-you-add-ai-audit-product-teams/",
+        "source": "TLDR Design",
+        "also_in": [],
+        "summary": "The audit asks whether AI cuts total effort including verification, beats the current method, lets users catch errors, and keeps their checking skills intact over time.",
+        "why": "Works as an intake filter for workflow requests, so you build only where verification costs don't eat the time saved."
       }
     ],
-    "enablement": [],
-    "landscape": [
+    "enablement": [
       {
-        "title": "Desktop agents spread: Gemini can now run your Mac, and Apple is building its own",
-        "url": "https://techcrunch.com/2026/11/19/google-gives-gemini-the-ability-to-use-your-mac-for-you/",
-        "source": "The AI Report",
-        "also_in": ["The Neuron", "TLDR", "The Rundown AI"],
-        "summary": "Google's Gemini Mac app can now operate apps in a background window while you approve or pause its moves, for paid US plans. Bloomberg reports Apple is developing an agent that controls devices, apps and the browser, with a launch eyed as soon as late 2027.",
-        "why": ""
+        "title": "Anthropic opens a 9.5-hour Forward Deployed Engineer learning path",
+        "url": "https://anthropic-partners.skilljar.com/path/claude-fde",
+        "source": "The Code",
+        "also_in": [],
+        "summary": "Anthropic published a free course path covering what the forward deployed engineer role involves when rolling out Claude.",
+        "why": "The deployment and adoption modules could inform how you run internal AI champion or concierge programs."
       }
-    ]
+    ],
+    "landscape": []
   }
 }
