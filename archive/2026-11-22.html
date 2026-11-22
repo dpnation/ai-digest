@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily AI Digest — November 22, 2026</title>
+  <link rel="icon" type="image/png" href="../favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* dpnation brand: Ink #0D0D0D, Canvas #F7F6F3, Mist #EBEBEB, Smoke #7A7A7A, Spark #FF8C69 */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+           background: #F7F6F3; color: #0D0D0D; line-height: 1.6; }
+    a { color: inherit; }
+
+    header { background: #0D0D0D; color: #FFFFFF; padding: 2.25rem 2rem 1.75rem; border-bottom: 3px solid #FF8C69; }
+    .header-inner { max-width: 1100px; margin: 0 auto; }
+    .header-eyebrow { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.72rem; font-weight: 500;
+                       letter-spacing: 0.14em; text-transform: lowercase; color: #FF8C69; margin-bottom: 0.5rem; }
+    header h1 { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 2rem; font-weight: 800;
+                 letter-spacing: -0.01em; margin-bottom: 0.3rem; }
+    .header-date { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.8rem; color: #EBEBEB; }
+
+    main { max-width: 1100px; margin: 2.25rem auto; padding: 0 1.5rem; }
+    .slow { font-size: 0.9rem; color: #7A7A7A; margin-bottom: 1.5rem; }
+
+    .topic-section { margin-bottom: 2.75rem; }
+    .topic-heading { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 1.05rem; font-weight: 700;
+                      border-bottom: 1px solid #EBEBEB; padding-bottom: 0.5rem; margin-bottom: 1.1rem; }
+
+    /* Top stories */
+    .top-list { display: flex; flex-direction: column; gap: 1rem; }
+    .top-card { background: #FFFFFF; border: 1px solid #EBEBEB; border-left: 4px solid #FF8C69; border-radius: 8px;
+                 padding: 1.25rem 1.4rem; display: flex; gap: 1.2rem; }
+    .top-num { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 1.4rem; font-weight: 500;
+                color: #FF8C69; line-height: 1.2; }
+    .top-body { display: flex; flex-direction: column; gap: 0.45rem; flex: 1; }
+    .top-title { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 1.15rem; font-weight: 700; line-height: 1.35; }
+    .top-title a, .card-title a, .try h3 a { text-decoration: none; }
+    .top-title a:hover, .card-title a:hover, .try h3 a:hover { color: #FF8C69; }
+    .what { font-size: 0.92rem; }
+    .why { font-size: 0.88rem; color: #3A3A3A; background: #F7F6F3; border-radius: 6px; padding: 0.55rem 0.75rem; }
+    .why-label, .try-label { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.66rem; letter-spacing: 0.08em;
+                  text-transform: lowercase; color: #FF8C69; display: block; margin-bottom: 0.1rem; }
+
+    /* Try this */
+    .try { background: #0D0D0D; color: #FFFFFF; border-radius: 8px; padding: 1.2rem 1.4rem; margin-bottom: 2.75rem; }
+    .try h3 { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 1.02rem; margin-bottom: 0.3rem; }
+    .try p { font-size: 0.9rem; color: #EBEBEB; }
+
+    /* Cards */
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
+    .card { background: #FFFFFF; border-radius: 8px; padding: 1.15rem 1.3rem 1rem; border: 1px solid #EBEBEB;
+             display: flex; flex-direction: column; gap: 0.45rem;
+             transition: box-shadow 0.15s ease, transform 0.15s ease, border-color 0.15s ease; }
+    .card:hover { box-shadow: 0 6px 18px rgba(13,13,13,0.08); border-color: #FF8C69; transform: translateY(-1px); }
+    .card-source { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.68rem; font-weight: 500;
+                    letter-spacing: 0.08em; text-transform: lowercase; color: #7A7A7A; }
+    .also { color: #A0A0A0; }
+    .card-title { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 0.97rem; font-weight: 700; line-height: 1.4; }
+    .card-summary { font-size: 0.85rem; color: #4A4A4A; line-height: 1.55; }
+    .card-why { font-size: 0.82rem; color: #7A7A7A; line-height: 1.5; flex: 1; border-left: 2px solid #FF8C69; padding-left: 0.6rem; }
+    .read-more { font-size: 0.8rem; font-weight: 600; color: #0D0D0D; text-decoration: none;
+                  border-bottom: 2px solid #FF8C69; align-self: flex-start; margin-top: auto; }
+    .read-more:hover { color: #FF8C69; }
+
+    footer { text-align: center; padding: 2rem 1rem; font-family: "JetBrains Mono", ui-monospace, monospace;
+              font-size: 0.75rem; color: #7A7A7A; border-top: 1px solid #EBEBEB; margin-top: 1rem; }
+    footer a { color: #0D0D0D; text-decoration: none; border-bottom: 1px solid #FF8C69; }
+    .archive { margin-top: 0.6rem; }
+
+    @media (max-width: 600px) {
+      .cards-grid { grid-template-columns: 1fr; }
+      header h1 { font-size: 1.5rem; }
+      .top-card { flex-direction: column; gap: 0.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="header-eyebrow">dpnation · ai for pmm workflows</div>
+      <h1><a href="../index.html" style="text-decoration:none">Daily AI Digest</a></h1>
+      <div class="header-date">Sunday, November 22, 2026 · 7 stories · 11 newsletters read</div>
+    </div>
+  </header>
+
+  <main>
+    <p class="slow">Quiet Sunday: most of today&#x27;s issues were sponsored deep dives, so the list is short. The OneTrust ROI piece from AI For Work was covered yesterday.</p>
+      <section class="topic-section">
+        <h2 class="topic-heading">🔝 Top stories</h2>
+        <div class="top-list">
+        <article class="top-card">
+          <div class="top-num">01</div>
+          <div class="top-body">
+            <div class="card-source">Neatprompts (sponsored)</div>
+            <h3 class="top-title"><a href="https://factory.com/news/frontier-harness" target="_blank" rel="noopener">Same model, different harness: Factory&#x27;s agent beat Claude Code by 7.6 points on Opus 5.5</a></h3>
+            <p class="what">Factory&#x27;s own Terminal-Bench 4 runs show its Droid agent passing 65.2% of tasks versus 57.6% for Claude Code with the same model and settings, and finishing faster. It credits the gap to the harness: tool design, context handling and programmatic tool calling, where the model writes a short script to run tools instead of reading every raw result.</p>
+            <p class="why"><span class="why-label">why it matters</span>Vendor-run numbers, but the lesson holds for her workflows: the instructions, tools and context plumbing around a model matter as much as the model choice, so version and test the harness, not just the prompt.</p>
+            <a href="https://factory.com/news/frontier-harness" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </div>
+        </article>
+        <article class="top-card">
+          <div class="top-num">02</div>
+          <div class="top-body">
+            <div class="card-source">The Deep View (sponsored)</div>
+            <h3 class="top-title"><a href="https://fingerprint.com/blog/how-to-detect-ai-agents/" target="_blank" rel="noopener">Agent traffic now needs an identity policy: signed, verified, unknown or spoofed</a></h3>
+            <p class="what">Fingerprint argues CAPTCHAs and static bot rules no longer separate humans from agents, since personal agents now shop and sign in for real customers. It tags each visiting agent by identity confidence, leaning on the emerging Web Bot Auth standard where agents cryptographically sign requests, and suggests setting access rules per tier.</p>
+            <p class="why"><span class="why-label">why it matters</span>A growing share of who reads Camunda&#x27;s docs and pages is agents acting for developers, which affects web analytics, gated-content rules and how marketing measures reach.</p>
+            <a href="https://fingerprint.com/blog/how-to-detect-ai-agents/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </div>
+        </article>
+        <article class="top-card">
+          <div class="top-num">03</div>
+          <div class="top-body">
+            <div class="card-source">Marketing Monk (sponsored)</div>
+            <h3 class="top-title"><a href="https://www.marketingmonk.so/p/hostinger-ai-builder-test-prompt-vs-sketch-vs-link" target="_blank" rel="noopener">Hostinger test: a wireframe image beat a typed prompt for AI-built landing pages</a></h3>
+            <p class="what">Marketing Monk built the same sign-up page three ways. A labeled wireframe gave the fastest, cheapest result with nothing to fix; a typed prompt needed fixes and invented a logo; cloning a live URL copied content faithfully but silently dropped the footer&#x27;s privacy and legal links.</p>
+            <p class="why"><span class="why-label">why it matters</span>Two reusable patterns for her PMM workflows: give the model a structural reference instead of describing layout in words, and add a review step that checks for invented elements and dropped required content.</p>
+            <a href="https://www.marketingmonk.so/p/hostinger-ai-builder-test-prompt-vs-sketch-vs-link" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="try">
+        <div class="try-label">🛠️ try this</div>
+        <h3><a href="https://www.marketingmonk.so/p/hostinger-ai-builder-test-prompt-vs-sketch-vs-link" target="_blank" rel="noopener">Wireframe-first briefs for AI drafts</a></h3>
+        <p>Next time you have Claude draft a one-pager, launch page or battlecard, sketch the layout with labeled boxes, attach the image, and say &quot;copy its layout, not its text.&quot; Compare fixes needed against your usual text-only brief.</p>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">🛡️ AI Guardrails &amp; Governance</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">Marketing Monk (sponsored)</div>
+            <h3 class="card-title"><a href="https://www.marketingmonk.so/p/hostinger-ai-builder-test-prompt-vs-sketch-vs-link" target="_blank" rel="noopener">Pre-launch checklist for AI-built pages: consent, placeholders, invented and dropped content</a></h3>
+            <p class="card-summary">The same test closes with a seven-step check before publishing: test the form, clear test data, review consent wording, replace placeholder testimonials, scan for anything the AI made up or left out, check mobile, then verify the live page.</p>
+            <p class="card-why">A ready-made human-in-the-loop checklist she could adapt into a standard review gate for any AI-generated asset that ships externally.</p>
+            <a href="https://www.marketingmonk.so/p/hostinger-ai-builder-test-prompt-vs-sketch-vs-link" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">🎯 Competitive Intel &amp; Orchestration Market</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">Neatprompts (sponsored)</div>
+            <h3 class="card-title"><a href="https://factory.com/case-studies/blackstone" target="_blank" rel="noopener">Blackstone picked its coding-agent vendor for on-prem control, not benchmark scores</a></h3>
+            <p class="card-summary">Factory&#x27;s case study says Blackstone chose it mainly for running agent sandboxes in its own data center, model choice and fit with existing security controls. Factory also sells a private VPC deployment that keeps code execution inside the customer&#x27;s environment.</p>
+            <p class="card-why">A CI signal for Camunda&#x27;s agentic orchestration story: regulated enterprises are choosing agent platforms on deployment control and governance, which is where self-managed orchestration can compete.</p>
+            <a href="https://factory.com/case-studies/blackstone" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">📊 Measuring AI Impact</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">Neatprompts (sponsored)</div>
+            <h3 class="card-title"><a href="https://factory.com/news/factory-router-inference-savings" target="_blank" rel="noopener">Factory Router reports 63% inference savings by sending routine work to cheaper models</a></h3>
+            <p class="card-summary">Factory says routing each task to the cheapest model that can handle it cut aggregate inference cost 63% against frontier pricing in one September week, with median per-session savings of 72.5%. It measures cost per passed task, not per request.</p>
+            <p class="card-why">Cost per successful output is a cleaner metric than token spend for her own workflow dashboards, and model routing is a lever worth testing on high-volume, low-stakes steps.</p>
+            <a href="https://factory.com/news/factory-router-inference-savings" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">🌐 Frontier Labs &amp; AI Landscape</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">The New York Times, The Morning</div>
+            <h3 class="card-title">A &#x27;Chatbot Canon&#x27; is forming as models converge on the same recommendations</h3>
+            <p class="card-summary">A Times Magazine essay on taste notes that informal tests asking different chatbots for &quot;the best&quot; of something keep returning the same consensus picks. The piece argues that people increasingly outsource discovery to models that flatten choice.</p>
+            <p class="card-why">If buyers ask assistants which orchestration platform to use, the answers will cluster around a few names, which raises the stakes for how Camunda shows up in AI answers.</p>
+            
+          </article>
+        </div>
+      </section>
+  </main>
+
+  <footer>
+    curated daily by <a href="https://dpnation.com" target="_blank" rel="noopener">dpnation</a> · November 22, 2026
+    <div class="archive">past days: <a href="../archive/2026-11-21.html">2026-11-21</a> · <a href="../archive/2026-11-20.html">2026-11-20</a> · <a href="../archive/2026-11-19.html">2026-11-19</a> · <a href="../archive/2026-11-18.html">2026-11-18</a> · <a href="../archive/2026-11-17.html">2026-11-17</a> · <a href="../archive/2026-11-16.html">2026-11-16</a> · <a href="../archive/2026-11-15.html">2026-11-15</a> · <a href="../archive/index.html">all briefings →</a></div>
+  </footer>
+</body>
+</html>
