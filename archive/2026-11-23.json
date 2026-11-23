@@ -1,0 +1,129 @@
+{
+  "date": "2026-11-23",
+  "note": "Monday edition: covers the weekend's AI newsletters too.",
+  "stats": {"newsletters_scanned": 30, "read_in_full": 8},
+  "top": [
+    {
+      "title": "Businesses can now claim and correct their profile inside ChatGPT",
+      "url": "https://openai.com/business/businesses-in-chatgpt/",
+      "source": "Neatprompts",
+      "also_in": [],
+      "summary": "OpenAI opened a beta of Businesses in ChatGPT: companies claim a profile in Business Hub, fix their details, add product feeds, and see mentions, clicks and the topics people ask about. It is free for now, and some US ecommerce businesses can also run a labeled Business Agent.",
+      "why": "This is a direct lever on how ChatGPT describes Camunda to developers and architects, and the topic data is a new input for AI-visibility tracking and messaging checks."
+    },
+    {
+      "title": "OpenRouter drops three inference providers after a canary study caught them leaking prompts",
+      "url": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/",
+      "source": "The Neuron",
+      "also_in": ["The AI Report", "TLDR AI"],
+      "summary": "Researchers seeded about 2 million canary prompts into AI inference providers and found them leaking, with three hosting providers compromised and credentials stolen within hours. OpenRouter removed three providers and pulled Zero Data Retention status from 125 endpoints, while saying its own systems were not breached.",
+      "why": "A 'zero data retention' label on a model endpoint is not proof; add provider-level checks (who actually hosts the model) to the data-handling rules for marketing AI tools."
+    },
+    {
+      "title": "LangChain's co-founder pitches a 'knowledge factory' that keeps agent skills current",
+      "url": "https://x.com/hwchase17/status/2124181216719151585",
+      "source": "Neatprompts",
+      "also_in": [],
+      "summary": "Harrison Chase argues companies need a system that turns scattered docs, expert know-how and procedures into reusable skills and data guides for agents. A curator agent would review feedback, execution traces and sources like Notion and Slack to keep that knowledge accurate.",
+      "why": "This is the maintenance problem behind a PMM skills library; a curator step that reads run traces and flags stale guidance is a pattern worth piloting on the most-used skills."
+    }
+  ],
+  "try_this": {
+    "title": "Make agents list requirements up front and prove each one at the end",
+    "url": "https://arxiv.org/abs/2611.20218",
+    "how": "Add this to one production skill: before working, list the requirements, constraints and acceptance checks from the brief and flag anything ambiguous; after, show how each was verified and name anything unfinished. Compare a week of outputs against the current version."
+  },
+  "sections": {
+    "workflows": [
+      {
+        "title": "Study: agents call work 'done' when nearly a third of it fails",
+        "url": "https://arxiv.org/abs/2611.20218",
+        "source": "The Neuron",
+        "also_in": [],
+        "summary": "SWE-CoWork gave 11 models workplace-style assignments with requirements spread across simulated colleagues. The best fully finished under 8% of tasks, and 31% of requirements agents reported as complete failed their tests; a fuller brief raised test scores but not completion.",
+        "why": "Requirement tracking, not prompt length, is the weak spot, so build explicit checklists and verification steps into multi-step marketing workflows."
+      },
+      {
+        "title": "ChatGPT Space opens to Plus users, with shared interactive pages and slides",
+        "url": "https://chatgpt.com/features/space/",
+        "source": "Neatprompts",
+        "also_in": [],
+        "summary": "Space, which already replaced Library on Pro, Business and Enterprise plans, now lets Plus users co-build pages, slides and sites with ChatGPT and keep them updated, including on mobile. Sharing a page does not expose private chats, but anything placed on the page is visible to all viewers.",
+        "why": "Expect teammates to start sharing Space pages; spell out what can and cannot go into a shared AI page in the team's usage guidelines."
+      }
+    ],
+    "governance": [
+      {
+        "title": "NYC regulators: 'the AI decided' is not a defense",
+        "url": "https://www.nyc.gov/site/dca/news/067-26/dcwp-tlc-cchr-issue-enforcement-policy-on-artificial-intelligence",
+        "source": "The AI Report",
+        "also_in": [],
+        "summary": "Three New York City agencies issued a joint enforcement policy saying businesses stay liable for discrimination, wage theft and consumer-protection violations even when an AI system made the call.",
+        "why": "A clean citation for why human review stays in the loop on customer-facing AI output."
+      },
+      {
+        "title": "A game studio pulled AI music after fans found Suno metadata in the files",
+        "url": "https://www.theverge.com/games/1039770/binding-of-isaac-ai-music",
+        "source": "The Neuron",
+        "also_in": [],
+        "summary": "Players spotted generator metadata inside the soundtrack files, and the developer removed the tracks after a backlash over undisclosed AI use.",
+        "why": "Generated assets carry traces; add a metadata check and a disclosure decision to the release checklist for AI-made content."
+      },
+      {
+        "title": "US and China say they will work on joint AI guardrails",
+        "url": "https://www.semafor.com/article/11/22/2026/us-china-eye-joint-guardrails-on-ai",
+        "source": "The AI Report",
+        "also_in": [],
+        "summary": "The administration announced plans for joint AI guardrails with China, a shift from its earlier anti-regulation stance, while tightening export controls at the same time.",
+        "why": ""
+      }
+    ],
+    "competitive": [
+      {
+        "title": "A copy-and-paste prompt for a scheduled competitor price tracker",
+        "url": "https://www.juliedx.com/insights/blog/competitor-price-tracker-prompt",
+        "source": "TLDR Marketing",
+        "also_in": [],
+        "summary": "You fill in eight fields about your company and rivals; the AI watches public pricing pages, logs price and promo changes in a shared doc, and a scheduled task refreshes it daily or weekly.",
+        "why": "An easy template for a pricing-page signal feed on orchestration and automation vendors, feeding battlecard updates."
+      }
+    ],
+    "measurement": [
+      {
+        "title": "AI-visibility scores and real clicks can move in opposite directions",
+        "url": "https://searchengineland.com/deleting-blog-posts-hurt-ai-visibility-organic-clicks-502405",
+        "source": "TLDR Marketing",
+        "also_in": [],
+        "summary": "A site that pruned blog posts saw its AI-visibility score drop while organic clicks held or rose, because blogs drive mentions and service pages drive visits. Tracker results also shift run to run, so the piece recommends pairing Search Console AI impressions with clicks and a 'how did you hear about us' form field.",
+        "why": "Useful caution before AI-visibility scores become a headline marketing KPI."
+      },
+      {
+        "title": "Crexi's playbook: baseline rep admin time before rolling out AI",
+        "url": "https://www.salesforce.com/customer-stories/crexi-reduces-admin-tasks-sales-ai/",
+        "source": "The AI Report",
+        "also_in": [],
+        "summary": "Crexi says AI handling follow-up emails and call notes gave reps about five hours back per day. The suggested method: measure current time on those tasks, pilot on one rep, and compare against the baseline before scaling.",
+        "why": "A simple time-saved measurement template that transfers directly to PMM workflows."
+      }
+    ],
+    "enablement": [],
+    "landscape": [
+      {
+        "title": "OpenAI publishes internal capability scores and asks labs to agree on common limits",
+        "url": "https://openai.com/index/perplexity-and-intelligence/",
+        "source": "The Rundown AI",
+        "also_in": ["The Neuron", "Neatprompts"],
+        "summary": "Chief scientist Jakub Pachocki released OpenAI's pretraining scores since GPT-3.5, revealed an unreleased model at a new low, and proposed capability thresholds labs would not cross until monitoring catches up. It is a proposal, not an agreement.",
+        "why": "If labs pace releases, roadmaps that assume the next model will fix a workflow's weak spots get less predictable."
+      },
+      {
+        "title": "Lean maintainers back a Riemann hypothesis proof built with Claude",
+        "url": "https://the-decoder.com/lean-and-mathlib-community-officially-confirms-levent-alpoges-proof-of-the-riemann-hypothesis-is-correct/",
+        "source": "The Rundown AI",
+        "also_in": ["TLDR AI", "The Neuron"],
+        "summary": "An Anthropic mathematician says he and Claude proved the 167-year-old conjecture in about six weeks, delivered as a machine-checked proof that Lean and Mathlib maintainers say they have full confidence in. Some mathematicians object that no human can follow it.",
+        "why": ""
+      }
+    ]
+  }
+}

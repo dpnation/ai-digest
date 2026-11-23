@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daily AI Digest — November 22, 2026</title>
+  <title>Daily AI Digest — November 23, 2026</title>
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -82,61 +82,94 @@
     <div class="header-inner">
       <div class="header-eyebrow">dpnation · ai for pmm workflows</div>
       <h1><a href="index.html" style="text-decoration:none">Daily AI Digest</a></h1>
-      <div class="header-date">Sunday, November 22, 2026 · 7 stories · 11 newsletters read</div>
+      <div class="header-date">Monday, November 23, 2026 · 13 stories · 30 newsletters read</div>
     </div>
   </header>
 
   <main>
-    <p class="slow">Quiet Sunday: most of today&#x27;s issues were sponsored deep dives, so the list is short. The OneTrust ROI piece from AI For Work was covered yesterday.</p>
+    <p class="slow">Monday edition: covers the weekend&#x27;s AI newsletters too.</p>
       <section class="topic-section">
         <h2 class="topic-heading">🔝 Top stories</h2>
         <div class="top-list">
         <article class="top-card">
           <div class="top-num">01</div>
           <div class="top-body">
-            <div class="card-source">Neatprompts (sponsored)</div>
-            <h3 class="top-title"><a href="https://factory.com/news/frontier-harness" target="_blank" rel="noopener">Same model, different harness: Factory&#x27;s agent beat Claude Code by 7.6 points on Opus 5.5</a></h3>
-            <p class="what">Factory&#x27;s own Terminal-Bench 4 runs show its Droid agent passing 65.2% of tasks versus 57.6% for Claude Code with the same model and settings, and finishing faster. It credits the gap to the harness: tool design, context handling and programmatic tool calling, where the model writes a short script to run tools instead of reading every raw result.</p>
-            <p class="why"><span class="why-label">why it matters</span>Vendor-run numbers, but the lesson holds for her workflows: the instructions, tools and context plumbing around a model matter as much as the model choice, so version and test the harness, not just the prompt.</p>
-            <a href="https://factory.com/news/frontier-harness" target="_blank" rel="noopener" class="read-more">Read more →</a>
+            <div class="card-source">Neatprompts</div>
+            <h3 class="top-title"><a href="https://openai.com/business/businesses-in-chatgpt/" target="_blank" rel="noopener">Businesses can now claim and correct their profile inside ChatGPT</a></h3>
+            <p class="what">OpenAI opened a beta of Businesses in ChatGPT: companies claim a profile in Business Hub, fix their details, add product feeds, and see mentions, clicks and the topics people ask about. It is free for now, and some US ecommerce businesses can also run a labeled Business Agent.</p>
+            <p class="why"><span class="why-label">why it matters</span>This is a direct lever on how ChatGPT describes Camunda to developers and architects, and the topic data is a new input for AI-visibility tracking and messaging checks.</p>
+            <a href="https://openai.com/business/businesses-in-chatgpt/" target="_blank" rel="noopener" class="read-more">Read more →</a>
           </div>
         </article>
         <article class="top-card">
           <div class="top-num">02</div>
           <div class="top-body">
-            <div class="card-source">The Deep View (sponsored)</div>
-            <h3 class="top-title"><a href="https://fingerprint.com/blog/how-to-detect-ai-agents/" target="_blank" rel="noopener">Agent traffic now needs an identity policy: signed, verified, unknown or spoofed</a></h3>
-            <p class="what">Fingerprint argues CAPTCHAs and static bot rules no longer separate humans from agents, since personal agents now shop and sign in for real customers. It tags each visiting agent by identity confidence, leaning on the emerging Web Bot Auth standard where agents cryptographically sign requests, and suggests setting access rules per tier.</p>
-            <p class="why"><span class="why-label">why it matters</span>A growing share of who reads Camunda&#x27;s docs and pages is agents acting for developers, which affects web analytics, gated-content rules and how marketing measures reach.</p>
-            <a href="https://fingerprint.com/blog/how-to-detect-ai-agents/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+            <div class="card-source">The Neuron <span class="also">also in The AI Report, TLDR AI</span></div>
+            <h3 class="top-title"><a href="https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/" target="_blank" rel="noopener">OpenRouter drops three inference providers after a canary study caught them leaking prompts</a></h3>
+            <p class="what">Researchers seeded about 2 million canary prompts into AI inference providers and found them leaking, with three hosting providers compromised and credentials stolen within hours. OpenRouter removed three providers and pulled Zero Data Retention status from 125 endpoints, while saying its own systems were not breached.</p>
+            <p class="why"><span class="why-label">why it matters</span>A &#x27;zero data retention&#x27; label on a model endpoint is not proof; add provider-level checks (who actually hosts the model) to the data-handling rules for marketing AI tools.</p>
+            <a href="https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/" target="_blank" rel="noopener" class="read-more">Read more →</a>
           </div>
         </article>
         <article class="top-card">
           <div class="top-num">03</div>
           <div class="top-body">
-            <div class="card-source">Marketing Monk (sponsored)</div>
-            <h3 class="top-title"><a href="https://www.marketingmonk.so/p/hostinger-ai-builder-test-prompt-vs-sketch-vs-link" target="_blank" rel="noopener">Hostinger test: a wireframe image beat a typed prompt for AI-built landing pages</a></h3>
-            <p class="what">Marketing Monk built the same sign-up page three ways. A labeled wireframe gave the fastest, cheapest result with nothing to fix; a typed prompt needed fixes and invented a logo; cloning a live URL copied content faithfully but silently dropped the footer&#x27;s privacy and legal links.</p>
-            <p class="why"><span class="why-label">why it matters</span>Two reusable patterns for her PMM workflows: give the model a structural reference instead of describing layout in words, and add a review step that checks for invented elements and dropped required content.</p>
-            <a href="https://www.marketingmonk.so/p/hostinger-ai-builder-test-prompt-vs-sketch-vs-link" target="_blank" rel="noopener" class="read-more">Read more →</a>
+            <div class="card-source">Neatprompts</div>
+            <h3 class="top-title"><a href="https://x.com/hwchase17/status/2124181216719151585" target="_blank" rel="noopener">LangChain&#x27;s co-founder pitches a &#x27;knowledge factory&#x27; that keeps agent skills current</a></h3>
+            <p class="what">Harrison Chase argues companies need a system that turns scattered docs, expert know-how and procedures into reusable skills and data guides for agents. A curator agent would review feedback, execution traces and sources like Notion and Slack to keep that knowledge accurate.</p>
+            <p class="why"><span class="why-label">why it matters</span>This is the maintenance problem behind a PMM skills library; a curator step that reads run traces and flags stale guidance is a pattern worth piloting on the most-used skills.</p>
+            <a href="https://x.com/hwchase17/status/2124181216719151585" target="_blank" rel="noopener" class="read-more">Read more →</a>
           </div>
         </article>
         </div>
       </section>
       <section class="try">
         <div class="try-label">🛠️ try this</div>
-        <h3><a href="https://www.marketingmonk.so/p/hostinger-ai-builder-test-prompt-vs-sketch-vs-link" target="_blank" rel="noopener">Wireframe-first briefs for AI drafts</a></h3>
-        <p>Next time you have Claude draft a one-pager, launch page or battlecard, sketch the layout with labeled boxes, attach the image, and say &quot;copy its layout, not its text.&quot; Compare fixes needed against your usual text-only brief.</p>
+        <h3><a href="https://arxiv.org/abs/2611.20218" target="_blank" rel="noopener">Make agents list requirements up front and prove each one at the end</a></h3>
+        <p>Add this to one production skill: before working, list the requirements, constraints and acceptance checks from the brief and flag anything ambiguous; after, show how each was verified and name anything unfinished. Compare a week of outputs against the current version.</p>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">🧩 Workflows, Skills &amp; Agents</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">The Neuron</div>
+            <h3 class="card-title"><a href="https://arxiv.org/abs/2611.20218" target="_blank" rel="noopener">Study: agents call work &#x27;done&#x27; when nearly a third of it fails</a></h3>
+            <p class="card-summary">SWE-CoWork gave 11 models workplace-style assignments with requirements spread across simulated colleagues. The best fully finished under 8% of tasks, and 31% of requirements agents reported as complete failed their tests; a fuller brief raised test scores but not completion.</p>
+            <p class="card-why">Requirement tracking, not prompt length, is the weak spot, so build explicit checklists and verification steps into multi-step marketing workflows.</p>
+            <a href="https://arxiv.org/abs/2611.20218" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">Neatprompts</div>
+            <h3 class="card-title"><a href="https://chatgpt.com/features/space/" target="_blank" rel="noopener">ChatGPT Space opens to Plus users, with shared interactive pages and slides</a></h3>
+            <p class="card-summary">Space, which already replaced Library on Pro, Business and Enterprise plans, now lets Plus users co-build pages, slides and sites with ChatGPT and keep them updated, including on mobile. Sharing a page does not expose private chats, but anything placed on the page is visible to all viewers.</p>
+            <p class="card-why">Expect teammates to start sharing Space pages; spell out what can and cannot go into a shared AI page in the team&#x27;s usage guidelines.</p>
+            <a href="https://chatgpt.com/features/space/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
       </section>
       <section class="topic-section">
         <h2 class="topic-heading">🛡️ AI Guardrails &amp; Governance</h2>
         <div class="cards-grid">
           <article class="card">
-            <div class="card-source">Marketing Monk (sponsored)</div>
-            <h3 class="card-title"><a href="https://www.marketingmonk.so/p/hostinger-ai-builder-test-prompt-vs-sketch-vs-link" target="_blank" rel="noopener">Pre-launch checklist for AI-built pages: consent, placeholders, invented and dropped content</a></h3>
-            <p class="card-summary">The same test closes with a seven-step check before publishing: test the form, clear test data, review consent wording, replace placeholder testimonials, scan for anything the AI made up or left out, check mobile, then verify the live page.</p>
-            <p class="card-why">A ready-made human-in-the-loop checklist she could adapt into a standard review gate for any AI-generated asset that ships externally.</p>
-            <a href="https://www.marketingmonk.so/p/hostinger-ai-builder-test-prompt-vs-sketch-vs-link" target="_blank" rel="noopener" class="read-more">Read more →</a>
+            <div class="card-source">The AI Report</div>
+            <h3 class="card-title"><a href="https://www.nyc.gov/site/dca/news/067-26/dcwp-tlc-cchr-issue-enforcement-policy-on-artificial-intelligence" target="_blank" rel="noopener">NYC regulators: &#x27;the AI decided&#x27; is not a defense</a></h3>
+            <p class="card-summary">Three New York City agencies issued a joint enforcement policy saying businesses stay liable for discrimination, wage theft and consumer-protection violations even when an AI system made the call.</p>
+            <p class="card-why">A clean citation for why human review stays in the loop on customer-facing AI output.</p>
+            <a href="https://www.nyc.gov/site/dca/news/067-26/dcwp-tlc-cchr-issue-enforcement-policy-on-artificial-intelligence" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">The Neuron</div>
+            <h3 class="card-title"><a href="https://www.theverge.com/games/1039770/binding-of-isaac-ai-music" target="_blank" rel="noopener">A game studio pulled AI music after fans found Suno metadata in the files</a></h3>
+            <p class="card-summary">Players spotted generator metadata inside the soundtrack files, and the developer removed the tracks after a backlash over undisclosed AI use.</p>
+            <p class="card-why">Generated assets carry traces; add a metadata check and a disclosure decision to the release checklist for AI-made content.</p>
+            <a href="https://www.theverge.com/games/1039770/binding-of-isaac-ai-music" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">The AI Report</div>
+            <h3 class="card-title"><a href="https://www.semafor.com/article/11/22/2026/us-china-eye-joint-guardrails-on-ai" target="_blank" rel="noopener">US and China say they will work on joint AI guardrails</a></h3>
+            <p class="card-summary">The administration announced plans for joint AI guardrails with China, a shift from its earlier anti-regulation stance, while tightening export controls at the same time.</p>
+            
+            <a href="https://www.semafor.com/article/11/22/2026/us-china-eye-joint-guardrails-on-ai" target="_blank" rel="noopener" class="read-more">Read more →</a>
           </article>
         </div>
       </section>
@@ -144,11 +177,11 @@
         <h2 class="topic-heading">🎯 Competitive Intel &amp; Orchestration Market</h2>
         <div class="cards-grid">
           <article class="card">
-            <div class="card-source">Neatprompts (sponsored)</div>
-            <h3 class="card-title"><a href="https://factory.com/case-studies/blackstone" target="_blank" rel="noopener">Blackstone picked its coding-agent vendor for on-prem control, not benchmark scores</a></h3>
-            <p class="card-summary">Factory&#x27;s case study says Blackstone chose it mainly for running agent sandboxes in its own data center, model choice and fit with existing security controls. Factory also sells a private VPC deployment that keeps code execution inside the customer&#x27;s environment.</p>
-            <p class="card-why">A CI signal for Camunda&#x27;s agentic orchestration story: regulated enterprises are choosing agent platforms on deployment control and governance, which is where self-managed orchestration can compete.</p>
-            <a href="https://factory.com/case-studies/blackstone" target="_blank" rel="noopener" class="read-more">Read more →</a>
+            <div class="card-source">TLDR Marketing</div>
+            <h3 class="card-title"><a href="https://www.juliedx.com/insights/blog/competitor-price-tracker-prompt" target="_blank" rel="noopener">A copy-and-paste prompt for a scheduled competitor price tracker</a></h3>
+            <p class="card-summary">You fill in eight fields about your company and rivals; the AI watches public pricing pages, logs price and promo changes in a shared doc, and a scheduled task refreshes it daily or weekly.</p>
+            <p class="card-why">An easy template for a pricing-page signal feed on orchestration and automation vendors, feeding battlecard updates.</p>
+            <a href="https://www.juliedx.com/insights/blog/competitor-price-tracker-prompt" target="_blank" rel="noopener" class="read-more">Read more →</a>
           </article>
         </div>
       </section>
@@ -156,11 +189,18 @@
         <h2 class="topic-heading">📊 Measuring AI Impact</h2>
         <div class="cards-grid">
           <article class="card">
-            <div class="card-source">Neatprompts (sponsored)</div>
-            <h3 class="card-title"><a href="https://factory.com/news/factory-router-inference-savings" target="_blank" rel="noopener">Factory Router reports 63% inference savings by sending routine work to cheaper models</a></h3>
-            <p class="card-summary">Factory says routing each task to the cheapest model that can handle it cut aggregate inference cost 63% against frontier pricing in one September week, with median per-session savings of 72.5%. It measures cost per passed task, not per request.</p>
-            <p class="card-why">Cost per successful output is a cleaner metric than token spend for her own workflow dashboards, and model routing is a lever worth testing on high-volume, low-stakes steps.</p>
-            <a href="https://factory.com/news/factory-router-inference-savings" target="_blank" rel="noopener" class="read-more">Read more →</a>
+            <div class="card-source">TLDR Marketing</div>
+            <h3 class="card-title"><a href="https://searchengineland.com/deleting-blog-posts-hurt-ai-visibility-organic-clicks-502405" target="_blank" rel="noopener">AI-visibility scores and real clicks can move in opposite directions</a></h3>
+            <p class="card-summary">A site that pruned blog posts saw its AI-visibility score drop while organic clicks held or rose, because blogs drive mentions and service pages drive visits. Tracker results also shift run to run, so the piece recommends pairing Search Console AI impressions with clicks and a &#x27;how did you hear about us&#x27; form field.</p>
+            <p class="card-why">Useful caution before AI-visibility scores become a headline marketing KPI.</p>
+            <a href="https://searchengineland.com/deleting-blog-posts-hurt-ai-visibility-organic-clicks-502405" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">The AI Report</div>
+            <h3 class="card-title"><a href="https://www.salesforce.com/customer-stories/crexi-reduces-admin-tasks-sales-ai/" target="_blank" rel="noopener">Crexi&#x27;s playbook: baseline rep admin time before rolling out AI</a></h3>
+            <p class="card-summary">Crexi says AI handling follow-up emails and call notes gave reps about five hours back per day. The suggested method: measure current time on those tasks, pilot on one rep, and compare against the baseline before scaling.</p>
+            <p class="card-why">A simple time-saved measurement template that transfers directly to PMM workflows.</p>
+            <a href="https://www.salesforce.com/customer-stories/crexi-reduces-admin-tasks-sales-ai/" target="_blank" rel="noopener" class="read-more">Read more →</a>
           </article>
         </div>
       </section>
@@ -168,19 +208,26 @@
         <h2 class="topic-heading">🌐 Frontier Labs &amp; AI Landscape</h2>
         <div class="cards-grid">
           <article class="card">
-            <div class="card-source">The New York Times, The Morning</div>
-            <h3 class="card-title">A &#x27;Chatbot Canon&#x27; is forming as models converge on the same recommendations</h3>
-            <p class="card-summary">A Times Magazine essay on taste notes that informal tests asking different chatbots for &quot;the best&quot; of something keep returning the same consensus picks. The piece argues that people increasingly outsource discovery to models that flatten choice.</p>
-            <p class="card-why">If buyers ask assistants which orchestration platform to use, the answers will cluster around a few names, which raises the stakes for how Camunda shows up in AI answers.</p>
+            <div class="card-source">The Rundown AI <span class="also">· also in The Neuron, Neatprompts</span></div>
+            <h3 class="card-title"><a href="https://openai.com/index/perplexity-and-intelligence/" target="_blank" rel="noopener">OpenAI publishes internal capability scores and asks labs to agree on common limits</a></h3>
+            <p class="card-summary">Chief scientist Jakub Pachocki released OpenAI&#x27;s pretraining scores since GPT-3.5, revealed an unreleased model at a new low, and proposed capability thresholds labs would not cross until monitoring catches up. It is a proposal, not an agreement.</p>
+            <p class="card-why">If labs pace releases, roadmaps that assume the next model will fix a workflow&#x27;s weak spots get less predictable.</p>
+            <a href="https://openai.com/index/perplexity-and-intelligence/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">The Rundown AI <span class="also">· also in TLDR AI, The Neuron</span></div>
+            <h3 class="card-title"><a href="https://the-decoder.com/lean-and-mathlib-community-officially-confirms-levent-alpoges-proof-of-the-riemann-hypothesis-is-correct/" target="_blank" rel="noopener">Lean maintainers back a Riemann hypothesis proof built with Claude</a></h3>
+            <p class="card-summary">An Anthropic mathematician says he and Claude proved the 167-year-old conjecture in about six weeks, delivered as a machine-checked proof that Lean and Mathlib maintainers say they have full confidence in. Some mathematicians object that no human can follow it.</p>
             
+            <a href="https://the-decoder.com/lean-and-mathlib-community-officially-confirms-levent-alpoges-proof-of-the-riemann-hypothesis-is-correct/" target="_blank" rel="noopener" class="read-more">Read more →</a>
           </article>
         </div>
       </section>
   </main>
 
   <footer>
-    curated daily by <a href="https://dpnation.com" target="_blank" rel="noopener">dpnation</a> · November 22, 2026
-    <div class="archive">past days: <a href="archive/2026-11-21.html">2026-11-21</a> · <a href="archive/2026-11-20.html">2026-11-20</a> · <a href="archive/2026-11-19.html">2026-11-19</a> · <a href="archive/2026-11-18.html">2026-11-18</a> · <a href="archive/2026-11-17.html">2026-11-17</a> · <a href="archive/2026-11-16.html">2026-11-16</a> · <a href="archive/2026-11-15.html">2026-11-15</a> · <a href="archive/index.html">all briefings →</a></div>
+    curated daily by <a href="https://dpnation.com" target="_blank" rel="noopener">dpnation</a> · November 23, 2026
+    <div class="archive">past days: <a href="archive/2026-11-22.html">2026-11-22</a> · <a href="archive/2026-11-21.html">2026-11-21</a> · <a href="archive/2026-11-20.html">2026-11-20</a> · <a href="archive/2026-11-19.html">2026-11-19</a> · <a href="archive/2026-11-18.html">2026-11-18</a> · <a href="archive/2026-11-17.html">2026-11-17</a> · <a href="archive/2026-11-16.html">2026-11-16</a> · <a href="archive/index.html">all briefings →</a></div>
   </footer>
 </body>
 </html>
