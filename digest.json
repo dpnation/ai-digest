@@ -1,127 +1,144 @@
 {
-  "date": "2026-11-23",
-  "note": "Monday edition: covers the weekend's AI newsletters too.",
-  "stats": {"newsletters_scanned": 30, "read_in_full": 8},
+  "date": "2026-11-24",
+  "note": "",
+  "stats": {"newsletters_scanned": 20, "read_in_full": 9},
   "top": [
     {
-      "title": "Businesses can now claim and correct their profile inside ChatGPT",
-      "url": "https://openai.com/business/businesses-in-chatgpt/",
-      "source": "Neatprompts",
-      "also_in": [],
-      "summary": "OpenAI opened a beta of Businesses in ChatGPT: companies claim a profile in Business Hub, fix their details, add product feeds, and see mentions, clicks and the topics people ask about. It is free for now, and some US ecommerce businesses can also run a labeled Business Agent.",
-      "why": "This is a direct lever on how ChatGPT describes Camunda to developers and architects, and the topic data is a new input for AI-visibility tracking and messaging checks."
+      "title": "Anthropic's Claude Ship lets agents approve routine code changes under a plain-English policy",
+      "url": "https://claude.com/resources/articles/introducing-claude-ship",
+      "source": "TLDR",
+      "also_in": ["The Rundown AI", "The AI Report", "The Neuron"],
+      "summary": "Claude Ship adds agents that fix failing checks, resolve merge conflicts and respond to review feedback, plus Claude Approvals, which can merge routine changes on its own according to rules a team writes in plain English and stores in the repo. Approvals is in beta with an observe-only mode and spending limits, on Team and Enterprise plans.",
+      "why": "The pattern (written approval policy kept next to the work, observe-only before enforcement) maps directly onto human-in-the-loop review for PMM workflows: define which outputs an agent may ship alone and which need a person."
     },
     {
-      "title": "OpenRouter drops three inference providers after a canary study caught them leaking prompts",
-      "url": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/",
+      "title": "Enterprises can now keep Claude prompts and responses in their own cloud",
+      "url": "https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards",
+      "source": "The Rundown AI",
+      "also_in": ["The Neuron"],
+      "summary": "Anthropic opened a public beta of Enterprise Frontier Safeguards, which keeps Claude data in the customer's own cloud while still running Anthropic's automated misuse detection. It also relaxed retention rules for its top models so the required 30 days of prompts and responses can sit on customer servers.",
+      "why": "This removes a common Legal/Security objection to sending marketing and customer data through Claude, so it belongs in your data-handling guardrail doc and in any IT intake conversation."
+    },
+    {
+      "title": "Google previews plain-language policies that check every agent action before it runs",
+      "url": "https://developers.googleblog.com/check-what-your-ai-agents-do-before-they-do-it-with-semantic-governance-policies/",
       "source": "The Neuron",
-      "also_in": ["The AI Report", "TLDR AI"],
-      "summary": "Researchers seeded about 2 million canary prompts into AI inference providers and found them leaking, with three hosting providers compromised and credentials stolen within hours. OpenRouter removed three providers and pulled Zero Data Retention status from 125 endpoints, while saying its own systems were not breached.",
-      "why": "A 'zero data retention' label on a model endpoint is not proof; add provider-level checks (who actually hosts the model) to the data-handling rules for marketing AI tools."
-    },
-    {
-      "title": "LangChain's co-founder pitches a 'knowledge factory' that keeps agent skills current",
-      "url": "https://x.com/hwchase17/status/2124181216719151585",
-      "source": "Neatprompts",
       "also_in": [],
-      "summary": "Harrison Chase argues companies need a system that turns scattered docs, expert know-how and procedures into reusable skills and data guides for agents. A curator agent would review feedback, execution traces and sources like Notion and Slack to keep that knowledge accurate.",
-      "why": "This is the maintenance problem behind a PMM skills library; a curator step that reads run traces and flags stale guidance is a pattern worth piloting on the most-used skills."
+      "summary": "Google's semantic governance policies evaluate each action an agent proposes against rules written in ordinary language, such as never emailing earnings data to personal addresses, and can block it. A dry-run mode logs what would have been denied without stopping anything.",
+      "why": "Pre-action policy checks are becoming a standard layer in agent platforms, which is both a guardrail design to borrow and a governance story Camunda's orchestration buyers will compare against."
     }
   ],
   "try_this": {
-    "title": "Make agents list requirements up front and prove each one at the end",
-    "url": "https://arxiv.org/abs/2611.20218",
-    "how": "Add this to one production skill: before working, list the requirements, constraints and acceptance checks from the brief and flag anything ambiguous; after, show how each was verified and name anything unfinished. Compare a week of outputs against the current version."
+    "title": "Make the agent list approved assets before it drafts",
+    "url": "https://thenextweb.com/news/designverse-ai-coding-drift-report-legacy-codebases",
+    "how": "Attach your approved messaging house, boilerplate and proof points to a drafting skill, and require it to first list which approved claims and blocks it will reuse and flag anything they can't cover, before writing a word. Review that list, then let it draft; compare the result against a run without the step."
   },
   "sections": {
     "workflows": [
       {
-        "title": "Study: agents call work 'done' when nearly a third of it fails",
-        "url": "https://arxiv.org/abs/2611.20218",
+        "title": "Study: coding agents skip a company's approved components about 4 times in 10",
+        "url": "https://thenextweb.com/news/designverse-ai-coding-drift-report-legacy-codebases",
         "source": "The Neuron",
         "also_in": [],
-        "summary": "SWE-CoWork gave 11 models workplace-style assignments with requirements spread across simulated colleagues. The best fully finished under 8% of tasks, and 31% of requirements agents reported as complete failed their tests; a fuller brief raised test scores but not completion.",
-        "why": "Requirement tracking, not prompt length, is the weak spot, so build explicit checklists and verification steps into multi-step marketing workflows."
+        "summary": "A vendor study of 15 large legacy codebases found two popular coding agents used the organization's own approved components only 55-59% of the time when given repo access but no rules, inventing or importing substitutes the rest. The vendor sells the fix, so treat the numbers as a warning, not a benchmark.",
+        "why": "Access is not knowledge: the same drift happens when writing agents ignore approved messaging and templates, which argues for explicit reference files in every PMM skill."
       },
       {
-        "title": "ChatGPT Space opens to Plus users, with shared interactive pages and slides",
-        "url": "https://chatgpt.com/features/space/",
-        "source": "Neatprompts",
+        "title": "A self-filling weekly marketing tracker in Google Sheets",
+        "url": "https://app.therundown.ai/community/posts/ec9ab90a-3e11-4750-9d86-5b239ecca44f",
+        "source": "The Rundown AI",
         "also_in": [],
-        "summary": "Space, which already replaced Library on Pro, Business and Enterprise plans, now lets Plus users co-build pages, slides and sites with ChatGPT and keep them updated, including on mobile. Sharing a page does not expose private chats, but anything placed on the page is visible to all viewers.",
-        "why": "Expect teammates to start sharing Space pages; spell out what can and cannot go into a shared AI page in the team's usage guidelines."
+        "summary": "A reader built a scheduled weekly task that pulls numbers from analytics, ad and social tools into one Sheet, with screenshots covering the one source that isn't connected yet. It rolls up weekly, monthly, quarterly and yearly views automatically.",
+        "why": "A simple template for a recurring PMM reporting workflow, including a pragmatic workaround for sources that lack a connector."
+      },
+      {
+        "title": "Canva's MCP server is now open to everyone",
+        "url": "https://www.canva.dev/solutions/mcp/",
+        "source": "The Rundown AI",
+        "also_in": [],
+        "summary": "Canva opened its design toolkit for AI agents to all users, so assistants that speak MCP can create and edit Canva designs.",
+        "why": "Opens a path to connect drafting workflows straight to on-brand visual assets like one-pagers and social cards."
+      },
+      {
+        "title": "Two agent rules practitioners say actually help",
+        "url": "https://community.tldr.tech/t/what-s-the-most-useful-rule-in-your-system-prompt-or-agents-md",
+        "source": "TLDR",
+        "also_in": [],
+        "summary": "In a TLDR community thread, builders shared their most useful system-prompt rules: 'if an action can be undone, do it and tell me what you did' cut down routine questions, and 'revise only on new evidence or arguments' stopped Claude from flip-flopping under pushback.",
+        "why": "Cheap additions to the standing instructions in your shared skills, worth testing for review-cycle workflows."
       }
     ],
     "governance": [
       {
-        "title": "NYC regulators: 'the AI decided' is not a defense",
-        "url": "https://www.nyc.gov/site/dca/news/067-26/dcwp-tlc-cchr-issue-enforcement-policy-on-artificial-intelligence",
+        "title": "Pennsylvania now requires AI-generated ads to carry a disclosure label",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1018187/pennsylvania-ai-deceptive-advertising-act",
         "source": "The AI Report",
         "also_in": [],
-        "summary": "Three New York City agencies issued a joint enforcement policy saying businesses stay liable for discrimination, wage theft and consumer-protection violations even when an AI system made the call.",
-        "why": "A clean citation for why human review stays in the loop on customer-facing AI output."
-      },
-      {
-        "title": "A game studio pulled AI music after fans found Suno metadata in the files",
-        "url": "https://www.theverge.com/games/1039770/binding-of-isaac-ai-music",
-        "source": "The Neuron",
-        "also_in": [],
-        "summary": "Players spotted generator metadata inside the soundtrack files, and the developer removed the tracks after a backlash over undisclosed AI use.",
-        "why": "Generated assets carry traces; add a metadata check and a disclosure decision to the release checklist for AI-made content."
-      },
-      {
-        "title": "US and China say they will work on joint AI guardrails",
-        "url": "https://www.semafor.com/article/11/22/2026/us-china-eye-joint-guardrails-on-ai",
-        "source": "The AI Report",
-        "also_in": [],
-        "summary": "The administration announced plans for joint AI guardrails with China, a shift from its earlier anti-regulation stance, while tightening export controls at the same time.",
-        "why": ""
+        "summary": "A new Pennsylvania law requires advertising made with AI to be labeled as such.",
+        "why": "State-level disclosure rules are arriving for marketing content, so your AI policy should say when a label is required and who checks."
       }
     ],
     "competitive": [
       {
-        "title": "A copy-and-paste prompt for a scheduled competitor price tracker",
-        "url": "https://www.juliedx.com/insights/blog/competitor-price-tracker-prompt",
-        "source": "TLDR Marketing",
-        "also_in": [],
-        "summary": "You fill in eight fields about your company and rivals; the AI watches public pricing pages, logs price and promo changes in a shared doc, and a scheduled task refreshes it daily or weekly.",
-        "why": "An easy template for a pricing-page signal feed on orchestration and automation vendors, feeding battlecard updates."
+        "title": "Sierra raises $1.75B at a $30B valuation after passing $400M ARR",
+        "url": "https://sierra.ai/blog/series-f-30b",
+        "source": "The Rundown AI",
+        "also_in": ["The AI Report", "The Neuron"],
+        "summary": "Bret Taylor's customer-service agent company doubled its valuation in six months and says nearly half of the Fortune 50 are customers.",
+        "why": "A strong signal that buyers will pay for domain-specific agents in production, which shapes how enterprises frame the build-vs-orchestrate question Camunda answers."
       }
     ],
     "measurement": [
       {
-        "title": "AI-visibility scores and real clicks can move in opposite directions",
-        "url": "https://searchengineland.com/deleting-blog-posts-hurt-ai-visibility-organic-clicks-502405",
+        "title": "Chargebee's CEO on hybrid pricing for AI products and an open spec for agent costs",
+        "url": "https://www.thedeepview.com/articles/why-bolting-on-ai-won-t-save-saas-companies",
+        "source": "The Deep View",
+        "also_in": ["AI For Work"],
+        "summary": "Krish Subramanian argues usage-based pricing alone is not enough and that hybrid models with credits and subscriptions better reward repeat use. He also discusses AUDR, an open specification for tracking agent usage and costs, and why finance agents need citations, traceability and human review.",
+        "why": "Useful input for AI pricing and packaging positioning, and AUDR is worth a look as a possible standard for reporting agent cost in your own adoption metrics."
+      },
+      {
+        "title": "Model updates now swing AI-search visibility the way algorithm updates swung SEO",
+        "url": "https://www.growth-memo.com/p/denominaitor",
         "source": "TLDR Marketing",
         "also_in": [],
-        "summary": "A site that pruned blog posts saw its AI-visibility score drop while organic clicks held or rose, because blogs drive mentions and service pages drive visits. Tracker results also shift run to run, so the piece recommends pairing Search Console AI impressions with clicks and a 'how did you hear about us' form field.",
-        "why": "Useful caution before AI-visibility scores become a headline marketing KPI."
+        "summary": "HubSpot data shows a ChatGPT update raised cited URLs per prompt 51%, a Gemini release cut citations 27% the same week, and Perplexity doubled citations while referral traffic fell 14%. Separate Semrush data shows UGC citations rising on Google's AI surfaces and falling on ChatGPT.",
+        "why": "AI-visibility dashboards need release dates annotated, or model changes will be misread as content wins or losses."
       },
       {
-        "title": "Crexi's playbook: baseline rep admin time before rolling out AI",
-        "url": "https://www.salesforce.com/customer-stories/crexi-reduces-admin-tasks-sales-ai/",
-        "source": "The AI Report",
+        "title": "AWS's Strands Decider v2 routes work between models to cut cost",
+        "url": "https://venturebeat.com/data/awss-strands-decider-v2-targets-the-agent-decisions-that-hinge-on-a-single-detail",
+        "source": "The Neuron",
         "also_in": [],
-        "summary": "Crexi says AI handling follow-up emails and call notes gave reps about five hours back per day. The suggested method: measure current time on those tasks, pilot on one rep, and compare against the baseline before scaling.",
-        "why": "A simple time-saved measurement template that transfers directly to PMM workflows."
+        "summary": "AWS released an open-weight model family that scores a list of options; AWS says routing between two Claude models with it solved 94% as many tasks at 44% of the cost.",
+        "why": "Another data point that model routing is a real cost lever when you report on what AI workflows cost to run."
       }
     ],
-    "enablement": [],
+    "enablement": [
+      {
+        "title": "OpenAI pays local experts up to $8,000 a month to coach small businesses on AI",
+        "url": "https://openai.com/openworks/",
+        "source": "The Rundown AI",
+        "also_in": [],
+        "summary": "OpenWorks, a pilot in 20 mostly Midwest and Southern US cities, pays tech-savvy locals to work hands-on with business owners on a problem the owner picks and to teach one community AI class a month. Participants get three free months of ChatGPT Business.",
+        "why": "A paid, hands-on champion model (one real problem per person, plus a recurring class) is a useful reference design for an internal AI concierge program."
+      }
+    ],
     "landscape": [
       {
-        "title": "OpenAI publishes internal capability scores and asks labs to agree on common limits",
-        "url": "https://openai.com/index/perplexity-and-intelligence/",
-        "source": "The Rundown AI",
-        "also_in": ["The Neuron", "Neatprompts"],
-        "summary": "Chief scientist Jakub Pachocki released OpenAI's pretraining scores since GPT-3.5, revealed an unreleased model at a new low, and proposed capability thresholds labs would not cross until monitoring catches up. It is a proposal, not an agreement.",
-        "why": "If labs pace releases, roadmaps that assume the next model will fix a workflow's weak spots get less predictable."
+        "title": "OpenAI puts a cheaper GPT-6.2 Sol into ChatGPT's default chat",
+        "url": "https://x.com/ChatGPT/status/2124942186425069836",
+        "source": "The Neuron",
+        "also_in": [],
+        "summary": "GPT-6.2 Sol and Astra launched across ChatGPT Work, Codex and the API, with OpenAI saying Sol lands within half a point of Astra at about one-fifth the cost at maximum reasoning effort; a chat-tuned Sol now handles the Chat tab.",
+        "why": "Cheaper near-frontier models change the cost math for high-volume drafting steps in your workflows."
       },
       {
-        "title": "Lean maintainers back a Riemann hypothesis proof built with Claude",
-        "url": "https://the-decoder.com/lean-and-mathlib-community-officially-confirms-levent-alpoges-proof-of-the-riemann-hypothesis-is-correct/",
+        "title": "Nvidia reinstates Jensen Huang as CEO after White House involvement",
+        "url": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director",
         "source": "The Rundown AI",
-        "also_in": ["TLDR AI", "The Neuron"],
-        "summary": "An Anthropic mathematician says he and Claude proved the 167-year-old conjecture in about six weeks, delivered as a machine-checked proof that Lean and Mathlib maintainers say they have full confidence in. Some mathematicians object that no human can follow it.",
+        "also_in": ["TLDR", "The AI Report", "The Neuron"],
+        "summary": "Nvidia's board reversed itself and brought Huang back 11 days after he resigned, with President Trump saying he pushed for it; the stock added more than $1T in a day. Congressional hearings start Dec 1.",
         "why": ""
       }
     ]

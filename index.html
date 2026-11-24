@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daily AI Digest — November 23, 2026</title>
+  <title>Daily AI Digest — November 24, 2026</title>
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -82,68 +82,82 @@
     <div class="header-inner">
       <div class="header-eyebrow">dpnation · ai for pmm workflows</div>
       <h1><a href="index.html" style="text-decoration:none">Daily AI Digest</a></h1>
-      <div class="header-date">Monday, November 23, 2026 · 13 stories · 30 newsletters read</div>
+      <div class="header-date">Tuesday, November 24, 2026 · 15 stories · 20 newsletters read</div>
     </div>
   </header>
 
   <main>
-    <p class="slow">Monday edition: covers the weekend&#x27;s AI newsletters too.</p>
+    
       <section class="topic-section">
         <h2 class="topic-heading">🔝 Top stories</h2>
         <div class="top-list">
         <article class="top-card">
           <div class="top-num">01</div>
           <div class="top-body">
-            <div class="card-source">Neatprompts</div>
-            <h3 class="top-title"><a href="https://openai.com/business/businesses-in-chatgpt/" target="_blank" rel="noopener">Businesses can now claim and correct their profile inside ChatGPT</a></h3>
-            <p class="what">OpenAI opened a beta of Businesses in ChatGPT: companies claim a profile in Business Hub, fix their details, add product feeds, and see mentions, clicks and the topics people ask about. It is free for now, and some US ecommerce businesses can also run a labeled Business Agent.</p>
-            <p class="why"><span class="why-label">why it matters</span>This is a direct lever on how ChatGPT describes Camunda to developers and architects, and the topic data is a new input for AI-visibility tracking and messaging checks.</p>
-            <a href="https://openai.com/business/businesses-in-chatgpt/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+            <div class="card-source">TLDR <span class="also">also in The Rundown AI, The AI Report, The Neuron</span></div>
+            <h3 class="top-title"><a href="https://claude.com/resources/articles/introducing-claude-ship" target="_blank" rel="noopener">Anthropic&#x27;s Claude Ship lets agents approve routine code changes under a plain-English policy</a></h3>
+            <p class="what">Claude Ship adds agents that fix failing checks, resolve merge conflicts and respond to review feedback, plus Claude Approvals, which can merge routine changes on its own according to rules a team writes in plain English and stores in the repo. Approvals is in beta with an observe-only mode and spending limits, on Team and Enterprise plans.</p>
+            <p class="why"><span class="why-label">why it matters</span>The pattern (written approval policy kept next to the work, observe-only before enforcement) maps directly onto human-in-the-loop review for PMM workflows: define which outputs an agent may ship alone and which need a person.</p>
+            <a href="https://claude.com/resources/articles/introducing-claude-ship" target="_blank" rel="noopener" class="read-more">Read more →</a>
           </div>
         </article>
         <article class="top-card">
           <div class="top-num">02</div>
           <div class="top-body">
-            <div class="card-source">The Neuron <span class="also">also in The AI Report, TLDR AI</span></div>
-            <h3 class="top-title"><a href="https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/" target="_blank" rel="noopener">OpenRouter drops three inference providers after a canary study caught them leaking prompts</a></h3>
-            <p class="what">Researchers seeded about 2 million canary prompts into AI inference providers and found them leaking, with three hosting providers compromised and credentials stolen within hours. OpenRouter removed three providers and pulled Zero Data Retention status from 125 endpoints, while saying its own systems were not breached.</p>
-            <p class="why"><span class="why-label">why it matters</span>A &#x27;zero data retention&#x27; label on a model endpoint is not proof; add provider-level checks (who actually hosts the model) to the data-handling rules for marketing AI tools.</p>
-            <a href="https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+            <div class="card-source">The Rundown AI <span class="also">also in The Neuron</span></div>
+            <h3 class="top-title"><a href="https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards" target="_blank" rel="noopener">Enterprises can now keep Claude prompts and responses in their own cloud</a></h3>
+            <p class="what">Anthropic opened a public beta of Enterprise Frontier Safeguards, which keeps Claude data in the customer&#x27;s own cloud while still running Anthropic&#x27;s automated misuse detection. It also relaxed retention rules for its top models so the required 30 days of prompts and responses can sit on customer servers.</p>
+            <p class="why"><span class="why-label">why it matters</span>This removes a common Legal/Security objection to sending marketing and customer data through Claude, so it belongs in your data-handling guardrail doc and in any IT intake conversation.</p>
+            <a href="https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards" target="_blank" rel="noopener" class="read-more">Read more →</a>
           </div>
         </article>
         <article class="top-card">
           <div class="top-num">03</div>
           <div class="top-body">
-            <div class="card-source">Neatprompts</div>
-            <h3 class="top-title"><a href="https://x.com/hwchase17/status/2124181216719151585" target="_blank" rel="noopener">LangChain&#x27;s co-founder pitches a &#x27;knowledge factory&#x27; that keeps agent skills current</a></h3>
-            <p class="what">Harrison Chase argues companies need a system that turns scattered docs, expert know-how and procedures into reusable skills and data guides for agents. A curator agent would review feedback, execution traces and sources like Notion and Slack to keep that knowledge accurate.</p>
-            <p class="why"><span class="why-label">why it matters</span>This is the maintenance problem behind a PMM skills library; a curator step that reads run traces and flags stale guidance is a pattern worth piloting on the most-used skills.</p>
-            <a href="https://x.com/hwchase17/status/2124181216719151585" target="_blank" rel="noopener" class="read-more">Read more →</a>
+            <div class="card-source">The Neuron</div>
+            <h3 class="top-title"><a href="https://developers.googleblog.com/check-what-your-ai-agents-do-before-they-do-it-with-semantic-governance-policies/" target="_blank" rel="noopener">Google previews plain-language policies that check every agent action before it runs</a></h3>
+            <p class="what">Google&#x27;s semantic governance policies evaluate each action an agent proposes against rules written in ordinary language, such as never emailing earnings data to personal addresses, and can block it. A dry-run mode logs what would have been denied without stopping anything.</p>
+            <p class="why"><span class="why-label">why it matters</span>Pre-action policy checks are becoming a standard layer in agent platforms, which is both a guardrail design to borrow and a governance story Camunda&#x27;s orchestration buyers will compare against.</p>
+            <a href="https://developers.googleblog.com/check-what-your-ai-agents-do-before-they-do-it-with-semantic-governance-policies/" target="_blank" rel="noopener" class="read-more">Read more →</a>
           </div>
         </article>
         </div>
       </section>
       <section class="try">
         <div class="try-label">🛠️ try this</div>
-        <h3><a href="https://arxiv.org/abs/2611.20218" target="_blank" rel="noopener">Make agents list requirements up front and prove each one at the end</a></h3>
-        <p>Add this to one production skill: before working, list the requirements, constraints and acceptance checks from the brief and flag anything ambiguous; after, show how each was verified and name anything unfinished. Compare a week of outputs against the current version.</p>
+        <h3><a href="https://thenextweb.com/news/designverse-ai-coding-drift-report-legacy-codebases" target="_blank" rel="noopener">Make the agent list approved assets before it drafts</a></h3>
+        <p>Attach your approved messaging house, boilerplate and proof points to a drafting skill, and require it to first list which approved claims and blocks it will reuse and flag anything they can&#x27;t cover, before writing a word. Review that list, then let it draft; compare the result against a run without the step.</p>
       </section>
       <section class="topic-section">
         <h2 class="topic-heading">🧩 Workflows, Skills &amp; Agents</h2>
         <div class="cards-grid">
           <article class="card">
             <div class="card-source">The Neuron</div>
-            <h3 class="card-title"><a href="https://arxiv.org/abs/2611.20218" target="_blank" rel="noopener">Study: agents call work &#x27;done&#x27; when nearly a third of it fails</a></h3>
-            <p class="card-summary">SWE-CoWork gave 11 models workplace-style assignments with requirements spread across simulated colleagues. The best fully finished under 8% of tasks, and 31% of requirements agents reported as complete failed their tests; a fuller brief raised test scores but not completion.</p>
-            <p class="card-why">Requirement tracking, not prompt length, is the weak spot, so build explicit checklists and verification steps into multi-step marketing workflows.</p>
-            <a href="https://arxiv.org/abs/2611.20218" target="_blank" rel="noopener" class="read-more">Read more →</a>
+            <h3 class="card-title"><a href="https://thenextweb.com/news/designverse-ai-coding-drift-report-legacy-codebases" target="_blank" rel="noopener">Study: coding agents skip a company&#x27;s approved components about 4 times in 10</a></h3>
+            <p class="card-summary">A vendor study of 15 large legacy codebases found two popular coding agents used the organization&#x27;s own approved components only 55-59% of the time when given repo access but no rules, inventing or importing substitutes the rest. The vendor sells the fix, so treat the numbers as a warning, not a benchmark.</p>
+            <p class="card-why">Access is not knowledge: the same drift happens when writing agents ignore approved messaging and templates, which argues for explicit reference files in every PMM skill.</p>
+            <a href="https://thenextweb.com/news/designverse-ai-coding-drift-report-legacy-codebases" target="_blank" rel="noopener" class="read-more">Read more →</a>
           </article>
           <article class="card">
-            <div class="card-source">Neatprompts</div>
-            <h3 class="card-title"><a href="https://chatgpt.com/features/space/" target="_blank" rel="noopener">ChatGPT Space opens to Plus users, with shared interactive pages and slides</a></h3>
-            <p class="card-summary">Space, which already replaced Library on Pro, Business and Enterprise plans, now lets Plus users co-build pages, slides and sites with ChatGPT and keep them updated, including on mobile. Sharing a page does not expose private chats, but anything placed on the page is visible to all viewers.</p>
-            <p class="card-why">Expect teammates to start sharing Space pages; spell out what can and cannot go into a shared AI page in the team&#x27;s usage guidelines.</p>
-            <a href="https://chatgpt.com/features/space/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+            <div class="card-source">The Rundown AI</div>
+            <h3 class="card-title"><a href="https://app.therundown.ai/community/posts/ec9ab90a-3e11-4750-9d86-5b239ecca44f" target="_blank" rel="noopener">A self-filling weekly marketing tracker in Google Sheets</a></h3>
+            <p class="card-summary">A reader built a scheduled weekly task that pulls numbers from analytics, ad and social tools into one Sheet, with screenshots covering the one source that isn&#x27;t connected yet. It rolls up weekly, monthly, quarterly and yearly views automatically.</p>
+            <p class="card-why">A simple template for a recurring PMM reporting workflow, including a pragmatic workaround for sources that lack a connector.</p>
+            <a href="https://app.therundown.ai/community/posts/ec9ab90a-3e11-4750-9d86-5b239ecca44f" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">The Rundown AI</div>
+            <h3 class="card-title"><a href="https://www.canva.dev/solutions/mcp/" target="_blank" rel="noopener">Canva&#x27;s MCP server is now open to everyone</a></h3>
+            <p class="card-summary">Canva opened its design toolkit for AI agents to all users, so assistants that speak MCP can create and edit Canva designs.</p>
+            <p class="card-why">Opens a path to connect drafting workflows straight to on-brand visual assets like one-pagers and social cards.</p>
+            <a href="https://www.canva.dev/solutions/mcp/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">TLDR</div>
+            <h3 class="card-title"><a href="https://community.tldr.tech/t/what-s-the-most-useful-rule-in-your-system-prompt-or-agents-md" target="_blank" rel="noopener">Two agent rules practitioners say actually help</a></h3>
+            <p class="card-summary">In a TLDR community thread, builders shared their most useful system-prompt rules: &#x27;if an action can be undone, do it and tell me what you did&#x27; cut down routine questions, and &#x27;revise only on new evidence or arguments&#x27; stopped Claude from flip-flopping under pushback.</p>
+            <p class="card-why">Cheap additions to the standing instructions in your shared skills, worth testing for review-cycle workflows.</p>
+            <a href="https://community.tldr.tech/t/what-s-the-most-useful-rule-in-your-system-prompt-or-agents-md" target="_blank" rel="noopener" class="read-more">Read more →</a>
           </article>
         </div>
       </section>
@@ -152,24 +166,10 @@
         <div class="cards-grid">
           <article class="card">
             <div class="card-source">The AI Report</div>
-            <h3 class="card-title"><a href="https://www.nyc.gov/site/dca/news/067-26/dcwp-tlc-cchr-issue-enforcement-policy-on-artificial-intelligence" target="_blank" rel="noopener">NYC regulators: &#x27;the AI decided&#x27; is not a defense</a></h3>
-            <p class="card-summary">Three New York City agencies issued a joint enforcement policy saying businesses stay liable for discrimination, wage theft and consumer-protection violations even when an AI system made the call.</p>
-            <p class="card-why">A clean citation for why human review stays in the loop on customer-facing AI output.</p>
-            <a href="https://www.nyc.gov/site/dca/news/067-26/dcwp-tlc-cchr-issue-enforcement-policy-on-artificial-intelligence" target="_blank" rel="noopener" class="read-more">Read more →</a>
-          </article>
-          <article class="card">
-            <div class="card-source">The Neuron</div>
-            <h3 class="card-title"><a href="https://www.theverge.com/games/1039770/binding-of-isaac-ai-music" target="_blank" rel="noopener">A game studio pulled AI music after fans found Suno metadata in the files</a></h3>
-            <p class="card-summary">Players spotted generator metadata inside the soundtrack files, and the developer removed the tracks after a backlash over undisclosed AI use.</p>
-            <p class="card-why">Generated assets carry traces; add a metadata check and a disclosure decision to the release checklist for AI-made content.</p>
-            <a href="https://www.theverge.com/games/1039770/binding-of-isaac-ai-music" target="_blank" rel="noopener" class="read-more">Read more →</a>
-          </article>
-          <article class="card">
-            <div class="card-source">The AI Report</div>
-            <h3 class="card-title"><a href="https://www.semafor.com/article/11/22/2026/us-china-eye-joint-guardrails-on-ai" target="_blank" rel="noopener">US and China say they will work on joint AI guardrails</a></h3>
-            <p class="card-summary">The administration announced plans for joint AI guardrails with China, a shift from its earlier anti-regulation stance, while tightening export controls at the same time.</p>
-            
-            <a href="https://www.semafor.com/article/11/22/2026/us-china-eye-joint-guardrails-on-ai" target="_blank" rel="noopener" class="read-more">Read more →</a>
+            <h3 class="card-title"><a href="https://www.theverge.com/ai-artificial-intelligence/1018187/pennsylvania-ai-deceptive-advertising-act" target="_blank" rel="noopener">Pennsylvania now requires AI-generated ads to carry a disclosure label</a></h3>
+            <p class="card-summary">A new Pennsylvania law requires advertising made with AI to be labeled as such.</p>
+            <p class="card-why">State-level disclosure rules are arriving for marketing content, so your AI policy should say when a label is required and who checks.</p>
+            <a href="https://www.theverge.com/ai-artificial-intelligence/1018187/pennsylvania-ai-deceptive-advertising-act" target="_blank" rel="noopener" class="read-more">Read more →</a>
           </article>
         </div>
       </section>
@@ -177,11 +177,11 @@
         <h2 class="topic-heading">🎯 Competitive Intel &amp; Orchestration Market</h2>
         <div class="cards-grid">
           <article class="card">
-            <div class="card-source">TLDR Marketing</div>
-            <h3 class="card-title"><a href="https://www.juliedx.com/insights/blog/competitor-price-tracker-prompt" target="_blank" rel="noopener">A copy-and-paste prompt for a scheduled competitor price tracker</a></h3>
-            <p class="card-summary">You fill in eight fields about your company and rivals; the AI watches public pricing pages, logs price and promo changes in a shared doc, and a scheduled task refreshes it daily or weekly.</p>
-            <p class="card-why">An easy template for a pricing-page signal feed on orchestration and automation vendors, feeding battlecard updates.</p>
-            <a href="https://www.juliedx.com/insights/blog/competitor-price-tracker-prompt" target="_blank" rel="noopener" class="read-more">Read more →</a>
+            <div class="card-source">The Rundown AI <span class="also">· also in The AI Report, The Neuron</span></div>
+            <h3 class="card-title"><a href="https://sierra.ai/blog/series-f-30b" target="_blank" rel="noopener">Sierra raises $1.75B at a $30B valuation after passing $400M ARR</a></h3>
+            <p class="card-summary">Bret Taylor&#x27;s customer-service agent company doubled its valuation in six months and says nearly half of the Fortune 50 are customers.</p>
+            <p class="card-why">A strong signal that buyers will pay for domain-specific agents in production, which shapes how enterprises frame the build-vs-orchestrate question Camunda answers.</p>
+            <a href="https://sierra.ai/blog/series-f-30b" target="_blank" rel="noopener" class="read-more">Read more →</a>
           </article>
         </div>
       </section>
@@ -189,18 +189,37 @@
         <h2 class="topic-heading">📊 Measuring AI Impact</h2>
         <div class="cards-grid">
           <article class="card">
-            <div class="card-source">TLDR Marketing</div>
-            <h3 class="card-title"><a href="https://searchengineland.com/deleting-blog-posts-hurt-ai-visibility-organic-clicks-502405" target="_blank" rel="noopener">AI-visibility scores and real clicks can move in opposite directions</a></h3>
-            <p class="card-summary">A site that pruned blog posts saw its AI-visibility score drop while organic clicks held or rose, because blogs drive mentions and service pages drive visits. Tracker results also shift run to run, so the piece recommends pairing Search Console AI impressions with clicks and a &#x27;how did you hear about us&#x27; form field.</p>
-            <p class="card-why">Useful caution before AI-visibility scores become a headline marketing KPI.</p>
-            <a href="https://searchengineland.com/deleting-blog-posts-hurt-ai-visibility-organic-clicks-502405" target="_blank" rel="noopener" class="read-more">Read more →</a>
+            <div class="card-source">The Deep View <span class="also">· also in AI For Work</span></div>
+            <h3 class="card-title"><a href="https://www.thedeepview.com/articles/why-bolting-on-ai-won-t-save-saas-companies" target="_blank" rel="noopener">Chargebee&#x27;s CEO on hybrid pricing for AI products and an open spec for agent costs</a></h3>
+            <p class="card-summary">Krish Subramanian argues usage-based pricing alone is not enough and that hybrid models with credits and subscriptions better reward repeat use. He also discusses AUDR, an open specification for tracking agent usage and costs, and why finance agents need citations, traceability and human review.</p>
+            <p class="card-why">Useful input for AI pricing and packaging positioning, and AUDR is worth a look as a possible standard for reporting agent cost in your own adoption metrics.</p>
+            <a href="https://www.thedeepview.com/articles/why-bolting-on-ai-won-t-save-saas-companies" target="_blank" rel="noopener" class="read-more">Read more →</a>
           </article>
           <article class="card">
-            <div class="card-source">The AI Report</div>
-            <h3 class="card-title"><a href="https://www.salesforce.com/customer-stories/crexi-reduces-admin-tasks-sales-ai/" target="_blank" rel="noopener">Crexi&#x27;s playbook: baseline rep admin time before rolling out AI</a></h3>
-            <p class="card-summary">Crexi says AI handling follow-up emails and call notes gave reps about five hours back per day. The suggested method: measure current time on those tasks, pilot on one rep, and compare against the baseline before scaling.</p>
-            <p class="card-why">A simple time-saved measurement template that transfers directly to PMM workflows.</p>
-            <a href="https://www.salesforce.com/customer-stories/crexi-reduces-admin-tasks-sales-ai/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+            <div class="card-source">TLDR Marketing</div>
+            <h3 class="card-title"><a href="https://www.growth-memo.com/p/denominaitor" target="_blank" rel="noopener">Model updates now swing AI-search visibility the way algorithm updates swung SEO</a></h3>
+            <p class="card-summary">HubSpot data shows a ChatGPT update raised cited URLs per prompt 51%, a Gemini release cut citations 27% the same week, and Perplexity doubled citations while referral traffic fell 14%. Separate Semrush data shows UGC citations rising on Google&#x27;s AI surfaces and falling on ChatGPT.</p>
+            <p class="card-why">AI-visibility dashboards need release dates annotated, or model changes will be misread as content wins or losses.</p>
+            <a href="https://www.growth-memo.com/p/denominaitor" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">The Neuron</div>
+            <h3 class="card-title"><a href="https://venturebeat.com/data/awss-strands-decider-v2-targets-the-agent-decisions-that-hinge-on-a-single-detail" target="_blank" rel="noopener">AWS&#x27;s Strands Decider v2 routes work between models to cut cost</a></h3>
+            <p class="card-summary">AWS released an open-weight model family that scores a list of options; AWS says routing between two Claude models with it solved 94% as many tasks at 44% of the cost.</p>
+            <p class="card-why">Another data point that model routing is a real cost lever when you report on what AI workflows cost to run.</p>
+            <a href="https://venturebeat.com/data/awss-strands-decider-v2-targets-the-agent-decisions-that-hinge-on-a-single-detail" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">🚀 Enablement &amp; Adoption</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">The Rundown AI</div>
+            <h3 class="card-title"><a href="https://openai.com/openworks/" target="_blank" rel="noopener">OpenAI pays local experts up to $8,000 a month to coach small businesses on AI</a></h3>
+            <p class="card-summary">OpenWorks, a pilot in 20 mostly Midwest and Southern US cities, pays tech-savvy locals to work hands-on with business owners on a problem the owner picks and to teach one community AI class a month. Participants get three free months of ChatGPT Business.</p>
+            <p class="card-why">A paid, hands-on champion model (one real problem per person, plus a recurring class) is a useful reference design for an internal AI concierge program.</p>
+            <a href="https://openai.com/openworks/" target="_blank" rel="noopener" class="read-more">Read more →</a>
           </article>
         </div>
       </section>
@@ -208,26 +227,26 @@
         <h2 class="topic-heading">🌐 Frontier Labs &amp; AI Landscape</h2>
         <div class="cards-grid">
           <article class="card">
-            <div class="card-source">The Rundown AI <span class="also">· also in The Neuron, Neatprompts</span></div>
-            <h3 class="card-title"><a href="https://openai.com/index/perplexity-and-intelligence/" target="_blank" rel="noopener">OpenAI publishes internal capability scores and asks labs to agree on common limits</a></h3>
-            <p class="card-summary">Chief scientist Jakub Pachocki released OpenAI&#x27;s pretraining scores since GPT-3.5, revealed an unreleased model at a new low, and proposed capability thresholds labs would not cross until monitoring catches up. It is a proposal, not an agreement.</p>
-            <p class="card-why">If labs pace releases, roadmaps that assume the next model will fix a workflow&#x27;s weak spots get less predictable.</p>
-            <a href="https://openai.com/index/perplexity-and-intelligence/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+            <div class="card-source">The Neuron</div>
+            <h3 class="card-title"><a href="https://x.com/ChatGPT/status/2124942186425069836" target="_blank" rel="noopener">OpenAI puts a cheaper GPT-6.2 Sol into ChatGPT&#x27;s default chat</a></h3>
+            <p class="card-summary">GPT-6.2 Sol and Astra launched across ChatGPT Work, Codex and the API, with OpenAI saying Sol lands within half a point of Astra at about one-fifth the cost at maximum reasoning effort; a chat-tuned Sol now handles the Chat tab.</p>
+            <p class="card-why">Cheaper near-frontier models change the cost math for high-volume drafting steps in your workflows.</p>
+            <a href="https://x.com/ChatGPT/status/2124942186425069836" target="_blank" rel="noopener" class="read-more">Read more →</a>
           </article>
           <article class="card">
-            <div class="card-source">The Rundown AI <span class="also">· also in TLDR AI, The Neuron</span></div>
-            <h3 class="card-title"><a href="https://the-decoder.com/lean-and-mathlib-community-officially-confirms-levent-alpoges-proof-of-the-riemann-hypothesis-is-correct/" target="_blank" rel="noopener">Lean maintainers back a Riemann hypothesis proof built with Claude</a></h3>
-            <p class="card-summary">An Anthropic mathematician says he and Claude proved the 167-year-old conjecture in about six weeks, delivered as a machine-checked proof that Lean and Mathlib maintainers say they have full confidence in. Some mathematicians object that no human can follow it.</p>
+            <div class="card-source">The Rundown AI <span class="also">· also in TLDR, The AI Report, The Neuron</span></div>
+            <h3 class="card-title"><a href="https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director" target="_blank" rel="noopener">Nvidia reinstates Jensen Huang as CEO after White House involvement</a></h3>
+            <p class="card-summary">Nvidia&#x27;s board reversed itself and brought Huang back 11 days after he resigned, with President Trump saying he pushed for it; the stock added more than $1T in a day. Congressional hearings start Dec 1.</p>
             
-            <a href="https://the-decoder.com/lean-and-mathlib-community-officially-confirms-levent-alpoges-proof-of-the-riemann-hypothesis-is-correct/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+            <a href="https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director" target="_blank" rel="noopener" class="read-more">Read more →</a>
           </article>
         </div>
       </section>
   </main>
 
   <footer>
-    curated daily by <a href="https://dpnation.com" target="_blank" rel="noopener">dpnation</a> · November 23, 2026
-    <div class="archive">past days: <a href="archive/2026-11-22.html">2026-11-22</a> · <a href="archive/2026-11-21.html">2026-11-21</a> · <a href="archive/2026-11-20.html">2026-11-20</a> · <a href="archive/2026-11-19.html">2026-11-19</a> · <a href="archive/2026-11-18.html">2026-11-18</a> · <a href="archive/2026-11-17.html">2026-11-17</a> · <a href="archive/2026-11-16.html">2026-11-16</a> · <a href="archive/index.html">all briefings →</a></div>
+    curated daily by <a href="https://dpnation.com" target="_blank" rel="noopener">dpnation</a> · November 24, 2026
+    <div class="archive">past days: <a href="archive/2026-11-23.html">2026-11-23</a> · <a href="archive/2026-11-22.html">2026-11-22</a> · <a href="archive/2026-11-21.html">2026-11-21</a> · <a href="archive/2026-11-20.html">2026-11-20</a> · <a href="archive/2026-11-19.html">2026-11-19</a> · <a href="archive/2026-11-18.html">2026-11-18</a> · <a href="archive/2026-11-17.html">2026-11-17</a> · <a href="archive/index.html">all briefings →</a></div>
   </footer>
 </body>
 </html>
