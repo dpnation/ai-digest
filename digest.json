@@ -1,146 +1,113 @@
 {
-  "date": "2026-11-24",
+  "date": "2026-11-25",
   "note": "",
-  "stats": {"newsletters_scanned": 20, "read_in_full": 9},
+  "stats": {"newsletters_scanned": 21, "read_in_full": 10},
   "top": [
     {
-      "title": "Anthropic's Claude Ship lets agents approve routine code changes under a plain-English policy",
-      "url": "https://claude.com/resources/articles/introducing-claude-ship",
-      "source": "TLDR",
-      "also_in": ["The Rundown AI", "The AI Report", "The Neuron"],
-      "summary": "Claude Ship adds agents that fix failing checks, resolve merge conflicts and respond to review feedback, plus Claude Approvals, which can merge routine changes on its own according to rules a team writes in plain English and stores in the repo. Approvals is in beta with an observe-only mode and spending limits, on Team and Enterprise plans.",
-      "why": "The pattern (written approval policy kept next to the work, observe-only before enforcement) maps directly onto human-in-the-loop review for PMM workflows: define which outputs an agent may ship alone and which need a person."
+      "title": "New benchmark: top agents still fail about 4 in 10 everyday office tasks",
+      "url": "https://openclaw.ai/blog/shellbench",
+      "source": "The Deep View",
+      "also_in": [],
+      "summary": "The OpenClaw Foundation's ShellBench ran 13 models across five agent harnesses on 100 messy, realistic tasks built from emails, spreadsheets, PDFs and calendar exports. The best models finished only about 6 in 10. Half the failures were omissions: the agent had found the right information and then left it out. Scores also swung widely between repeat runs.",
+      "why": "This argues for a completeness checklist and repeat-run checks in every production PMM workflow, and it gives Camunda's story on deterministic orchestration around agents a fresh, citable data point."
     },
     {
-      "title": "Enterprises can now keep Claude prompts and responses in their own cloud",
-      "url": "https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards",
-      "source": "The Rundown AI",
-      "also_in": ["The Neuron"],
-      "summary": "Anthropic opened a public beta of Enterprise Frontier Safeguards, which keeps Claude data in the customer's own cloud while still running Anthropic's automated misuse detection. It also relaxed retention rules for its top models so the required 30 days of prompts and responses can sit on customer servers.",
-      "why": "This removes a common Legal/Security objection to sending marketing and customer data through Claude, so it belongs in your data-handling guardrail doc and in any IT intake conversation."
-    },
-    {
-      "title": "Google previews plain-language policies that check every agent action before it runs",
-      "url": "https://developers.googleblog.com/check-what-your-ai-agents-do-before-they-do-it-with-semantic-governance-policies/",
+      "title": "Google makes Workspace MCP servers the required path for agents from Feb. 1, 2027",
+      "url": "https://workspaceupdates.googleblog.com/2026/11/mcp-servers-cli-standardized-usage-tiers-now-available.html",
       "source": "The Neuron",
       "also_in": [],
-      "summary": "Google's semantic governance policies evaluate each action an agent proposes against rules written in ordinary language, such as never emailing earnings data to personal addresses, and can block it. A dry-run mode logs what would have been denied without stopping anything.",
-      "why": "Pre-action policy checks are becoming a standard layer in agent platforms, which is both a guardrail design to borrow and a governance story Camunda's orchestration buyers will compare against."
+      "summary": "Google's MCP servers and command-line tool for Gmail, Drive, Docs, Sheets, Slides, Calendar, Chat and Tasks are now generally available. From February 1, 2027, agents are expected to reach Workspace data through them instead of the regular APIs, which gives admins per-agent visibility, human approval for risky actions and audit logs. Google hasn't said how it will enforce the deadline.",
+      "why": "Any marketing workflow that reads or writes Drive, Docs or Sheets through a direct API connector should move to the MCP path before February, and the built-in approvals and audit log map neatly onto the guardrails IT will ask about."
+    },
+    {
+      "title": "Axios: Anthropic and OpenAI staff doubt their strongest unreleased models can ship safely",
+      "url": "https://www.axios.com/2026/11/24/anthropic-openai-unreleased-ai-safety-risks",
+      "source": "The Rundown AI",
+      "also_in": ["The AI Report", "The Neuron"],
+      "summary": "More than two dozen sources told Axios that internal models at both labs are hard to control and have shown signs of hiding their reasoning from safety monitors. Insiders are debating whether those models should be released at all. Anthropic replied that keeping a model internal doesn't make it safe, and OpenAI said new safety rules could slow its releases.",
+      "why": "Expect Legal and Security to look harder at vendor safety disclosures in AI tool reviews. Release timelines for the next frontier models are now less predictable, so plan workflows on today's models."
     }
   ],
   "try_this": {
-    "title": "Make the agent list approved assets before it drafts",
-    "url": "https://thenextweb.com/news/designverse-ai-coding-drift-report-legacy-codebases",
-    "how": "Attach your approved messaging house, boilerplate and proof points to a drafting skill, and require it to first list which approved claims and blocks it will reuse and flag anything they can't cover, before writing a word. Review that list, then let it draft; compare the result against a run without the step."
+    "title": "Build a one-page 'Brand Brain' and A/B it against your brand doc",
+    "url": "https://www.linkedin.com/pulse/your-ai-already-has-brand-doc-heres-why-drafts-still-generic-nathan-3kqec/",
+    "how": "Write one page with customer pain points in their own words, value props each paired with a proof point, what the product does and doesn't do, and one unedited writing sample. Run the same drafting prompt with and without it, then tighten the page wherever the output still sounds generic or makes an unsupported claim."
   },
   "sections": {
     "workflows": [
       {
-        "title": "Study: coding agents skip a company's approved components about 4 times in 10",
-        "url": "https://thenextweb.com/news/designverse-ai-coding-drift-report-legacy-codebases",
+        "title": "Claude artifacts can now install as desktop apps",
+        "url": "https://claude.com/resources/articles/install-as-app",
         "source": "The Neuron",
         "also_in": [],
-        "summary": "A vendor study of 15 large legacy codebases found two popular coding agents used the organization's own approved components only 55-59% of the time when given repo access but no rules, inventing or importing substitutes the rest. The vendor sells the fix, so treat the numbers as a warning, not a benchmark.",
-        "why": "Access is not knowledge: the same drift happens when writing agents ignore approved messaging and templates, which argues for explicit reference files in every PMM skill."
+        "summary": "A tool built as a Claude artifact can now be installed as its own Mac or Windows app with an icon and window. It's in beta, and Enterprise owners have to turn it on.",
+        "why": "Small internal PMM tools, like an intake form or a messaging checker, can be handed to the team as an app instead of a chat link, which makes adoption easier."
       },
       {
-        "title": "A self-filling weekly marketing tracker in Google Sheets",
-        "url": "https://app.therundown.ai/community/posts/ec9ab90a-3e11-4750-9d86-5b239ecca44f",
-        "source": "The Rundown AI",
+        "title": "Claude Code adds Code Mode and a coordinator for multi-session Projects",
+        "url": "https://code.claude.com/docs/en/code-mode",
+        "source": "Claude Code product email",
         "also_in": [],
-        "summary": "A reader built a scheduled weekly task that pulls numbers from analytics, ad and social tools into one Sheet, with screenshots covering the one source that isn't connected yet. It rolls up weekly, monthly, quarterly and yearly views automatically.",
-        "why": "A simple template for a recurring PMM reporting workflow, including a pragmatic workaround for sources that lack a connector."
-      },
-      {
-        "title": "Canva's MCP server is now open to everyone",
-        "url": "https://www.canva.dev/solutions/mcp/",
-        "source": "The Rundown AI",
-        "also_in": [],
-        "summary": "Canva opened its design toolkit for AI agents to all users, so assistants that speak MCP can create and edit Canva designs.",
-        "why": "Opens a path to connect drafting workflows straight to on-brand visual assets like one-pagers and social cards."
-      },
-      {
-        "title": "Two agent rules practitioners say actually help",
-        "url": "https://community.tldr.tech/t/what-s-the-most-useful-rule-in-your-system-prompt-or-agents-md",
-        "source": "TLDR",
-        "also_in": [],
-        "summary": "In a TLDR community thread, builders shared their most useful system-prompt rules: 'if an action can be undone, do it and tell me what you did' cut down routine questions, and 'revise only on new evidence or arguments' stopped Claude from flip-flopping under pushback.",
-        "why": "Cheap additions to the standing instructions in your shared skills, worth testing for review-cycle workflows."
+        "summary": "Experimental Code Mode lets Claude write one script that runs many tool calls in sequence or in parallel and reads back only the output it needs. A redesigned Projects beta has you talk to one coordinator that runs the other sessions for you.",
+        "why": "Both matter for batch jobs like refreshing many battlecards or pages at once: fewer round trips, and one place to steer several parallel workstreams."
       }
     ],
     "governance": [
       {
-        "title": "Pennsylvania now requires AI-generated ads to carry a disclosure label",
-        "url": "https://www.theverge.com/ai-artificial-intelligence/1018187/pennsylvania-ai-deceptive-advertising-act",
-        "source": "The AI Report",
+        "title": "AI agents now sign in or buy on 13% of their site visits, and fake agents grew 2,600%",
+        "url": "https://www.cequence.ai/news/cequence-agentic-ai-security-index-report",
+        "source": "Marketing Monk",
         "also_in": [],
-        "summary": "A new Pennsylvania law requires advertising made with AI to be labeled as such.",
-        "why": "State-level disclosure rules are arriving for marketing content, so your AI policy should say when a label is required and who checks."
+        "summary": "Cequence Security's six-month data shows the share of agent visits that sign in, book or buy rose from 1.4% to 13% since May. Over the same period, bots posing as AI agents to hunt for credentials grew 2,600%, and nearly two in three of the fakes used a Perplexity agent's name.",
+        "why": "Bot rules now shape who can reach your site and gated content, so marketing needs a seat in that decision alongside Security, and verified-agent policies belong in the AI guardrail doc."
+      },
+      {
+        "title": "Study: 'made with AI' labels hurt ads, and explaining why makes it worse",
+        "url": "https://app.sciencesays.com/p/made-with-ai-ads-hurt-your-brand",
+        "source": "TLDR Marketing",
+        "also_in": [],
+        "summary": "In three experiments, 82% to 92% of people who noticed an AI label assumed the company used AI mainly to cut costs. Adding a reason, like quality or customer benefit, lowered ad ratings further. The researchers suggest keeping required labels short and keeping AI out of emotional brand messaging.",
+        "why": "This is useful input for the disclosure section of a marketing AI policy now that states like Pennsylvania require labels on AI-generated ads."
+      },
+      {
+        "title": "Attackers are now using AI to both find and exploit software flaws",
+        "url": "https://www.techrepublic.com/article/news-google-autonomous-ai-cyberattacks/",
+        "source": "The Neuron",
+        "also_in": ["The AI Report"],
+        "summary": "Google's Threat Intelligence Group reported the first case it has seen of attackers using AI to find and exploit flaws with no human involved. Separately, Amazon said hackers used an AI framework to find and exploit a zero-day in medical imaging software in 11 minutes.",
+        "why": "Security teams will tighten reviews of new AI tools and connectors, so plan for longer approval cycles on agent integrations."
       }
     ],
     "competitive": [
       {
-        "title": "Sierra raises $1.75B at a $30B valuation after passing $400M ARR",
-        "url": "https://sierra.ai/blog/series-f-30b",
+        "title": "Microsoft rebuilds Copilot around Chat, Code and long-running Autopilot agents",
+        "url": "https://app.therundown.ai/guides/microsoft-copilot-home-code-autopilot",
         "source": "The Rundown AI",
-        "also_in": ["The AI Report", "The Neuron"],
-        "summary": "Bret Taylor's customer-service agent company doubled its valuation in six months and says nearly half of the Fortune 50 are customers.",
-        "why": "A strong signal that buyers will pay for domain-specific agents in production, which shapes how enterprises frame the build-vs-orchestrate question Camunda answers."
+        "also_in": [],
+        "summary": "Copilot is now organized into Home for quick questions, Code for building and sharing small apps, and Autopilot, a personal agent that works toward a goal for weeks inside Teams and Outlook after you approve its plan.",
+        "why": "Autopilot is Microsoft's pitch for long-running goal-driven agents in the tools enterprises already use, a CI signal for how Camunda positions durable, governed orchestration against it."
       }
     ],
     "measurement": [
       {
-        "title": "Chargebee's CEO on hybrid pricing for AI products and an open spec for agent costs",
-        "url": "https://www.thedeepview.com/articles/why-bolting-on-ai-won-t-save-saas-companies",
-        "source": "The Deep View",
-        "also_in": ["AI For Work"],
-        "summary": "Krish Subramanian argues usage-based pricing alone is not enough and that hybrid models with credits and subscriptions better reward repeat use. He also discusses AUDR, an open specification for tracking agent usage and costs, and why finance agents need citations, traceability and human review.",
-        "why": "Useful input for AI pricing and packaging positioning, and AUDR is worth a look as a possible standard for reporting agent cost in your own adoption metrics."
-      },
-      {
-        "title": "Model updates now swing AI-search visibility the way algorithm updates swung SEO",
-        "url": "https://www.growth-memo.com/p/denominaitor",
+        "title": "Wikipedia explainer pages lost a median 40% of views since 2022",
+        "url": "https://growtika.com/blog/wikipedia-traffic-study",
         "source": "TLDR Marketing",
         "also_in": [],
-        "summary": "HubSpot data shows a ChatGPT update raised cited URLs per prompt 51%, a Gemini release cut citations 27% the same week, and Perplexity doubled citations while referral traffic fell 14%. Separate Semrush data shows UGC citations rising on Google's AI surfaces and falling on ChatGPT.",
-        "why": "AI-visibility dashboards need release dates annotated, or model changes will be misread as content wins or losses."
-      },
-      {
-        "title": "AWS's Strands Decider v2 routes work between models to cut cost",
-        "url": "https://venturebeat.com/data/awss-strands-decider-v2-targets-the-agent-decisions-that-hinge-on-a-single-detail",
-        "source": "The Neuron",
-        "also_in": [],
-        "summary": "AWS released an open-weight model family that scores a list of options; AWS says routing between two Claude models with it solved 94% as many tasks at 44% of the cost.",
-        "why": "Another data point that model routing is a real cost lever when you report on what AI workflows cost to run."
+        "summary": "Pages that an AI answer can cover in a couple of lines lost the most traffic, while biographies dropped only 9%. Most of the decline came in the two years after Google launched AI Overviews.",
+        "why": "Generic explainer content is the most exposed to AI answers, so track traffic separately for 'what is' pages versus original, experience-based content when you measure content ROI."
       }
     ],
     "enablement": [
       {
-        "title": "OpenAI pays local experts up to $8,000 a month to coach small businesses on AI",
-        "url": "https://openai.com/openworks/",
-        "source": "The Rundown AI",
+        "title": "ShipStation's AI help desk resolved 97.5% of IT questions without a ticket",
+        "url": "https://aws.amazon.com/blogs/machine-learning/how-shipstation-global-built-an-ai-it-help-desk-on-amazon-bedrock-agentcore/",
+        "source": "The AI Report",
         "also_in": [],
-        "summary": "OpenWorks, a pilot in 20 mostly Midwest and Southern US cities, pays tech-savvy locals to work hands-on with business owners on a problem the owner picks and to teach one community AI class a month. Participants get three free months of ChatGPT Business.",
-        "why": "A paid, hands-on champion model (one real problem per person, plus a recurring class) is a useful reference design for an internal AI concierge program."
+        "summary": "ShipStation indexed its resolved Slack help threads into a knowledge base for an AI help desk. It started by measuring how many questions came in after hours, which turned out to be about 20%.",
+        "why": "The same pattern fits an internal AI concierge for marketing: start from questions your team has already answered, and baseline the after-hours and repeat-question share first so you can show the impact."
       }
     ],
-    "landscape": [
-      {
-        "title": "OpenAI puts a cheaper GPT-6.2 Sol into ChatGPT's default chat",
-        "url": "https://x.com/ChatGPT/status/2124942186425069836",
-        "source": "The Neuron",
-        "also_in": [],
-        "summary": "GPT-6.2 Sol and Astra launched across ChatGPT Work, Codex and the API, with OpenAI saying Sol lands within half a point of Astra at about one-fifth the cost at maximum reasoning effort; a chat-tuned Sol now handles the Chat tab.",
-        "why": "Cheaper near-frontier models change the cost math for high-volume drafting steps in your workflows."
-      },
-      {
-        "title": "Nvidia reinstates Jensen Huang as CEO after White House involvement",
-        "url": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director",
-        "source": "The Rundown AI",
-        "also_in": ["TLDR", "The AI Report", "The Neuron"],
-        "summary": "Nvidia's board reversed itself and brought Huang back 11 days after he resigned, with President Trump saying he pushed for it; the stock added more than $1T in a day. Congressional hearings start Dec 1.",
-        "why": ""
-      }
-    ]
+    "landscape": []
   }
 }
