@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily AI Digest — November 26, 2026</title>
+  <link rel="icon" type="image/png" href="../favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* dpnation brand: Ink #0D0D0D, Canvas #F7F6F3, Mist #EBEBEB, Smoke #7A7A7A, Spark #FF8C69 */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+           background: #F7F6F3; color: #0D0D0D; line-height: 1.6; }
+    a { color: inherit; }
+
+    header { background: #0D0D0D; color: #FFFFFF; padding: 2.25rem 2rem 1.75rem; border-bottom: 3px solid #FF8C69; }
+    .header-inner { max-width: 1100px; margin: 0 auto; }
+    .header-eyebrow { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.72rem; font-weight: 500;
+                       letter-spacing: 0.14em; text-transform: lowercase; color: #FF8C69; margin-bottom: 0.5rem; }
+    header h1 { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 2rem; font-weight: 800;
+                 letter-spacing: -0.01em; margin-bottom: 0.3rem; }
+    .header-date { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.8rem; color: #EBEBEB; }
+
+    main { max-width: 1100px; margin: 2.25rem auto; padding: 0 1.5rem; }
+    .slow { font-size: 0.9rem; color: #7A7A7A; margin-bottom: 1.5rem; }
+
+    .topic-section { margin-bottom: 2.75rem; }
+    .topic-heading { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 1.05rem; font-weight: 700;
+                      border-bottom: 1px solid #EBEBEB; padding-bottom: 0.5rem; margin-bottom: 1.1rem; }
+
+    /* Top stories */
+    .top-list { display: flex; flex-direction: column; gap: 1rem; }
+    .top-card { background: #FFFFFF; border: 1px solid #EBEBEB; border-left: 4px solid #FF8C69; border-radius: 8px;
+                 padding: 1.25rem 1.4rem; display: flex; gap: 1.2rem; }
+    .top-num { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 1.4rem; font-weight: 500;
+                color: #FF8C69; line-height: 1.2; }
+    .top-body { display: flex; flex-direction: column; gap: 0.45rem; flex: 1; }
+    .top-title { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 1.15rem; font-weight: 700; line-height: 1.35; }
+    .top-title a, .card-title a, .try h3 a { text-decoration: none; }
+    .top-title a:hover, .card-title a:hover, .try h3 a:hover { color: #FF8C69; }
+    .what { font-size: 0.92rem; }
+    .why { font-size: 0.88rem; color: #3A3A3A; background: #F7F6F3; border-radius: 6px; padding: 0.55rem 0.75rem; }
+    .why-label, .try-label { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.66rem; letter-spacing: 0.08em;
+                  text-transform: lowercase; color: #FF8C69; display: block; margin-bottom: 0.1rem; }
+
+    /* Try this */
+    .try { background: #0D0D0D; color: #FFFFFF; border-radius: 8px; padding: 1.2rem 1.4rem; margin-bottom: 2.75rem; }
+    .try h3 { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 1.02rem; margin-bottom: 0.3rem; }
+    .try p { font-size: 0.9rem; color: #EBEBEB; }
+
+    /* Cards */
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
+    .card { background: #FFFFFF; border-radius: 8px; padding: 1.15rem 1.3rem 1rem; border: 1px solid #EBEBEB;
+             display: flex; flex-direction: column; gap: 0.45rem;
+             transition: box-shadow 0.15s ease, transform 0.15s ease, border-color 0.15s ease; }
+    .card:hover { box-shadow: 0 6px 18px rgba(13,13,13,0.08); border-color: #FF8C69; transform: translateY(-1px); }
+    .card-source { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.68rem; font-weight: 500;
+                    letter-spacing: 0.08em; text-transform: lowercase; color: #7A7A7A; }
+    .also { color: #A0A0A0; }
+    .card-title { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 0.97rem; font-weight: 700; line-height: 1.4; }
+    .card-summary { font-size: 0.85rem; color: #4A4A4A; line-height: 1.55; }
+    .card-why { font-size: 0.82rem; color: #7A7A7A; line-height: 1.5; flex: 1; border-left: 2px solid #FF8C69; padding-left: 0.6rem; }
+    .read-more { font-size: 0.8rem; font-weight: 600; color: #0D0D0D; text-decoration: none;
+                  border-bottom: 2px solid #FF8C69; align-self: flex-start; margin-top: auto; }
+    .read-more:hover { color: #FF8C69; }
+
+    footer { text-align: center; padding: 2rem 1rem; font-family: "JetBrains Mono", ui-monospace, monospace;
+              font-size: 0.75rem; color: #7A7A7A; border-top: 1px solid #EBEBEB; margin-top: 1rem; }
+    footer a { color: #0D0D0D; text-decoration: none; border-bottom: 1px solid #FF8C69; }
+    .archive { margin-top: 0.6rem; }
+
+    @media (max-width: 600px) {
+      .cards-grid { grid-template-columns: 1fr; }
+      header h1 { font-size: 1.5rem; }
+      .top-card { flex-direction: column; gap: 0.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="header-eyebrow">dpnation · ai for pmm workflows</div>
+      <h1><a href="../index.html" style="text-decoration:none">Daily AI Digest</a></h1>
+      <div class="header-date">Thursday, November 26, 2026 · 10 stories · 19 newsletters read</div>
+    </div>
+  </header>
+
+  <main>
+    <p class="slow">Thanksgiving edition: lighter newsletter volume, so a shorter list today.</p>
+      <section class="topic-section">
+        <h2 class="topic-heading">🔝 Top stories</h2>
+        <div class="top-list">
+        <article class="top-card">
+          <div class="top-num">01</div>
+          <div class="top-body">
+            <div class="card-source">The Deep View <span class="also">also in AI For Work</span></div>
+            <h3 class="top-title"><a href="https://www.anthropic.com/research/working-with-ai" target="_blank" rel="noopener">Anthropic: companies get the most from AI by reorganizing work, not cutting staff</a></h3>
+            <p class="what">Anthropic interviewed 58 US enterprise customers about roughly 300 AI use cases. The biggest gains came from reshaping roles and task ownership around the models, while the main blockers were employee resistance and steps AI hasn&#x27;t sped up yet, like review and decision-making.</p>
+            <p class="why"><span class="why-label">why it matters</span>Gives you evidence for an enablement pitch built on redesigning PMM roles and handoffs, and flags review as the bottleneck to design your workflows around.</p>
+            <a href="https://www.anthropic.com/research/working-with-ai" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </div>
+        </article>
+        <article class="top-card">
+          <div class="top-num">02</div>
+          <div class="top-body">
+            <div class="card-source">The Neuron</div>
+            <h3 class="top-title"><a href="https://claude.com/resources/articles/skills-over-mcp-tasks-and-more" target="_blank" rel="noopener">Claude now picks up skills delivered by MCP servers</a></h3>
+            <p class="what">With Skills over MCP, a connected app can hand Claude its own how-to instructions with no separate install. It is in public beta and on by default for Pro, Max and Ultra plans.</p>
+            <p class="why"><span class="why-label">why it matters</span>You could ship PMM skills alongside an MCP connector so every teammate gets the same, versioned instructions instead of copying skill files around.</p>
+            <a href="https://claude.com/resources/articles/skills-over-mcp-tasks-and-more" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </div>
+        </article>
+        <article class="top-card">
+          <div class="top-num">03</div>
+          <div class="top-body">
+            <div class="card-source">The Neuron</div>
+            <h3 class="top-title"><a href="https://x.com/i/status/2125638790593274259" target="_blank" rel="noopener">OpenAI pilots Private Inference so it can&#x27;t see enterprise query data</a></h3>
+            <p class="what">OpenAI is piloting a mode that runs a company&#x27;s queries on its top models without OpenAI being able to see the data, starting with a first group of enterprise customers.</p>
+            <p class="why"><span class="why-label">why it matters</span>Raises the bar for what Legal and Security can ask of every vendor, including Anthropic, when you propose sending customer or deal data through marketing workflows.</p>
+            <a href="https://x.com/i/status/2125638790593274259" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="try">
+        <div class="try-label">🛠️ try this</div>
+        <h3><a href="https://chszlab.github.io/AgenticAlgorithmEngineering/" target="_blank" rel="noopener">Make every workflow change prove itself before you keep it</a></h3>
+        <p>Borrow the loop from this Claude Code skill: before editing a PMM skill or prompt, fix a small test set, a quality check and a budget, state what the change should improve, then keep it only if the scored output actually gets better. Revert anything that doesn&#x27;t.</p>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">🧩 Workflows, Skills &amp; Agents</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">TLDR Marketing</div>
+            <h3 class="card-title"><a href="https://newsletter.mkt1.co/p/ai-build-ideas-for-marketers" target="_blank" rel="noopener">MKT1: 30 things marketers can build with AI skills and agents</a></h3>
+            <p class="card-summary">A long guide that pushes marketers from prompting to building: brand voice checkers, customer benchmark tools and reusable skills, connected to Claude and ChatGPT through MCP.</p>
+            <p class="card-why">A ready-made idea backlog to compare against your PMM workflow roadmap and intake requests.</p>
+            <a href="https://newsletter.mkt1.co/p/ai-build-ideas-for-marketers" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">The Rundown AI</div>
+            <h3 class="card-title"><a href="https://app.therundown.ai/community/posts/4e1955ab-7875-4a46-8101-416f3ae9ad7f" target="_blank" rel="noopener">A Claude Code workflow where automated checks decide what ships</a></h3>
+            <p class="card-summary">A reader built a pipeline where Claude writes a brief, Claude Code builds from it, and accessibility checks block any output that fails, with no manual override. The failure report goes back to Claude to fix and resubmit.</p>
+            <p class="card-why">The same gate pattern works for PMM content: run brand, claims and terminology checks automatically before a human ever reviews.</p>
+            <a href="https://app.therundown.ai/community/posts/4e1955ab-7875-4a46-8101-416f3ae9ad7f" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">The Neuron</div>
+            <h3 class="card-title"><a href="https://developers.cloudflare.com/changelog/post/2026-11-25-search-for-agents/" target="_blank" rel="noopener">Cloudflare lets AI agents search a site and get Markdown back</a></h3>
+            <p class="card-summary">Search for Agents adds a search endpoint to a site so agents can query it and receive Markdown results. It is a beta toggle in the Cloudflare dashboard.</p>
+            <p class="card-why">Worth raising with web and docs owners: agent-readable docs and product pages affect how coding agents describe Camunda to developers.</p>
+            <a href="https://developers.cloudflare.com/changelog/post/2026-11-25-search-for-agents/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">🛡️ AI Guardrails &amp; Governance</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">TLDR AI</div>
+            <h3 class="card-title"><a href="https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input/" target="_blank" rel="noopener">Amazon: attackers&#x27; AI agents found and exploited a zero-day with almost no human input</a></h3>
+            <p class="card-summary">Agents running an open-source pen-testing framework found and exploited a flaw from a single goal prompt, and Palo Alto Networks tracked a related campaign that breached at least 10 organizations.</p>
+            <p class="card-why">Expect Security to tighten review of any agent or connector with write access; build your workflows with scoped permissions and logs from the start.</p>
+            <a href="https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">Bloomberg Technology</div>
+            <h3 class="card-title"><a href="https://www.bloomberg.com/newsletters/tech-in-depth/latest" target="_blank" rel="noopener">Startups pitch encryption to keep employee prompts away from model makers</a></h3>
+            <p class="card-summary">TrustedRouter offers end-to-end encryption of employee AI prompts, aimed at companies that don&#x27;t want model providers seeing their questions.</p>
+            <p class="card-why">Another sign that prompt privacy is becoming a standard procurement question for any AI tool your team adopts.</p>
+            <a href="https://www.bloomberg.com/newsletters/tech-in-depth/latest" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">📊 Measuring AI Impact</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">TLDR Marketing</div>
+            <h3 class="card-title"><a href="https://www.thatsgoodcontent.com/podcasts/40---kevin-white" target="_blank" rel="noopener">Scrunch lifted its AI answer mention rate from 15% to 40% in two months</a></h3>
+            <p class="card-summary">Scrunch&#x27;s playbook: refresh existing content, earn placements on trusted third-party sites and publish targeted FAQs. It also found AI citations decay within six to eight weeks without updates.</p>
+            <p class="card-why">AI mention rate is a measurable KPI for Camunda&#x27;s category story, and the decay window suggests a refresh cadence for a monitoring workflow.</p>
+            <a href="https://www.thatsgoodcontent.com/podcasts/40---kevin-white" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">🌐 Frontier Labs &amp; AI Landscape</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">The AI Report <span class="also">· also in The Neuron, The Deep View</span></div>
+            <h3 class="card-title"><a href="https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/" target="_blank" rel="noopener">OpenAI merges Chat and Work usage limits and retires GPT-5.6 on Dec. 23</a></h3>
+            <p class="card-summary">Chat and Work will share one usage meter, so heavy users may hit limits sooner as the rollout widens in December. Separately, GPT-5.6 and its Sol and Terra variants leave Chat, Work and Codex on Dec. 23.</p>
+            <p class="card-why">Check any ChatGPT-based team workflows pinned to GPT-5.6 and retest them on the replacement model before the cutoff.</p>
+            <a href="https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+  </main>
+
+  <footer>
+    curated daily by <a href="https://dpnation.com" target="_blank" rel="noopener">dpnation</a> · November 26, 2026
+    <div class="archive">past days: <a href="../archive/2026-11-25.html">2026-11-25</a> · <a href="../archive/2026-11-24.html">2026-11-24</a> · <a href="../archive/2026-11-23.html">2026-11-23</a> · <a href="../archive/2026-11-22.html">2026-11-22</a> · <a href="../archive/2026-11-21.html">2026-11-21</a> · <a href="../archive/2026-11-20.html">2026-11-20</a> · <a href="../archive/2026-11-19.html">2026-11-19</a> · <a href="../archive/index.html">all briefings →</a></div>
+  </footer>
+</body>
+</html>
