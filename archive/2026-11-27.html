@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily AI Digest — November 27, 2026</title>
+  <link rel="icon" type="image/png" href="../favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* dpnation brand: Ink #0D0D0D, Canvas #F7F6F3, Mist #EBEBEB, Smoke #7A7A7A, Spark #FF8C69 */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+           background: #F7F6F3; color: #0D0D0D; line-height: 1.6; }
+    a { color: inherit; }
+
+    header { background: #0D0D0D; color: #FFFFFF; padding: 2.25rem 2rem 1.75rem; border-bottom: 3px solid #FF8C69; }
+    .header-inner { max-width: 1100px; margin: 0 auto; }
+    .header-eyebrow { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.72rem; font-weight: 500;
+                       letter-spacing: 0.14em; text-transform: lowercase; color: #FF8C69; margin-bottom: 0.5rem; }
+    header h1 { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 2rem; font-weight: 800;
+                 letter-spacing: -0.01em; margin-bottom: 0.3rem; }
+    .header-date { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.8rem; color: #EBEBEB; }
+
+    main { max-width: 1100px; margin: 2.25rem auto; padding: 0 1.5rem; }
+    .slow { font-size: 0.9rem; color: #7A7A7A; margin-bottom: 1.5rem; }
+
+    .topic-section { margin-bottom: 2.75rem; }
+    .topic-heading { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 1.05rem; font-weight: 700;
+                      border-bottom: 1px solid #EBEBEB; padding-bottom: 0.5rem; margin-bottom: 1.1rem; }
+
+    /* Top stories */
+    .top-list { display: flex; flex-direction: column; gap: 1rem; }
+    .top-card { background: #FFFFFF; border: 1px solid #EBEBEB; border-left: 4px solid #FF8C69; border-radius: 8px;
+                 padding: 1.25rem 1.4rem; display: flex; gap: 1.2rem; }
+    .top-num { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 1.4rem; font-weight: 500;
+                color: #FF8C69; line-height: 1.2; }
+    .top-body { display: flex; flex-direction: column; gap: 0.45rem; flex: 1; }
+    .top-title { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 1.15rem; font-weight: 700; line-height: 1.35; }
+    .top-title a, .card-title a, .try h3 a { text-decoration: none; }
+    .top-title a:hover, .card-title a:hover, .try h3 a:hover { color: #FF8C69; }
+    .what { font-size: 0.92rem; }
+    .why { font-size: 0.88rem; color: #3A3A3A; background: #F7F6F3; border-radius: 6px; padding: 0.55rem 0.75rem; }
+    .why-label, .try-label { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.66rem; letter-spacing: 0.08em;
+                  text-transform: lowercase; color: #FF8C69; display: block; margin-bottom: 0.1rem; }
+
+    /* Try this */
+    .try { background: #0D0D0D; color: #FFFFFF; border-radius: 8px; padding: 1.2rem 1.4rem; margin-bottom: 2.75rem; }
+    .try h3 { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 1.02rem; margin-bottom: 0.3rem; }
+    .try p { font-size: 0.9rem; color: #EBEBEB; }
+
+    /* Cards */
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
+    .card { background: #FFFFFF; border-radius: 8px; padding: 1.15rem 1.3rem 1rem; border: 1px solid #EBEBEB;
+             display: flex; flex-direction: column; gap: 0.45rem;
+             transition: box-shadow 0.15s ease, transform 0.15s ease, border-color 0.15s ease; }
+    .card:hover { box-shadow: 0 6px 18px rgba(13,13,13,0.08); border-color: #FF8C69; transform: translateY(-1px); }
+    .card-source { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.68rem; font-weight: 500;
+                    letter-spacing: 0.08em; text-transform: lowercase; color: #7A7A7A; }
+    .also { color: #A0A0A0; }
+    .card-title { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-size: 0.97rem; font-weight: 700; line-height: 1.4; }
+    .card-summary { font-size: 0.85rem; color: #4A4A4A; line-height: 1.55; }
+    .card-why { font-size: 0.82rem; color: #7A7A7A; line-height: 1.5; flex: 1; border-left: 2px solid #FF8C69; padding-left: 0.6rem; }
+    .read-more { font-size: 0.8rem; font-weight: 600; color: #0D0D0D; text-decoration: none;
+                  border-bottom: 2px solid #FF8C69; align-self: flex-start; margin-top: auto; }
+    .read-more:hover { color: #FF8C69; }
+
+    footer { text-align: center; padding: 2rem 1rem; font-family: "JetBrains Mono", ui-monospace, monospace;
+              font-size: 0.75rem; color: #7A7A7A; border-top: 1px solid #EBEBEB; margin-top: 1rem; }
+    footer a { color: #0D0D0D; text-decoration: none; border-bottom: 1px solid #FF8C69; }
+    .archive { margin-top: 0.6rem; }
+
+    @media (max-width: 600px) {
+      .cards-grid { grid-template-columns: 1fr; }
+      header h1 { font-size: 1.5rem; }
+      .top-card { flex-direction: column; gap: 0.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="header-eyebrow">dpnation · ai for pmm workflows</div>
+      <h1><a href="../index.html" style="text-decoration:none">Daily AI Digest</a></h1>
+      <div class="header-date">Friday, November 27, 2026 · 10 stories · 13 newsletters read</div>
+    </div>
+  </header>
+
+  <main>
+    <p class="slow">Light holiday edition: fewer newsletters went out for Thanksgiving week.</p>
+      <section class="topic-section">
+        <h2 class="topic-heading">🔝 Top stories</h2>
+        <div class="top-list">
+        <article class="top-card">
+          <div class="top-num">01</div>
+          <div class="top-body">
+            <div class="card-source">Exit Five</div>
+            <h3 class="top-title">Varonis&#x27;s CMO lets agents produce competitive intel and hires people to drive its use</h3>
+            <p class="what">In an Exit Five roundup on small marketing teams, Varonis CMO Rob Sobers says his agents watch competitor webinars, capture every slide and drop summaries into the sales training repository. He no longer plans to hire a CI person to make that content; the role now focuses on winning deals and making sure sellers use what the agents produce.</p>
+            <p class="why"><span class="why-label">why it matters</span>A concrete model for an agent-run CI signal pipeline, with the human role shifting to adoption and deal support, which is the split to design for Camunda&#x27;s CI program.</p>
+            
+          </div>
+        </article>
+        <article class="top-card">
+          <div class="top-num">02</div>
+          <div class="top-body">
+            <div class="card-source">The AI Report <span class="also">also in TLDR AI, The Rundown AI</span></div>
+            <h3 class="top-title"><a href="https://openrouter.ai/blog/insights/is-jevons-paradox-holding/" target="_blank" rel="noopener">AI token use jumped 79% in November while spend grew only 8%</a></h3>
+            <p class="what">Paid token usage rose 79% as average model prices fell 39%, so total spend grew just 8%, and OpenRouter questions whether cheaper tokens still drive higher spending. Separately, an analysis finds OpenAI&#x27;s newest models now use far fewer reasoning tokens per task, and OpenAI fixed a billing bug so users will hit limits 40% faster on Astra and 25% faster on Sol.</p>
+            <p class="why"><span class="why-label">why it matters</span>Usage limits and per-task token costs are shifting under existing workflows, so track cost per completed workflow run, not just seat counts, in your AI measurement dashboard.</p>
+            <a href="https://openrouter.ai/blog/insights/is-jevons-paradox-holding/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </div>
+        </article>
+        <article class="top-card">
+          <div class="top-num">03</div>
+          <div class="top-body">
+            <div class="card-source">The AI Report <span class="also">also in The Rundown AI, Business Insider Today</span></div>
+            <h3 class="top-title"><a href="https://www.theverge.com/policy/1042620/character-ai-sale-state-ags-block-selling-users-chats" target="_blank" rel="noopener">42 state AGs move to stop bankrupt Character.AI from selling user chats</a></h3>
+            <p class="what">A coalition of 42 attorneys general is trying to block Character.AI from auctioning chat histories from more than 21 million users, including accounts registered to minors, in its Chapter 11 case. A buyer would not be bound by the company&#x27;s original privacy policy.</p>
+            <p class="why"><span class="why-label">why it matters</span>A privacy promise from an AI vendor can disappear in bankruptcy, so ask Legal to check what happens to prompt data in your AI tool contracts if a vendor fails or is sold.</p>
+            <a href="https://www.theverge.com/policy/1042620/character-ai-sale-state-ags-block-selling-users-chats" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="try">
+        <div class="try-label">🛠️ try this</div>
+        <h3><a href="https://www.theneurondaily.com/p/november-27-friday" target="_blank" rel="noopener">Run a must-keep check on every AI revision</a></h3>
+        <p>Before asking an AI to change a messaging doc or battlecard, write a short list of what it must keep (claims, proof points, required caveats). After the edit, give it both versions plus the list and ask it to flag anything dropped or no longer satisfied, then check each flag yourself.</p>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">🧩 Workflows, Skills &amp; Agents</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">TLDR Marketing</div>
+            <h3 class="card-title"><a href="https://www.linkedin.com/posts/ashleylewin_im-finishing-a-rewrite-of-94-sem-landing-share-7531376681463218178-Z1LO/" target="_blank" rel="noopener">Rewriting 94 landing pages with AI behind a fact-check and a 10-role review panel</a></h3>
+            <p class="card-summary">A practitioner rebuilt 94 paid-search pages starting from written rules and approved messaging, had AI tailor each page to its search intent, then ran every draft through source-based fact-checking and a simulated 10-role review before comparing old and new by hand.</p>
+            <p class="card-why">A reusable pattern for high-volume PMM content: rules first, AI drafting, automated fact-check and multi-persona review, then human sign-off.</p>
+            <a href="https://www.linkedin.com/posts/ashleylewin_im-finishing-a-rewrite-of-94-sem-landing-share-7531376681463218178-Z1LO/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">TLDR AI</div>
+            <h3 class="card-title"><a href="https://www.philschmid.de/mcp-2027" target="_blank" rel="noopener">Why one builder expects MCP to make a comeback in 2027</a></h3>
+            <p class="card-summary">After developers drifted toward CLIs and skills, MCP traffic is growing again and clients have gotten smarter about loading tools only when needed. The author argues the protocol is healthy and still improving.</p>
+            <p class="card-why">Supports keeping MCP connectors as a first-class option when deciding how marketing workflows reach tools and data.</p>
+            <a href="https://www.philschmid.de/mcp-2027" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">🛡️ AI Guardrails &amp; Governance</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">The Neuron</div>
+            <h3 class="card-title"><a href="https://www.livemint.com/technology/data-from-chinese-ai-firm-minimax-accessed-by-unidentified-parties-researcher-says-11795673767961.html" target="_blank" rel="noopener">Researcher finds private links sent to a Chinese AI model were opened by unknown parties</a></h3>
+            <p class="card-summary">A Dragos researcher reports that private links included in requests to MiniMax were later accessed by unidentified parties, according to Reuters.</p>
+            <p class="card-why">Good evidence for a guardrail: never paste private share links or unreleased asset URLs into prompts for unapproved models.</p>
+            <a href="https://www.livemint.com/technology/data-from-chinese-ai-firm-minimax-accessed-by-unidentified-parties-researcher-says-11795673767961.html" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">🎯 Competitive Intel &amp; Orchestration Market</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">The Rundown AI</div>
+            <h3 class="card-title"><a href="https://app.therundown.ai/guides/n8n-nod-personal-agent" target="_blank" rel="noopener">n8n&#x27;s Nod personal agent is now a free download with spending caps and approvals</a></h3>
+            <p class="card-summary">A Rundown guide walks through setting up Nod, n8n Labs&#x27; free desktop agent, with spending caps, approval before it submits forms, and scheduled recurring jobs.</p>
+            <p class="card-why">n8n is moving from workflow builder toward personal agents with human-in-the-loop controls, a framing to watch next to Camunda&#x27;s agentic orchestration story.</p>
+            <a href="https://app.therundown.ai/guides/n8n-nod-personal-agent" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+          <article class="card">
+            <div class="card-source">TLDR Marketing</div>
+            <h3 class="card-title"><a href="https://ahrefs.com/blog/ai-sentiment-analysis/" target="_blank" rel="noopener">How to track what AI assistants say about your brand and competitors</a></h3>
+            <p class="card-summary">Ahrefs lays out AI sentiment tracking: test known concerns with targeted prompts, watch what assistants say unprompted, compare across competitors and platforms, and trace negative claims back to their cited sources.</p>
+            <p class="card-why">A ready template for a recurring CI signal: what ChatGPT and Gemini say about Camunda versus Pega, Appian and Temporal, and which sources drive it.</p>
+            <a href="https://ahrefs.com/blog/ai-sentiment-analysis/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">📊 Measuring AI Impact</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">TLDR Marketing</div>
+            <h3 class="card-title"><a href="https://marketingadvice.substack.com/p/non-branded-traffic-is-declining" target="_blank" rel="noopener">B2B organic clicks fell 35% for non-branded and 19% for branded searches</a></h3>
+            <p class="card-summary">Across 34 B2B sites, branded traffic is a growing share of a shrinking organic channel as AI answers absorb informational queries. The author recommends shifting effort to comparison, pricing and proof content and measuring AI visibility and pipeline, not just clicks.</p>
+            <p class="card-why">Useful baseline when reporting the impact of AI on content programs and making the case for comparison and proof pages.</p>
+            <a href="https://marketingadvice.substack.com/p/non-branded-traffic-is-declining" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+      <section class="topic-section">
+        <h2 class="topic-heading">🚀 Enablement &amp; Adoption</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-source">The Neuron</div>
+            <h3 class="card-title"><a href="https://www.i-scoop.eu/benedict-evans-ai-questions/" target="_blank" rel="noopener">Benedict Evans: AI licenses for everyone don&#x27;t change how a company works</a></h3>
+            <p class="card-summary">Evans&#x27;s new deck argues that giving every employee an AI seat spreads the tool without changing workflows, as with spreadsheets and browsers. About 45% of US workers use generative AI at work, but fewer than 15% use it daily.</p>
+            <p class="card-why">Supports pairing tool rollouts with rebuilt workflows and tracking daily use, not just license activation.</p>
+            <a href="https://www.i-scoop.eu/benedict-evans-ai-questions/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+          </article>
+        </div>
+      </section>
+  </main>
+
+  <footer>
+    curated daily by <a href="https://dpnation.com" target="_blank" rel="noopener">dpnation</a> · November 27, 2026
+    <div class="archive">past days: <a href="../archive/2026-11-26.html">2026-11-26</a> · <a href="../archive/2026-11-25.html">2026-11-25</a> · <a href="../archive/2026-11-24.html">2026-11-24</a> · <a href="../archive/2026-11-23.html">2026-11-23</a> · <a href="../archive/2026-11-22.html">2026-11-22</a> · <a href="../archive/2026-11-21.html">2026-11-21</a> · <a href="../archive/2026-11-20.html">2026-11-20</a> · <a href="../archive/index.html">all briefings →</a></div>
+  </footer>
+</body>
+</html>

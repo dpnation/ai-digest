@@ -1,104 +1,105 @@
 {
-  "date": "2026-11-26",
-  "note": "Thanksgiving edition: lighter newsletter volume, so a shorter list today.",
-  "stats": {"newsletters_scanned": 19, "read_in_full": 10},
+  "date": "2026-11-27",
+  "note": "Light holiday edition: fewer newsletters went out for Thanksgiving week.",
+  "stats": {"newsletters_scanned": 13, "read_in_full": 7},
   "top": [
     {
-      "title": "Anthropic: companies get the most from AI by reorganizing work, not cutting staff",
-      "url": "https://www.anthropic.com/research/working-with-ai",
-      "source": "The Deep View",
-      "also_in": ["AI For Work"],
-      "summary": "Anthropic interviewed 58 US enterprise customers about roughly 300 AI use cases. The biggest gains came from reshaping roles and task ownership around the models, while the main blockers were employee resistance and steps AI hasn't sped up yet, like review and decision-making.",
-      "why": "Gives you evidence for an enablement pitch built on redesigning PMM roles and handoffs, and flags review as the bottleneck to design your workflows around."
+      "title": "Varonis's CMO lets agents produce competitive intel and hires people to drive its use",
+      "url": "",
+      "source": "Exit Five",
+      "also_in": [],
+      "summary": "In an Exit Five roundup on small marketing teams, Varonis CMO Rob Sobers says his agents watch competitor webinars, capture every slide and drop summaries into the sales training repository. He no longer plans to hire a CI person to make that content; the role now focuses on winning deals and making sure sellers use what the agents produce.",
+      "why": "A concrete model for an agent-run CI signal pipeline, with the human role shifting to adoption and deal support, which is the split to design for Camunda's CI program."
     },
     {
-      "title": "Claude now picks up skills delivered by MCP servers",
-      "url": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more",
-      "source": "The Neuron",
-      "also_in": [],
-      "summary": "With Skills over MCP, a connected app can hand Claude its own how-to instructions with no separate install. It is in public beta and on by default for Pro, Max and Ultra plans.",
-      "why": "You could ship PMM skills alongside an MCP connector so every teammate gets the same, versioned instructions instead of copying skill files around."
+      "title": "AI token use jumped 79% in November while spend grew only 8%",
+      "url": "https://openrouter.ai/blog/insights/is-jevons-paradox-holding/",
+      "source": "The AI Report",
+      "also_in": ["TLDR AI", "The Rundown AI"],
+      "summary": "Paid token usage rose 79% as average model prices fell 39%, so total spend grew just 8%, and OpenRouter questions whether cheaper tokens still drive higher spending. Separately, an analysis finds OpenAI's newest models now use far fewer reasoning tokens per task, and OpenAI fixed a billing bug so users will hit limits 40% faster on Astra and 25% faster on Sol.",
+      "why": "Usage limits and per-task token costs are shifting under existing workflows, so track cost per completed workflow run, not just seat counts, in your AI measurement dashboard."
     },
     {
-      "title": "OpenAI pilots Private Inference so it can't see enterprise query data",
-      "url": "https://x.com/i/status/2125638790593274259",
-      "source": "The Neuron",
-      "also_in": [],
-      "summary": "OpenAI is piloting a mode that runs a company's queries on its top models without OpenAI being able to see the data, starting with a first group of enterprise customers.",
-      "why": "Raises the bar for what Legal and Security can ask of every vendor, including Anthropic, when you propose sending customer or deal data through marketing workflows."
+      "title": "42 state AGs move to stop bankrupt Character.AI from selling user chats",
+      "url": "https://www.theverge.com/policy/1042620/character-ai-sale-state-ags-block-selling-users-chats",
+      "source": "The AI Report",
+      "also_in": ["The Rundown AI", "Business Insider Today"],
+      "summary": "A coalition of 42 attorneys general is trying to block Character.AI from auctioning chat histories from more than 21 million users, including accounts registered to minors, in its Chapter 11 case. A buyer would not be bound by the company's original privacy policy.",
+      "why": "A privacy promise from an AI vendor can disappear in bankruptcy, so ask Legal to check what happens to prompt data in your AI tool contracts if a vendor fails or is sold."
     }
   ],
   "try_this": {
-    "title": "Make every workflow change prove itself before you keep it",
-    "url": "https://chszlab.github.io/AgenticAlgorithmEngineering/",
-    "how": "Borrow the loop from this Claude Code skill: before editing a PMM skill or prompt, fix a small test set, a quality check and a budget, state what the change should improve, then keep it only if the scored output actually gets better. Revert anything that doesn't."
+    "title": "Run a must-keep check on every AI revision",
+    "url": "https://www.theneurondaily.com/p/november-27-friday",
+    "how": "Before asking an AI to change a messaging doc or battlecard, write a short list of what it must keep (claims, proof points, required caveats). After the edit, give it both versions plus the list and ask it to flag anything dropped or no longer satisfied, then check each flag yourself."
   },
   "sections": {
     "workflows": [
       {
-        "title": "MKT1: 30 things marketers can build with AI skills and agents",
-        "url": "https://newsletter.mkt1.co/p/ai-build-ideas-for-marketers",
+        "title": "Rewriting 94 landing pages with AI behind a fact-check and a 10-role review panel",
+        "url": "https://www.linkedin.com/posts/ashleylewin_im-finishing-a-rewrite-of-94-sem-landing-share-7531376681463218178-Z1LO/",
         "source": "TLDR Marketing",
         "also_in": [],
-        "summary": "A long guide that pushes marketers from prompting to building: brand voice checkers, customer benchmark tools and reusable skills, connected to Claude and ChatGPT through MCP.",
-        "why": "A ready-made idea backlog to compare against your PMM workflow roadmap and intake requests."
+        "summary": "A practitioner rebuilt 94 paid-search pages starting from written rules and approved messaging, had AI tailor each page to its search intent, then ran every draft through source-based fact-checking and a simulated 10-role review before comparing old and new by hand.",
+        "why": "A reusable pattern for high-volume PMM content: rules first, AI drafting, automated fact-check and multi-persona review, then human sign-off."
       },
       {
-        "title": "A Claude Code workflow where automated checks decide what ships",
-        "url": "https://app.therundown.ai/community/posts/4e1955ab-7875-4a46-8101-416f3ae9ad7f",
-        "source": "The Rundown AI",
+        "title": "Why one builder expects MCP to make a comeback in 2027",
+        "url": "https://www.philschmid.de/mcp-2027",
+        "source": "TLDR AI",
         "also_in": [],
-        "summary": "A reader built a pipeline where Claude writes a brief, Claude Code builds from it, and accessibility checks block any output that fails, with no manual override. The failure report goes back to Claude to fix and resubmit.",
-        "why": "The same gate pattern works for PMM content: run brand, claims and terminology checks automatically before a human ever reviews."
-      },
-      {
-        "title": "Cloudflare lets AI agents search a site and get Markdown back",
-        "url": "https://developers.cloudflare.com/changelog/post/2026-11-25-search-for-agents/",
-        "source": "The Neuron",
-        "also_in": [],
-        "summary": "Search for Agents adds a search endpoint to a site so agents can query it and receive Markdown results. It is a beta toggle in the Cloudflare dashboard.",
-        "why": "Worth raising with web and docs owners: agent-readable docs and product pages affect how coding agents describe Camunda to developers."
+        "summary": "After developers drifted toward CLIs and skills, MCP traffic is growing again and clients have gotten smarter about loading tools only when needed. The author argues the protocol is healthy and still improving.",
+        "why": "Supports keeping MCP connectors as a first-class option when deciding how marketing workflows reach tools and data."
       }
     ],
     "governance": [
       {
-        "title": "Amazon: attackers' AI agents found and exploited a zero-day with almost no human input",
-        "url": "https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input/",
-        "source": "TLDR AI",
+        "title": "Researcher finds private links sent to a Chinese AI model were opened by unknown parties",
+        "url": "https://www.livemint.com/technology/data-from-chinese-ai-firm-minimax-accessed-by-unidentified-parties-researcher-says-11795673767961.html",
+        "source": "The Neuron",
         "also_in": [],
-        "summary": "Agents running an open-source pen-testing framework found and exploited a flaw from a single goal prompt, and Palo Alto Networks tracked a related campaign that breached at least 10 organizations.",
-        "why": "Expect Security to tighten review of any agent or connector with write access; build your workflows with scoped permissions and logs from the start."
+        "summary": "A Dragos researcher reports that private links included in requests to MiniMax were later accessed by unidentified parties, according to Reuters.",
+        "why": "Good evidence for a guardrail: never paste private share links or unreleased asset URLs into prompts for unapproved models."
+      }
+    ],
+    "competitive": [
+      {
+        "title": "n8n's Nod personal agent is now a free download with spending caps and approvals",
+        "url": "https://app.therundown.ai/guides/n8n-nod-personal-agent",
+        "source": "The Rundown AI",
+        "also_in": [],
+        "summary": "A Rundown guide walks through setting up Nod, n8n Labs' free desktop agent, with spending caps, approval before it submits forms, and scheduled recurring jobs.",
+        "why": "n8n is moving from workflow builder toward personal agents with human-in-the-loop controls, a framing to watch next to Camunda's agentic orchestration story."
       },
       {
-        "title": "Startups pitch encryption to keep employee prompts away from model makers",
-        "url": "https://www.bloomberg.com/newsletters/tech-in-depth/latest",
-        "source": "Bloomberg Technology",
-        "also_in": [],
-        "summary": "TrustedRouter offers end-to-end encryption of employee AI prompts, aimed at companies that don't want model providers seeing their questions.",
-        "why": "Another sign that prompt privacy is becoming a standard procurement question for any AI tool your team adopts."
-      }
-    ],
-    "competitive": [],
-    "measurement": [
-      {
-        "title": "Scrunch lifted its AI answer mention rate from 15% to 40% in two months",
-        "url": "https://www.thatsgoodcontent.com/podcasts/40---kevin-white",
+        "title": "How to track what AI assistants say about your brand and competitors",
+        "url": "https://ahrefs.com/blog/ai-sentiment-analysis/",
         "source": "TLDR Marketing",
         "also_in": [],
-        "summary": "Scrunch's playbook: refresh existing content, earn placements on trusted third-party sites and publish targeted FAQs. It also found AI citations decay within six to eight weeks without updates.",
-        "why": "AI mention rate is a measurable KPI for Camunda's category story, and the decay window suggests a refresh cadence for a monitoring workflow."
+        "summary": "Ahrefs lays out AI sentiment tracking: test known concerns with targeted prompts, watch what assistants say unprompted, compare across competitors and platforms, and trace negative claims back to their cited sources.",
+        "why": "A ready template for a recurring CI signal: what ChatGPT and Gemini say about Camunda versus Pega, Appian and Temporal, and which sources drive it."
       }
     ],
-    "enablement": [],
-    "landscape": [
+    "measurement": [
       {
-        "title": "OpenAI merges Chat and Work usage limits and retires GPT-5.6 on Dec. 23",
-        "url": "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/",
-        "source": "The AI Report",
-        "also_in": ["The Neuron", "The Deep View"],
-        "summary": "Chat and Work will share one usage meter, so heavy users may hit limits sooner as the rollout widens in December. Separately, GPT-5.6 and its Sol and Terra variants leave Chat, Work and Codex on Dec. 23.",
-        "why": "Check any ChatGPT-based team workflows pinned to GPT-5.6 and retest them on the replacement model before the cutoff."
+        "title": "B2B organic clicks fell 35% for non-branded and 19% for branded searches",
+        "url": "https://marketingadvice.substack.com/p/non-branded-traffic-is-declining",
+        "source": "TLDR Marketing",
+        "also_in": [],
+        "summary": "Across 34 B2B sites, branded traffic is a growing share of a shrinking organic channel as AI answers absorb informational queries. The author recommends shifting effort to comparison, pricing and proof content and measuring AI visibility and pipeline, not just clicks.",
+        "why": "Useful baseline when reporting the impact of AI on content programs and making the case for comparison and proof pages."
       }
-    ]
+    ],
+    "enablement": [
+      {
+        "title": "Benedict Evans: AI licenses for everyone don't change how a company works",
+        "url": "https://www.i-scoop.eu/benedict-evans-ai-questions/",
+        "source": "The Neuron",
+        "also_in": [],
+        "summary": "Evans's new deck argues that giving every employee an AI seat spreads the tool without changing workflows, as with spreadsheets and browsers. About 45% of US workers use generative AI at work, but fewer than 15% use it daily.",
+        "why": "Supports pairing tool rollouts with rebuilt workflows and tracking daily use, not just license activation."
+      }
+    ],
+    "landscape": []
   }
 }
